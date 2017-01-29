@@ -1,0 +1,39 @@
+package com.wp.service.service.serviceImpl;
+
+import com.wp.food.dao.foodsMapper;
+import com.wp.food.entity.foods;
+import com.wp.service.service.ServiceService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+/**
+ * Created by admin on 2016/10/8.
+ */
+@Service
+public class ServiceServiceImpl implements ServiceService{
+
+    @Autowired
+    private foodsMapper foodsMapper;
+
+    public void add(foods food) {
+        foodsMapper.insert(food);
+    }
+
+    public foods findById(Integer id) {
+        return foodsMapper.selectByPrimaryKey(id);
+    }
+
+    public List<foods> findAll() {
+            return foodsMapper.findAll();
+    }
+
+    public void update(foods food) {
+        foodsMapper.updateByPrimaryKey(food);
+    }
+
+    public void delete(Integer id) {
+        foodsMapper.deleteByPrimaryKey(id);
+    }
+}
