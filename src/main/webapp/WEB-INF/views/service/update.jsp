@@ -14,6 +14,7 @@
 <body>
 <form:form action="/service/update" method="post" modelAttribute="food">
     <form:hidden path="id"/>
+    <form:hidden path="imageName"/>
     <form:input path="name"/>
     <form:input path="price"/>
     <input type="submit" value="提交">

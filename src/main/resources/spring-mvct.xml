@@ -12,9 +12,9 @@
 	<!--静态资源管理-->
 	<mvc:default-servlet-handler></mvc:default-servlet-handler>
 
-	<!--&lt;!&ndash;自动转到主页&ndash;&gt;-->
-	<!--<mvc:view-controller path="/" view-name="redirect:/sys/load"/>-->
-  <!--&lt;!&ndash; 扫描包 &ndash;&gt;-->
+	<!--自动转到主页-->
+	<mvc:view-controller path="/" view-name="redirect:/client/index"/>
+  <!-- 扫描包 -->
 
    <context:component-scan base-package="com.wp">
 	   <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>

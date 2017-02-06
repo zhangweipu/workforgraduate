@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: admin
-  Date: 2016/9/6
-  Time: 18:55
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="from" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -12,7 +5,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-
     <link rel="shortcut icon" href="/static/image/bushuohua.ico" type="image/x-icon"/>
     <title>fuwu</title>
     <!-- Bootstrap core CSS -->
@@ -47,16 +39,14 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
-            <ul id="ls" class="nav nav-sidebar">
-                <li ><a href="/service/add" class="btn btn-primary btn-lg active" role="button">添加菜</a></li>
-                <li ><a href="/service/list" class="btn btn-primary btn-lg active" role="button">菜单显示</a></li>
-                <li ><a href="#" class="btn btn-primary btn-lg active" role="button">Primary link</a></li>
-                <li ><a href="#" class="btn btn-primary btn-lg active" role="button">Primary link</a></li>
-
-            </ul>
+            <jsp:include page="left.jsp"/>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="showOper">
             <div id="main">
+                <%--<c:forEach items="${urlList}" var="list">--%>
+                <%--<img src="${list}" width="100" height="100">--%>
+                <%--</c:forEach>--%>
+                <h1>欢迎管理员</h1>
             </div>
         </div>
     </div>
@@ -67,6 +57,6 @@
 <script src="/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
 <script src="/static/bootstrap3/js/bootstrap.min.js"></script>
 <script src="/static/bootstrap3/js/json2.js"></script>
-<script  src="/static/bootstrap3/js/myJs.js"></script>
+<script  src="/static/js/service.js"></script>
 </body>
 </html>
