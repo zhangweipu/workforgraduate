@@ -13,13 +13,19 @@ public class foods {
 
     private Integer price;
 
-    public foods(Integer id, String name, String imageName, String type, Integer size, Integer price) {
+    private String la;
+
+    private String detail;
+
+    public foods(Integer id, String name, String imageName, String type, Integer size, Integer price, String la, String detail) {
         this.id = id;
         this.name = name;
         this.imageName = imageName;
         this.type = type;
         this.size = size;
         this.price = price;
+        this.la = la;
+        this.detail = detail;
     }
 
     public foods() {
@@ -74,15 +80,19 @@ public class foods {
         this.price = price;
     }
 
-    @Override
-    public String toString() {
-        return "foods{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", imageName='" + imageName + '\'' +
-                ", type='" + type + '\'' +
-                ", size=" + size +
-                ", price=" + price +
-                '}';
+    public String getLa() {
+        return la;
+    }
+
+    public void setLa(String la) {
+        this.la = la == null ? null : la.trim();
+    }
+
+    public String getDetail() {
+        return detail;
+    }
+
+    public void setDetail(String detail) {
+        this.detail = detail == null ? null : detail.trim();
     }
 }

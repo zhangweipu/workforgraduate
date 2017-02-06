@@ -9,10 +9,12 @@
       <arg column="type" javaType="java.lang.String" jdbcType="VARCHAR" />
       <arg column="size" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="price" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="la" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="detail" javaType="java.lang.String" jdbcType="VARCHAR" />
     </constructor>
   </resultMap>
   <sql id="Base_Column_List">
-    id, name, image_name, type, size, price
+    id, name, image_name, type, size, price, la, detail
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -26,9 +28,11 @@
   </delete>
   <insert id="insert" parameterType="com.wp.food.entity.foods">
     insert into t_food (id, name, image_name, 
-      type, size, price)
+      type, size, price, 
+      la, detail)
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{imageName,jdbcType=VARCHAR}, 
-      #{type,jdbcType=VARCHAR}, #{size,jdbcType=INTEGER}, #{price,jdbcType=INTEGER})
+      #{type,jdbcType=VARCHAR}, #{size,jdbcType=INTEGER}, #{price,jdbcType=INTEGER}, 
+      #{la,jdbcType=VARCHAR}, #{detail,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.wp.food.entity.foods">
     insert into t_food
@@ -51,6 +55,12 @@
       <if test="price != null">
         price,
       </if>
+      <if test="la != null">
+        la,
+      </if>
+      <if test="detail != null">
+        detail,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -70,6 +80,12 @@
       </if>
       <if test="price != null">
         #{price,jdbcType=INTEGER},
+      </if>
+      <if test="la != null">
+        #{la,jdbcType=VARCHAR},
+      </if>
+      <if test="detail != null">
+        #{detail,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -91,6 +107,12 @@
       <if test="price != null">
         price = #{price,jdbcType=INTEGER},
       </if>
+      <if test="la != null">
+        la = #{la,jdbcType=VARCHAR},
+      </if>
+      <if test="detail != null">
+        detail = #{detail,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -100,10 +122,16 @@
       image_name = #{imageName,jdbcType=VARCHAR},
       type = #{type,jdbcType=VARCHAR},
       size = #{size,jdbcType=INTEGER},
-      price = #{price,jdbcType=INTEGER}
+      price = #{price,jdbcType=INTEGER},
+      la = #{la,jdbcType=VARCHAR},
+      detail = #{detail,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
   <select id="findAll" resultMap="BaseResultMap">
     select * from t_food
+  </select>
+  <select id="findSizePriceByName" resultMap="BaseResultMap" parameterType="String">
+    select * from t_food where name=#{tab,jdbcType=VARCHAR}
   </select>
 </mapper>

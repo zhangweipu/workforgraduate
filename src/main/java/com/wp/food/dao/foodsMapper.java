@@ -1,5 +1,6 @@
 package com.wp.food.dao;
 
+
 import com.wp.food.entity.foods;
 import com.wp.utils.MyBatis;
 
@@ -20,4 +21,6 @@ public interface foodsMapper {
     int updateByPrimaryKey(foods record);
 
     List<foods> findAll();
+
+    foods findSizePriceByName(String tab);
 }

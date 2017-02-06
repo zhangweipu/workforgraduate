@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wp.order.dao.OrderMapper">
+  <resultMap id="BaseResultMap" type="com.wp.order.entity.Order">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="seat_mark" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="food_name" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="food_type" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="food_size" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="Food_stutas" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="la" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="food_price" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, seat_mark, food_name, food_type, food_size, Food_stutas, time, la, food_price
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_order
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_order
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.wp.order.entity.Order">
+    insert into t_order (id, seat_mark, food_name, 
+      food_type, food_size, Food_stutas, 
+      time, la, food_price
+      )
+    values (#{id,jdbcType=INTEGER}, #{seatMark,jdbcType=VARCHAR}, #{foodName,jdbcType=VARCHAR}, 
+      #{foodType,jdbcType=VARCHAR}, #{foodSize,jdbcType=INTEGER}, #{foodStutas,jdbcType=INTEGER}, 
+      #{time,jdbcType=TIMESTAMP}, #{la,jdbcType=VARCHAR}, #{foodPrice,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.wp.order.entity.Order">
+    insert into t_order
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="seatMark != null">
+        seat_mark,
+      </if>
+      <if test="foodName != null">
+        food_name,
+      </if>
+      <if test="foodType != null">
+        food_type,
+      </if>
+      <if test="foodSize != null">
+        food_size,
+      </if>
+      <if test="foodStutas != null">
+        Food_stutas,
+      </if>
+      <if test="time != null">
+        time,
+      </if>
+      <if test="la != null">
+        la,
+      </if>
+      <if test="foodPrice != null">
+        food_price,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="seatMark != null">
+        #{seatMark,jdbcType=VARCHAR},
+      </if>
+      <if test="foodName != null">
+        #{foodName,jdbcType=VARCHAR},
+      </if>
+      <if test="foodType != null">
+        #{foodType,jdbcType=VARCHAR},
+      </if>
+      <if test="foodSize != null">
+        #{foodSize,jdbcType=INTEGER},
+      </if>
+      <if test="foodStutas != null">
+        #{foodStutas,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="la != null">
+        #{la,jdbcType=VARCHAR},
+      </if>
+      <if test="foodPrice != null">
+        #{foodPrice,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wp.order.entity.Order">
+    update t_order
+    <set>
+      <if test="seatMark != null">
+        seat_mark = #{seatMark,jdbcType=VARCHAR},
+      </if>
+      <if test="foodName != null">
+        food_name = #{foodName,jdbcType=VARCHAR},
+      </if>
+      <if test="foodType != null">
+        food_type = #{foodType,jdbcType=VARCHAR},
+      </if>
+      <if test="foodSize != null">
+        food_size = #{foodSize,jdbcType=INTEGER},
+      </if>
+      <if test="foodStutas != null">
+        Food_stutas = #{foodStutas,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        time = #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="la != null">
+        la = #{la,jdbcType=VARCHAR},
+      </if>
+      <if test="foodPrice != null">
+        food_price = #{foodPrice,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wp.order.entity.Order">
+    update t_order
+    set seat_mark = #{seatMark,jdbcType=VARCHAR},
+      food_name = #{foodName,jdbcType=VARCHAR},
+      food_type = #{foodType,jdbcType=VARCHAR},
+      food_size = #{foodSize,jdbcType=INTEGER},
+      Food_stutas = #{foodStutas,jdbcType=INTEGER},
+      time = #{time,jdbcType=TIMESTAMP},
+      la = #{la,jdbcType=VARCHAR},
+      food_price = #{foodPrice,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="findBySeat" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select * from t_order where seat_mark=#{tab}
+  </select>
+
+  <select id="findAllOrder" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select * from t_order
+  </select>
+
+  <delete id="deleteBySeat" parameterType="java.lang.Integer">
+    delete from t_order where seat_mark=#{tab}
+  </delete>
+</mapper>
