@@ -1,6 +1,7 @@
 package com.wp.service.service;
 
 import com.wp.food.entity.foods;
+import com.wp.order.entity.Order;
 
 import java.util.List;
 
@@ -13,4 +14,6 @@ public interface ServiceService {
     List<foods>  findAll();
     void update(foods food);
     void delete(Integer id);
+    List<Order> findAllOrder();
+    List<Order> findBySeatOrTime();
 }

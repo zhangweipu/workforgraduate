@@ -2,6 +2,8 @@ package com.wp.service.service.serviceImpl;
 
 import com.wp.food.dao.foodsMapper;
 import com.wp.food.entity.foods;
+import com.wp.order.dao.OrderMapper;
+import com.wp.order.entity.Order;
 import com.wp.service.service.ServiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +18,9 @@ public class ServiceServiceImpl implements ServiceService{
 
     @Autowired
     private foodsMapper foodsMapper;
+
+    @Autowired
+    private OrderMapper orderMapper;
 
     public void add(foods food) {
         foodsMapper.insert(food);
@@ -35,5 +40,13 @@ public class ServiceServiceImpl implements ServiceService{
 
     public void delete(Integer id) {
         foodsMapper.deleteByPrimaryKey(id);
+    }
+
+    public  List<Order> findAllOrder(){
+        return orderMapper.findAllOrder();
+    }
+
+    public List<Order> findBySeatOrTime() {
+        return null;
     }
 }
