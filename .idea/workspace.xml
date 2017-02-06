@@ -10,47 +10,106 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe8ed5e5-92bb-4392-88f2-2a1ddfb43c85" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap3/js/myJs.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wp/client/controller/ClientController.class" afterPath="$PROJECT_DIR$/target/classes/com/wp/client/controller/ClientController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wp/client/dao/ClientDao.class" afterPath="$PROJECT_DIR$/target/classes/com/wp/client/dao/ClientDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wp/food/dao/foodsMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/wp/food/dao/foodsMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wp/food/entity/foods.class" afterPath="$PROJECT_DIR$/target/classes/com/wp/food/entity/foods.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wp/service/controller/ServiceController.class" afterPath="$PROJECT_DIR$/target/classes/com/wp/service/controller/ServiceController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wp/service/service/ServiceService.class" afterPath="$PROJECT_DIR$/target/classes/com/wp/service/service/ServiceService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wp/service/service/serviceImpl/ServiceServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/wp/service/service/serviceImpl/ServiceServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wp/utils/MyBatis.class" afterPath="$PROJECT_DIR$/target/classes/com/wp/utils/MyBatis.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/workforgraduate.war" afterPath="$PROJECT_DIR$/target/workforgraduate.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/client/controller/ClientController.class" afterPath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/client/controller/ClientController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/client/dao/ClientDao.class" afterPath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/client/dao/ClientDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/food/dao/foodsMapper.class" afterPath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/food/dao/foodsMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/food/entity/foods.class" afterPath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/food/entity/foods.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/service/controller/ServiceController.class" afterPath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/service/controller/ServiceController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/service/service/ServiceService.class" afterPath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/service/service/ServiceService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/service/service/serviceImpl/ServiceServiceImpl.class" afterPath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/service/service/serviceImpl/ServiceServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/utils/MyBatis.class" afterPath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/utils/MyBatis.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/workforgraduate_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/workforgraduate_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wp/client/controller/ClientController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wp/client/controller/ClientController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wp/food/dao/foodsMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/wp/food/dao/foodsMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wp/food/entity/foods.java" afterPath="$PROJECT_DIR$/src/main/java/com/wp/food/entity/foods.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/food/foodsMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/food/foodsMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" afterPath="$PROJECT_DIR$/target/classes/generatorConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/food/foodsMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/food/foodsMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring-mvct.xml" afterPath="$PROJECT_DIR$/target/classes/spring-mvct.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/workforgraduate/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/workforgraduate/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/generatorConfig.xml" afterPath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/generatorConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/mapper/food/foodsMapper.xml" afterPath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/mapper/food/foodsMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/spring-mvct.xml" afterPath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/spring-mvct.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/views/client/index.jsp" afterPath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/views/client/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/views/service/add.jsp" afterPath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/views/service/add.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/views/service/index.jsp" afterPath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/views/service/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/views/service/list.jsp" afterPath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/views/service/list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/views/service/show.jsp" afterPath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/views/service/show.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/views/service/update.jsp" afterPath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/views/service/update.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workforgraduate.iml" afterPath="$PROJECT_DIR$/workforgraduate.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/wp/client/controller/ClientController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/wp/client/dao/ClientDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/wp/food/dao/foodsMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/wp/food/entity/foods.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/wp/service/controller/ServiceController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/wp/service/service/ServiceService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/wp/service/service/serviceImpl/ServiceServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/wp/utils/MyBatis.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/log4j.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/logback.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/mapper/food/foodsMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/spring-context.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/spring-mvct.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate.war" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/client/controller/ClientController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/client/dao/ClientDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/food/dao/foodsMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/food/entity/foods.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/service/controller/ServiceController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/service/service/ServiceService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/service/service/serviceImpl/ServiceServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/com/wp/utils/MyBatis.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/generatorConfig.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/jdbc.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/log4j.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/logback.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/mapper/food/foodsMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/mybatis-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/spring-context.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/classes/spring-mvct.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/aopalliance-1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/classmate-1.0.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/commons-beanutils-1.9.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/commons-codec-1.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/commons-collections-3.2.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/commons-fileupload-1.3.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/commons-io-2.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/commons-lang3-3.3.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/commons-logging-1.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/druid-1.0.11.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/hamcrest-core-1.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/hibernate-validator-5.1.1.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/jackson-annotations-2.2.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/jackson-core-2.2.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/jackson-databind-2.2.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/jackson-module-jaxb-annotations-2.2.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/javax.el-api-3.0.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/jboss-logging-3.1.3.GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/jsqlparser-0.9.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/jstl-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/junit-4.12.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/log4j-1.2.14.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/mapper-3.3.8.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/mybatis-3.2.8.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/mybatis-spring-1.2.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/mysql-connector-java-5.1.30.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/pagehelper-4.1.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/persistence-api-1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/spring-aop-4.1.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/spring-beans-4.1.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/spring-context-4.1.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/spring-core-4.1.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/spring-expression-4.1.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/spring-jdbc-4.1.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/spring-test-4.1.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/spring-tx-4.1.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/spring-web-4.1.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/spring-webmvc-4.1.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/lib/validation-api-1.1.0.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/log4j.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/views/client/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/views/service/add.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/views/service/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/views/service/list.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/views/service/show.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/views/service/update.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/static/bootstrap3/css/bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/static/bootstrap3/css/bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/static/bootstrap3/css/bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/static/bootstrap3/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/static/bootstrap3/css/bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/static/bootstrap3/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/static/bootstrap3/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/static/bootstrap3/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/static/bootstrap3/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/static/bootstrap3/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/static/bootstrap3/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/static/bootstrap3/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/static/bootstrap3/js/jquery-1.11.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/static/bootstrap3/js/json2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/static/bootstrap3/js/myJs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/static/css/dashboard.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/static/css/signin.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/workforgraduate/static/images/bushuohua.ico" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="workforgraduate.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,7 +159,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/service/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="338">
-              <caret line="60" column="7" lean-forward="true" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
+              <caret line="60" column="7" lean-forward="false" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -159,7 +218,7 @@
       <file leaf-file-name="ServiceServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wp/service/service/serviceImpl/ServiceServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-416">
+            <state relative-caret-position="-182">
               <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
               <folding />
             </state>
@@ -1797,7 +1856,7 @@
       <workItem from="1486279423895" duration="2174000" />
       <workItem from="1486345258209" duration="10116000" />
       <workItem from="1486367177117" duration="1568000" />
-      <workItem from="1486371359498" duration="616000" />
+      <workItem from="1486371359498" duration="921000" />
     </task>
     <task id="LOCAL-00001" summary="commit at home">
       <created>1486370350661</created>
@@ -1853,7 +1912,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244419000" />
+    <option name="totallyTimeSpent" value="244724000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1887,10 +1946,10 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32744783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46885246" sideWeight="0.59379727" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46885246" sideWeight="0.59379727" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16557378" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32744783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4967213" sideWeight="0.7836611" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4967213" sideWeight="0.7836611" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20801815" sideWeight="0.4828283" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24942966" sideWeight="0.51717174" order="2" side_tool="true" content_ui="tabs" />
@@ -2591,7 +2650,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/service/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
-          <caret line="60" column="7" lean-forward="true" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
+          <caret line="60" column="7" lean-forward="false" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -2614,7 +2673,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wp/service/service/serviceImpl/ServiceServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-416">
+        <state relative-caret-position="-182">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding />
         </state>
