@@ -9,6 +9,7 @@
     <title>fuwu</title>
     <!-- Bootstrap core CSS -->
     <link href="/static/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/common.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="/static/css/dashboard.css" rel="stylesheet">
 
