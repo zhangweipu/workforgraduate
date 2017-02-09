@@ -1,12 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
-<head>
+    <script src="/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
     <script src="/static/js/service.js"></script>
     <script src="/static/bootstrap3/js/bootstrap.min.js"></script>
     <title>菜单列表</title>
-</head>
-<body style="width: 768px">
 <table class="table" id="table">
     <thead>
     <tr>
@@ -39,5 +36,5 @@
     <%--<jsp:param name="coun" value="11"/>--%>
     <%--<jsp:param name="aa" value="11"/>--%>
 <%--</jsp:include>--%>
-</body>
-</html>
+<%--</body>--%>
+<%--</html>--%>

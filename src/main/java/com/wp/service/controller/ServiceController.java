@@ -113,18 +113,18 @@ public class ServiceController {
     @RequestMapping(value="/list",method = RequestMethod.GET)
     public String list(ModelMap modelMap, Conditions conditions){
         if(conditions.getPage()==null){
-            conditions.setPage(0);
+            conditions.setPage(1);
         }
         int currentPage=conditions.getPage();
         //求总页数的公式
         int pageCount=(serviceService.foodCount()+20-1)/20;
-        List<foods> list=serviceService.findPage(currentPage);
+        List<foods> list=serviceService.findPage(currentPage-1);
         conditions.setPageCount(pageCount);
         modelMap.addAttribute("list",list);
         int a=5;
-        modelMap.addAttribute("currentPage",currentPage+1);
+        modelMap.addAttribute("currentPage",currentPage);
         modelMap.addAttribute("pageCount",pageCount);
-        modelMap.addAttribute("url","aaa");
+        modelMap.addAttribute("url","/service/list");
         return "service/list";
     }
 
