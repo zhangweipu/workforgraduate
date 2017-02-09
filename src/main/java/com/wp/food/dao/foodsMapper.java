@@ -24,5 +24,9 @@ public interface foodsMapper {
 
     List<foods> findAll();
 
+    List<foods> selectLimit(int page);
+
+    int count();
+
     foods findSizePriceByName(String tab);
 }

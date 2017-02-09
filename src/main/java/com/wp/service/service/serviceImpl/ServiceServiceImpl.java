@@ -39,6 +39,16 @@ public class ServiceServiceImpl implements ServiceService{
             return foodsMapper.findAll();
     }
 
+    @Override
+    public List<foods> findPage(int page) {
+        return foodsMapper.selectLimit(page);
+    }
+
+    @Override
+    public int foodCount() {
+        return foodsMapper.count();
+    }
+
     public void update(foods food) {
         foodsMapper.updateByPrimaryKey(food);
     }

@@ -22,7 +22,7 @@
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse"
                        data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        查询列表
+                        编辑菜单
                     </a>
                 </h4>
             </div>
@@ -31,7 +31,7 @@
                     <ul class="nav nav-sidebar">
                         <%--<li ><a href="/service/add" class="btn " role="button">添加菜单</a></li>--%>
 
-                        <li ><a href="/service/list" class="btn " role="button">菜单查询</a></li>
+                        <li ><a href="/service/list" class="btn " role="button">菜单列表</a></li>
 
                     </ul>
                 </div>

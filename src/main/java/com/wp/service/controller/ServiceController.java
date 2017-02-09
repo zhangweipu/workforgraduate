@@ -5,6 +5,7 @@ import com.wp.order.entity.Order;
 import com.wp.service.dao.TableTools;
 import com.wp.service.entity.Table;
 import com.wp.service.service.ServiceService;
+import com.wp.utils.Conditions;
 import com.wp.utils.ImportMenu;
 import net.sf.json.JSONObject;
 import org.apache.commons.io.FileUtils;
@@ -110,9 +111,20 @@ public class ServiceController {
     }
 
     @RequestMapping(value="/list",method = RequestMethod.GET)
-    public String list(ModelMap modelMap){
-        List<foods> list=serviceService.findAll();
+    public String list(ModelMap modelMap, Conditions conditions){
+        if(conditions.getPage()==null){
+            conditions.setPage(0);
+        }
+        int currentPage=conditions.getPage();
+        //求总页数的公式
+        int pageCount=(serviceService.foodCount()+20-1)/20;
+        List<foods> list=serviceService.findPage(currentPage);
+        conditions.setPageCount(pageCount);
         modelMap.addAttribute("list",list);
+        int a=5;
+        modelMap.addAttribute("currentPage",currentPage+1);
+        modelMap.addAttribute("pageCount",pageCount);
+        modelMap.addAttribute("url","aaa");
         return "service/list";
     }
 

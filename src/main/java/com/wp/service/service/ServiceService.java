@@ -13,6 +13,8 @@ public interface ServiceService {
     void addFoods(List<foods> list);
     foods findById(Integer id);
     List<foods>  findAll();
+    List<foods>  findPage(int page);
+    int foodCount();
     void update(foods food);
     void delete(Integer id);
     List<Order> findAllOrder();

@@ -22,6 +22,14 @@
     from t_food
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="selectLimit" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List" />
+    from t_food
+    where id limit #{0},20
+  </select>
+  <select id="count" resultType="java.lang.Integer">
+    select count(id) from t_food
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from t_food
     where id = #{id,jdbcType=INTEGER}
