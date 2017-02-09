@@ -5,7 +5,6 @@
     <script src="/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
     <script type="text/javascript">
         $("#subm").on("click",function (evt) {
-            alert("here");
             $(".required").each(function () {
                 var inp=$(this).val();
                 if(inp==""){
