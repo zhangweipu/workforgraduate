@@ -12,9 +12,7 @@
                 <div class="panel-body">
                     <ul  class="nav nav-sidebar">
                         <li ><a href="/service/add" class="btn " role="button">添加一个</a></li>
-                        <li ><a href="/service/addMany" class="btn " role="button">批量添加</a></li>
-                        <li ><a href="#" class="btn " role="button">Primary link</a></li>
-
+                        <li ><a href="/service/addmany" class="btn " role="button">批量添加</a></li>
                     </ul>
                 </div> 
             </div>
@@ -22,8 +20,9 @@
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingTwo">
                 <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        菜单查询
+                    <a class="collapsed" role="button" data-toggle="collapse"
+                       data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        查询列表
                     </a>
                 </h4>
             </div>
@@ -33,8 +32,6 @@
                         <%--<li ><a href="/service/add" class="btn " role="button">添加菜单</a></li>--%>
 
                         <li ><a href="/service/list" class="btn " role="button">菜单查询</a></li>
-                        <li ><a href="/service/showOrder" class="btn " role="button">订单列表</a></li>
-                        <li ><a href="#" class="btn " role="button">Primary link</a></li>
 
                     </ul>
                 </div>

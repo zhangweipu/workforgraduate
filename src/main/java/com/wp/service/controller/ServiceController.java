@@ -5,11 +5,15 @@ import com.wp.order.entity.Order;
 import com.wp.service.dao.TableTools;
 import com.wp.service.entity.Table;
 import com.wp.service.service.ServiceService;
-import javafx.scene.control.Tab;
-import net.sf.json.JSONArray;
+import com.wp.utils.ImportMenu;
 import net.sf.json.JSONObject;
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -21,6 +25,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -77,6 +82,31 @@ public class ServiceController {
         serviceService.add(food);
         modelMap.addAttribute("urlImage",path+imageName);
         return "service/index";
+    }
+    @RequestMapping(value = "/addmany",method = RequestMethod.GET)
+    public String toaddmany(){
+        return "service/addMany";
+    }
+
+    @RequestMapping(value = "/addmany",method = RequestMethod.POST)
+    public String addmany(MultipartFile file ) throws IOException {
+
+        InputStream in=file.getInputStream();
+       List<foods> foodsList=ImportMenu.readExcel(in);
+       serviceService.addFoods(foodsList);
+//        System.out.println(foodsList.size());
+        return "service/index";
+    }
+
+    @RequestMapping(value = "/down",method = RequestMethod.GET)
+    public ResponseEntity<byte[]> downMould() throws IOException{
+        String path="d://food.xlsx";
+        File file=new File(path);
+        HttpHeaders httpHeaders = new HttpHeaders();
+        String fileName=new String("菜单模板.xlsx".getBytes("UTF-8"),"iso-8859-1");
+        httpHeaders.setContentDispositionFormData("attachment",fileName);
+        httpHeaders.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+        return new ResponseEntity<byte[]>(FileUtils.readFileToByteArray(file),httpHeaders, HttpStatus.CREATED);
     }
 
     @RequestMapping(value="/list",method = RequestMethod.GET)

@@ -2,6 +2,7 @@ package com.wp.utils;
 
 import com.wp.food.entity.foods;
 import org.apache.poi.hwpf.extractor.WordExtractor;
+import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -51,9 +52,9 @@ public class ImportMenu {
         }
     }
 
-    public void readExcel(File file){
+    public static List readExcel(InputStream in){
         try {
-            InputStream in=new FileInputStream(file);
+           // InputStream in=new FileInputStream(file);
             try {
                 XSSFWorkbook xssfWorkbook=new XSSFWorkbook(in);
                 foods foods=null;
@@ -70,15 +71,26 @@ public class ImportMenu {
                         if(xssfRow!=null){
                             foods=new foods();
                             foods.setName(String.valueOf(xssfRow.getCell(0)));
+                            foods.setType(String.valueOf(xssfRow.getCell(1)));
+                            XSSFCell size=xssfRow.getCell(2);
+                            foods.setSize(1);
+                            XSSFCell price=xssfRow.getCell(3);
+                            foods.setPrice(1);
+                            foods.setLa(String.valueOf(xssfRow.getCell(4)));
+                            foods.setImageName(String.valueOf(xssfRow.getCell(5)));
+                            foods.setDetail(String.valueOf(xssfRow.getCell(6)));
+                            list.add(foods);
                         }
                     }
+
                 }
+                return list;
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        } catch (FileNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
-
+        return null;
     }
 }

@@ -10,6 +10,7 @@ import java.util.List;
  */
 public interface ServiceService {
     void add(foods food);
+    void addFoods(List<foods> list);
     foods findById(Integer id);
     List<foods>  findAll();
     void update(foods food);

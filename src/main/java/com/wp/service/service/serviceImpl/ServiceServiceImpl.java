@@ -26,6 +26,11 @@ public class ServiceServiceImpl implements ServiceService{
         foodsMapper.insert(food);
     }
 
+    @Override
+    public void addFoods(List<foods> list) {
+        foodsMapper.insertBatch(list);
+    }
+
     public foods findById(Integer id) {
         return foodsMapper.selectByPrimaryKey(id);
     }

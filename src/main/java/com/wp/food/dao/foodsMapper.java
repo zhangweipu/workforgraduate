@@ -12,6 +12,8 @@ public interface foodsMapper {
 
     int insert(foods record);
 
+    void insertBatch(List<foods> list);
+
     int insertSelective(foods record);
 
     foods selectByPrimaryKey(Integer id);
