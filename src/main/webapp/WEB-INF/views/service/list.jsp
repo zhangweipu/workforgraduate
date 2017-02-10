@@ -1,9 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    <script src="/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
+ <%@taglib prefix="FUNC" uri="http://myel.com" %>
+    <%--<script src="/static/bootstrap3/js/jquery-1.11.2.min.js"></script>--%>
     <script src="/static/js/service.js"></script>
-    <script src="/static/bootstrap3/js/bootstrap.min.js"></script>
-    <title>菜单列表</title>
+    <%--<script src="/static/bootstrap3/js/bootstrap.min.js"></script>--%>
+<input type="text" name="condition1" placeholder="请输入菜名"/>
+<button id="find">查找</button>
+${FUNC:myFunc()}
 <table class="table" id="table">
     <thead>
     <tr>

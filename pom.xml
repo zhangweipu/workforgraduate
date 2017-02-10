@@ -281,8 +281,17 @@
           <encoding>utf8</encoding>
         </configuration>
       </plugin>
+<!--不让Maven在打包时生成描述文件-->
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <classesDirectory>target/classes/</classesDirectory>
+          <archive>
+            <addMavenDescriptor>false</addMavenDescriptor>
+          </archive>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
-
 
 </project>

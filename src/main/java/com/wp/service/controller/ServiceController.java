@@ -112,7 +112,7 @@ public class ServiceController {
 
     @RequestMapping(value="/list",method = RequestMethod.GET)
     public String list(ModelMap modelMap, Conditions conditions){
-        if(conditions.getPage()==null){
+        if(conditions.getPage()==null||conditions.getPage()==0){
             conditions.setPage(1);
         }
         int currentPage=conditions.getPage();
