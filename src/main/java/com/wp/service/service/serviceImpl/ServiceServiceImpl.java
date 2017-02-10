@@ -5,6 +5,7 @@ import com.wp.food.entity.foods;
 import com.wp.order.dao.OrderMapper;
 import com.wp.order.entity.Order;
 import com.wp.service.service.ServiceService;
+import com.wp.utils.Conditions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -40,8 +41,8 @@ public class ServiceServiceImpl implements ServiceService{
     }
 
     @Override
-    public List<foods> findPage(int page) {
-        return foodsMapper.selectLimit(page);
+    public List<foods> findPage(Conditions conditions) {
+        return foodsMapper.selectLimit(conditions);
     }
 
     @Override

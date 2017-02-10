@@ -2,6 +2,7 @@ package com.wp.service.service;
 
 import com.wp.food.entity.foods;
 import com.wp.order.entity.Order;
+import com.wp.utils.Conditions;
 
 import java.util.List;
 
@@ -13,7 +14,7 @@ public interface ServiceService {
     void addFoods(List<foods> list);
     foods findById(Integer id);
     List<foods>  findAll();
-    List<foods>  findPage(int page);
+    List<foods>  findPage(Conditions conditions);
     int foodCount();
     void update(foods food);
     void delete(Integer id);

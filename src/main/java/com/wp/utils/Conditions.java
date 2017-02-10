@@ -1,5 +1,7 @@
 package com.wp.utils;
 
+import java.util.List;
+
 /**
  * @Description 用于条件和分页查询的辅助类
  * Created by zhang on 2017/2/9.
@@ -7,9 +9,18 @@ package com.wp.utils;
 public class Conditions {
     private Integer page;
     private Integer pageCount;
+    List<String> condition;
     private String condition1;
     private String condition2;
     private String condition3;
+
+    public List<String> getCondition() {
+        return condition;
+    }
+
+    public void setCondition(List<String> condition) {
+        this.condition = condition;
+    }
 
     public Integer getPage() {
         return page;

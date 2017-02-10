@@ -20,6 +20,7 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
@@ -116,12 +117,12 @@ public class ServiceController {
             conditions.setPage(1);
         }
         int currentPage=conditions.getPage();
+        conditions.setPage(currentPage-1);
         //求总页数的公式
         int pageCount=(serviceService.foodCount()+20-1)/20;
-        List<foods> list=serviceService.findPage(currentPage-1);
-        conditions.setPageCount(pageCount);
+        List<foods> list=serviceService.findPage(conditions);
+        //conditions.setPageCount(pageCount);
         modelMap.addAttribute("list",list);
-        int a=5;
         modelMap.addAttribute("currentPage",currentPage);
         modelMap.addAttribute("pageCount",pageCount);
         modelMap.addAttribute("url","/service/list");
@@ -161,6 +162,12 @@ public class ServiceController {
         modelMap.put("list",list);
         return "service/show";
     }
+
+    @RequestMapping(value = "/orderList",method = RequestMethod.GET)
+    public String toOrderList(){
+        return "service/orderList";
+    }
+
 
     @RequestMapping(value = "/getTable",method = RequestMethod.POST)
     public String getTable(String getTable, HttpServletResponse response) throws IOException {

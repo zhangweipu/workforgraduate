@@ -3,7 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <link rel="shortcut icon" href="/static/image/bushuohua.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../static/image/bushuohua.ico" type="image/x-icon"/>
     <title>fuwu</title>
     <!-- Bootstrap core CSS -->
     <link href="/static/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +19,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">点餐后台</a>
+            <a class="navbar-brand" href="#">餐厅后台</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -57,5 +57,6 @@
 <script src="/static/bootstrap3/js/bootstrap.min.js"></script>
 <script src="/static/bootstrap3/js/json2.js"></script>
 <script  src="/static/js/service.js"></script>
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
 </body>
 </html>

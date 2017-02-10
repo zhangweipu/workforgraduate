@@ -2,6 +2,7 @@ package com.wp.food.dao;
 
 
 import com.wp.food.entity.foods;
+import com.wp.utils.Conditions;
 import com.wp.utils.MyBatis;
 
 import java.util.List;
@@ -24,7 +25,7 @@ public interface foodsMapper {
 
     List<foods> findAll();
 
-    List<foods> selectLimit(int page);
+    List<foods> selectLimit(Conditions conditions);
 
     int count();
 
