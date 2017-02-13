@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wp.order.dao.OrderIdMapper">
+  <resultMap id="BaseResult" type="com.wp.order.entity.Order">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="seat_mark" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="food_name" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="food_type" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="food_size" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="Food_stutas" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="la" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="food_price" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    </constructor>
+  </resultMap>
+  <resultMap id="BaseResultMap" type="com.wp.order.entity.OrderId">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="time" javaType="java.util.Date" jdbcType="DATE" />
+      <arg column="stat" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="money" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg resultMap="BaseResult" javaType="java.util.List"/>
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, time, stat, money
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_orderid
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_orderid
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.wp.order.entity.OrderId">
+    insert into t_orderid (id, time, stat, 
+      money)
+    values (#{id,jdbcType=INTEGER}, #{time,jdbcType=DATE}, #{stat,jdbcType=VARCHAR}, 
+      #{money,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.wp.order.entity.OrderId">
+    insert into t_orderid
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="time != null">
+        time,
+      </if>
+      <if test="stat != null">
+        stat,
+      </if>
+      <if test="money != null">
+        money,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        #{time,jdbcType=DATE},
+      </if>
+      <if test="stat != null">
+        #{stat,jdbcType=VARCHAR},
+      </if>
+      <if test="money != null">
+        #{money,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wp.order.entity.OrderId">
+    update t_orderid
+    <set>
+      <if test="time != null">
+        time = #{time,jdbcType=DATE},
+      </if>
+      <if test="stat != null">
+        stat = #{stat,jdbcType=VARCHAR},
+      </if>
+      <if test="money != null">
+        money = #{money,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wp.order.entity.OrderId">
+    update t_orderid
+    set time = #{time,jdbcType=DATE},
+      stat = #{stat,jdbcType=VARCHAR},
+      money = #{money,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -4,7 +4,10 @@ jQuery(function($) {
         var href=$(this).attr("href");
         $("#main").load(href);
     })
-      $(".sub").on("click",function () {
-          
-      })
+
+    $("#findBy").on("click",function () {
+        var val=$("#findBy").val();
+        var url="/service/list?condition1="+val;
+        $("#main").load(url);
+    })
 })

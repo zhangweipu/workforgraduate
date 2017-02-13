@@ -2,12 +2,12 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
  <%@taglib prefix="FUNC" uri="http://myel.com" %>
 <%--<script src="/static/bootstrap3/js/jquery-1.11.2.min.js"></script>--%>
-    <%--<script src="/static/js/service.js"></script>--%>
-    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <script src="/static/js/service.js"></script>
+    <script src="/static/js/angular.min.js"></script>
     <script src="/static/bootstrap3/js/bootstrap.min.js"></script>
-<div ng-app="">
-<input type="text" ng-model="condition1" placeholder="请输入菜名"/>
-    <a class="btn" href="${url}?condition1={{condition1}}">查找</a><br>
+<div>
+<input type="text" id="find" placeholder="请输入菜名"/>
+    <a id="findBy" href="#">查找</a><br>
 </div>
 <c:forEach begin="0" end="${FUNC:myFunc().size()}" items="${FUNC:myFunc()}" var="ls" >
     <a class="btn" href="${url}?condition=${ls}">${ls}</a>

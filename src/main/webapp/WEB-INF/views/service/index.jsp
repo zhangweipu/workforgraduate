@@ -57,6 +57,6 @@
 <script src="/static/bootstrap3/js/bootstrap.min.js"></script>
 <script src="/static/bootstrap3/js/json2.js"></script>
 <script  src="/static/js/service.js"></script>
-<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script src="/static/js/angular.min.js"></script>
 </body>
 </html>

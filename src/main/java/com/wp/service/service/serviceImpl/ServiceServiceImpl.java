@@ -4,6 +4,7 @@ import com.wp.food.dao.foodsMapper;
 import com.wp.food.entity.foods;
 import com.wp.order.dao.OrderMapper;
 import com.wp.order.entity.Order;
+import com.wp.order.entity.OrderId;
 import com.wp.service.service.ServiceService;
 import com.wp.utils.Conditions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,6 +64,11 @@ public class ServiceServiceImpl implements ServiceService{
     }
 
     public List<Order> findBySeatOrTime() {
+        return null;
+    }
+
+    @Override
+    public List<OrderId> fingAllorderId() {
         return null;
     }
 }
