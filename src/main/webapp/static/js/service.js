@@ -6,7 +6,7 @@ jQuery(function($) {
     })
 
     $("#findBy").on("click",function () {
-        var val=$("#findBy").val();
+        var val=$("#find").val();
         var url="/service/list?condition1="+val;
         $("#main").load(url);
     })
