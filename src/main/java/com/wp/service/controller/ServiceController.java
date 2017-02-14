@@ -2,6 +2,7 @@ package com.wp.service.controller;
 
 import com.wp.food.entity.foods;
 import com.wp.order.entity.Order;
+import com.wp.order.entity.OrderId;
 import com.wp.service.dao.TableTools;
 import com.wp.service.entity.Table;
 import com.wp.service.service.ServiceService;
@@ -158,9 +159,9 @@ public class ServiceController {
 
     @RequestMapping(value = "/showOrder",method = RequestMethod.GET)
     public String showOrder(ModelMap modelMap){
-        List<Order> list=serviceService.findAllOrder();
+        List<OrderId> list=serviceService.findAllorderId();
         modelMap.put("list",list);
-        return "service/show";
+        return "service/orderlist";
     }
 
     @RequestMapping(value = "/orderList",method = RequestMethod.GET)

@@ -32,8 +32,11 @@
         <include refid="Base_Column_List"/>
         from t_food
         <where>
+            <if test="condition1!='' and condition1!=null">
+                condition1=#{condition1}
+            </if>
                 <if test="condition != null">
-                type IN
+               AND type IN
                 <foreach collection="condition" item="c" open="(" close=")" index="index" separator=",">
                     #{c}
                 </foreach>

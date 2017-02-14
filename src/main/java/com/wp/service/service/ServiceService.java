@@ -21,5 +21,5 @@ public interface ServiceService {
     void delete(Integer id);
     List<Order> findAllOrder();
     List<Order> findBySeatOrTime();
-    List<OrderId> fingAllorderId();
+    List<OrderId> findAllorderId();
 }

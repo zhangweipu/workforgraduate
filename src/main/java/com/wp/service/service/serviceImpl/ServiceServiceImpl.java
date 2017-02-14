@@ -2,6 +2,7 @@ package com.wp.service.service.serviceImpl;
 
 import com.wp.food.dao.foodsMapper;
 import com.wp.food.entity.foods;
+import com.wp.order.dao.OrderIdMapper;
 import com.wp.order.dao.OrderMapper;
 import com.wp.order.entity.Order;
 import com.wp.order.entity.OrderId;
@@ -23,6 +24,9 @@ public class ServiceServiceImpl implements ServiceService{
 
     @Autowired
     private OrderMapper orderMapper;
+
+    @Autowired
+    private OrderIdMapper orderIdMapper;
 
     public void add(foods food) {
         foodsMapper.insert(food);
@@ -68,7 +72,7 @@ public class ServiceServiceImpl implements ServiceService{
     }
 
     @Override
-    public List<OrderId> fingAllorderId() {
-        return null;
+    public List<OrderId> findAllorderId() {
+        return orderIdMapper.selectAll();
     }
 }

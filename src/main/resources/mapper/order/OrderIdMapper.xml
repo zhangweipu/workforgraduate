@@ -20,7 +20,6 @@
       <arg column="time" javaType="java.util.Date" jdbcType="DATE" />
       <arg column="stat" javaType="java.lang.String" jdbcType="VARCHAR" />
       <arg column="money" javaType="java.lang.Integer" jdbcType="INTEGER" />
-      <arg resultMap="BaseResult" javaType="java.util.List"/>
     </constructor>
   </resultMap>
   <sql id="Base_Column_List">
@@ -31,6 +30,13 @@
     <include refid="Base_Column_List" />
     from t_orderid
     where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    SELECT
+    id, time, stat, money as sum()
+    FROM t_orderid,t_order
+    where
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from t_orderid

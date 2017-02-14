@@ -6,15 +6,6 @@
     <title></title>
 </head>
 <body>
-<table>
-    <thead></thead>
-    <tbody>
-    <c:forEach items="${list}" var="ls">
-    <tr><td>${ls.seatMark}</td>
-    <td><fmt:formatDate value="${ls.time}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate></td>
-    <td>${ls.foodPrice}</td></tr>
-    </c:forEach>
-    </tbody>
-</table>
+
 </body>
 </html>
