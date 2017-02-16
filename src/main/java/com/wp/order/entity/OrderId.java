@@ -15,12 +15,11 @@ public class OrderId {
     List<Order> orders;
 
 
-    public OrderId(Integer id, Date time, String stat, Integer money, List<Order> orders) {
+    public OrderId(Integer id, Date time, String stat, Integer money) {
         this.id = id;
         this.time = time;
         this.stat = stat;
         this.money = money;
-        this.orders = orders;
     }
 
     public OrderId() {

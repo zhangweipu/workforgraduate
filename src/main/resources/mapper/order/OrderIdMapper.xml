@@ -33,10 +33,9 @@
   </select>
 
   <select id="selectAll" resultMap="BaseResultMap">
-    SELECT
-    id, time, stat, money as sum()
-    FROM t_orderid,t_order
-    where
+ select o.id,o.time,o.stat,sum(t.food_price) as money
+ from t_order t,t_orderid o
+ group by t.orderid having o.id=t.orderid
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from t_orderid

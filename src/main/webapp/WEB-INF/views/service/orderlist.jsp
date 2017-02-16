@@ -1,11 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: zhang
-  Date: 2017/2/10
-  Time: 17:06
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>详细订单</title>
@@ -23,9 +18,9 @@
     </thead>
     <tbody>
     <c:forEach items="${list}" var="ls">
-        <tr><td>${ls.seatMark}</td>
+        <tr><td>${ls.id}</td>
             <td><fmt:formatDate value="${ls.time}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate></td>
-            <td>${ls.foodPrice}</td></tr>
+            <td>${ls.id}</td></tr>
     </c:forEach>
     </tbody>
 </table>
