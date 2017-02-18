@@ -22,4 +22,5 @@ public interface ServiceService {
     List<Order> findAllOrder();
     List<Order> findBySeatOrTime();
     List<OrderId> findAllorderId();
+    List<Order> findOrderDetail(Integer id);
 }

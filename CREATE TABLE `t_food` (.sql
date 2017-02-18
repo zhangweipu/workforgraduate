@@ -32,5 +32,6 @@ CREATE TABLE `t_order` (
   `time` datetime DEFAULT NULL,
   `la` varchar(5) DEFAULT NULL,
   `food_price` int(11) DEFAULT NULL,
+  `orderid` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8

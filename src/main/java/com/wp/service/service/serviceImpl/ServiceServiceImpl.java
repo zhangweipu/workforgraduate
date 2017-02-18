@@ -75,4 +75,9 @@ public class ServiceServiceImpl implements ServiceService{
     public List<OrderId> findAllorderId() {
         return orderIdMapper.selectAll();
     }
+
+    @Override
+    public List<Order> findOrderDetail(Integer id) {
+        return orderMapper.findOrder(id);
+    }
 }

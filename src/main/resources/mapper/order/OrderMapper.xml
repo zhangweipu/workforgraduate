@@ -12,6 +12,7 @@
       <arg column="time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
       <arg column="la" javaType="java.lang.String" jdbcType="VARCHAR" />
       <arg column="food_price" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="orderid" javaType="java.lang.Integer" jdbcType="INTEGER"/>
     </constructor>
   </resultMap>
   <sql id="Base_Column_List">
@@ -30,11 +31,12 @@
   <insert id="insert" parameterType="com.wp.order.entity.Order">
     insert into t_order (id, seat_mark, food_name, 
       food_type, food_size, Food_stutas, 
-      time, la, food_price
+      time, la, food_price,orderid
       )
     values (#{id,jdbcType=INTEGER}, #{seatMark,jdbcType=VARCHAR}, #{foodName,jdbcType=VARCHAR}, 
       #{foodType,jdbcType=VARCHAR}, #{foodSize,jdbcType=INTEGER}, #{foodStutas,jdbcType=INTEGER}, 
-      #{time,jdbcType=TIMESTAMP}, #{la,jdbcType=VARCHAR}, #{foodPrice,jdbcType=INTEGER}
+      #{time,jdbcType=TIMESTAMP}, #{la,jdbcType=VARCHAR}, #{foodPrice,jdbcType=INTEGER},
+      #{orderid,jdbcType=INTEGER}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.wp.order.entity.Order">
@@ -146,6 +148,10 @@
 
   <select id="findAllOrder" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select * from t_order
+  </select>
+
+  <select id="findOrder" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select * from t_order where orderid=#{0}
   </select>
 
   <delete id="deleteBySeat" parameterType="java.lang.Integer">

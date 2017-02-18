@@ -1,5 +1,6 @@
 package com.wp.order.dao;
 
+import com.sun.tools.corba.se.idl.constExpr.Or;
 import com.wp.order.entity.Order;
 import com.wp.utils.MyBatis;
 
@@ -24,4 +25,6 @@ public interface OrderMapper {
     void deleteBySeat(Integer tab);//删除订单
 
     List<Order> findAllOrder();
+
+    List<Order> findOrder(Integer id);
 }

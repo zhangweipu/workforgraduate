@@ -169,6 +169,12 @@ public class ServiceController {
         return "service/orderList";
     }
 
+    @RequestMapping("/orderdetail")
+    public String orderDetial(String id,Model model){
+        List<Order> list=serviceService.findOrderDetail(Integer.valueOf(id));
+        model.addAttribute("list",list);
+        return "service/orderdetail";
+    }
 
     @RequestMapping(value = "/getTable",method = RequestMethod.POST)
     public String getTable(String getTable, HttpServletResponse response) throws IOException {
