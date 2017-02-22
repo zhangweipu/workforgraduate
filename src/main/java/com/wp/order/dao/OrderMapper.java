@@ -27,4 +27,6 @@ public interface OrderMapper {
     List<Order> findAllOrder();
 
     List<Order> findOrder(Integer id);
+
+    List<Order> search(int a,boolean b);
 }

@@ -21,21 +21,7 @@ public class Order {
 
     private Integer foodPrice;
 
-    public Order(Integer id, String seatMark, String foodName, String foodType, Integer foodSize, Integer foodStutas, Date time, String la, Integer foodPrice) {
-        this.id = id;
-        this.seatMark = seatMark;
-        this.foodName = foodName;
-        this.foodType = foodType;
-        this.foodSize = foodSize;
-        this.foodStutas = foodStutas;
-        this.time = time;
-        this.la = la;
-        this.foodPrice = foodPrice;
-    }
-
-    public Order() {
-        super();
-    }
+    private Integer orderId;
 
     public Integer getId() {
         return id;
@@ -50,7 +36,7 @@ public class Order {
     }
 
     public void setSeatMark(String seatMark) {
-        this.seatMark = seatMark == null ? null : seatMark.trim();
+        this.seatMark = seatMark;
     }
 
     public String getFoodName() {
@@ -58,7 +44,7 @@ public class Order {
     }
 
     public void setFoodName(String foodName) {
-        this.foodName = foodName == null ? null : foodName.trim();
+        this.foodName = foodName;
     }
 
     public String getFoodType() {
@@ -66,7 +52,7 @@ public class Order {
     }
 
     public void setFoodType(String foodType) {
-        this.foodType = foodType == null ? null : foodType.trim();
+        this.foodType = foodType;
     }
 
     public Integer getFoodSize() {
@@ -98,7 +84,7 @@ public class Order {
     }
 
     public void setLa(String la) {
-        this.la = la == null ? null : la.trim();
+        this.la = la;
     }
 
     public Integer getFoodPrice() {
@@ -107,5 +93,28 @@ public class Order {
 
     public void setFoodPrice(Integer foodPrice) {
         this.foodPrice = foodPrice;
+    }
+
+    public Integer getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(Integer orderId) {
+        this.orderId = orderId;
+    }
+
+    public Order(){}
+
+    public Order(Integer id, String seatMark, String foodName, String foodType, Integer foodSize, Integer foodStutas, Date time, String la, Integer foodPrice, Integer orderId) {
+        this.id = id;
+        this.seatMark = seatMark;
+        this.foodName = foodName;
+        this.foodType = foodType;
+        this.foodSize = foodSize;
+        this.foodStutas = foodStutas;
+        this.time = time;
+        this.la = la;
+        this.foodPrice = foodPrice;
+        this.orderId = orderId;
     }
 }
