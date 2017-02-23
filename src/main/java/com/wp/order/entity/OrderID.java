@@ -1,9 +1,8 @@
 package com.wp.order.entity;
 
 import java.util.Date;
-import java.util.List;
 
-public class OrderId {
+public class OrderID {
     private Integer id;
 
     private Date time;
@@ -12,30 +11,22 @@ public class OrderId {
 
     private Integer money;
 
-    List<Order> orders;
+    private String seat;
 
-
-    public OrderId(Integer id, Date time, String stat, Integer money) {
+    public OrderID(Integer id, Date time, String stat, Integer money, String seat) {
         this.id = id;
         this.time = time;
         this.stat = stat;
         this.money = money;
+        this.seat = seat;
     }
 
-    public OrderId() {
+    public OrderID() {
         super();
     }
 
     public Integer getId() {
         return id;
-    }
-
-    public List<Order> getOrders() {
-        return orders;
-    }
-
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
     }
 
     public void setId(Integer id) {
@@ -64,5 +55,13 @@ public class OrderId {
 
     public void setMoney(Integer money) {
         this.money = money;
+    }
+
+    public String getSeat() {
+        return seat;
+    }
+
+    public void setSeat(String seat) {
+        this.seat = seat == null ? null : seat.trim();
     }
 }

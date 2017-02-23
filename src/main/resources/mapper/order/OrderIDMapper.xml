@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wp.order.dao.OrderIdMapper">
-  <resultMap id="BaseResultMap" type="com.wp.food.entity.OrderId">
+  <resultMap id="BaseResultMap" type="com.wp.order.entity.OrderID">
     <constructor>
       <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="time" javaType="java.util.Date" jdbcType="DATE" />
@@ -19,17 +19,22 @@
     from t_orderid
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select o.id,o.time,o.stat,sum(t.food_price) as money,o.seat
+    from t_order t,t_orderid o
+    group by t.orderid having o.id=t.orderid
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from t_orderid
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.wp.food.entity.OrderId">
+  <insert id="insert" parameterType="com.wp.order.entity.OrderID">
     insert into t_orderid (id, time, stat, 
       money, seat)
     values (#{id,jdbcType=INTEGER}, #{time,jdbcType=DATE}, #{stat,jdbcType=VARCHAR}, 
       #{money,jdbcType=INTEGER}, #{seat,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.wp.food.entity.OrderId">
+  <insert id="insertSelective" parameterType="com.wp.order.entity.OrderID">
     insert into t_orderid
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -66,7 +71,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.wp.food.entity.OrderId">
+  <update id="updateByPrimaryKeySelective" parameterType="com.wp.order.entity.OrderID">
     update t_orderid
     <set>
       <if test="time != null">
@@ -84,7 +89,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.wp.food.entity.OrderId">
+  <update id="updateByPrimaryKey" parameterType="com.wp.order.entity.OrderID">
     update t_orderid
     set time = #{time,jdbcType=DATE},
       stat = #{stat,jdbcType=VARCHAR},
