@@ -4,11 +4,11 @@
   <resultMap id="BaseResultMap" type="com.wp.order.entity.Order">
     <constructor>
       <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
-      <arg column="seat_mark" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="food_id" javaType="java.lang.String" jdbcType="VARCHAR" />
       <arg column="food_name" javaType="java.lang.String" jdbcType="VARCHAR" />
       <arg column="food_type" javaType="java.lang.String" jdbcType="VARCHAR" />
       <arg column="food_size" javaType="java.lang.Integer" jdbcType="INTEGER" />
-      <arg column="Food_stutas" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="num" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
       <arg column="la" javaType="java.lang.String" jdbcType="VARCHAR" />
       <arg column="food_price" javaType="java.lang.Integer" jdbcType="INTEGER" />
@@ -16,7 +16,7 @@
     </constructor>
   </resultMap>
   <sql id="Base_Column_List">
-    id, seat_mark, food_name, food_type, food_size, Food_stutas, time, la, food_price
+    id, food_id, food_name, food_type, food_size, num, time, la, food_price
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -29,12 +29,12 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.wp.order.entity.Order">
-    insert into t_order (id, seat_mark, food_name, 
-      food_type, food_size, Food_stutas, 
+    insert into t_order (id, food_id, food_name, 
+      food_type, food_size, num, 
       time, la, food_price,orderid
       )
-    values (#{id,jdbcType=INTEGER}, #{seatMark,jdbcType=VARCHAR}, #{foodName,jdbcType=VARCHAR}, 
-      #{foodType,jdbcType=VARCHAR}, #{foodSize,jdbcType=INTEGER}, #{foodStutas,jdbcType=INTEGER}, 
+    values (#{id,jdbcType=INTEGER}, #{foodID,jdbcType=VARCHAR}, #{foodName,jdbcType=VARCHAR}, 
+      #{foodType,jdbcType=VARCHAR}, #{foodSize,jdbcType=INTEGER}, #{num,jdbcType=INTEGER}, 
       #{time,jdbcType=TIMESTAMP}, #{la,jdbcType=VARCHAR}, #{foodPrice,jdbcType=INTEGER},
       #{orderid,jdbcType=INTEGER}
       )
@@ -45,8 +45,8 @@
       <if test="id != null">
         id,
       </if>
-      <if test="seatMark != null">
-        seat_mark,
+      <if test="foodID != null">
+        food_id,
       </if>
       <if test="foodName != null">
         food_name,
@@ -57,8 +57,8 @@
       <if test="foodSize != null">
         food_size,
       </if>
-      <if test="foodStutas != null">
-        Food_stutas,
+      <if test="num != null">
+        num,
       </if>
       <if test="time != null">
         time,
@@ -74,8 +74,8 @@
       <if test="id != null">
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="seatMark != null">
-        #{seatMark,jdbcType=VARCHAR},
+      <if test="foodID != null">
+        #{foodID,jdbcType=VARCHAR},
       </if>
       <if test="foodName != null">
         #{foodName,jdbcType=VARCHAR},
@@ -86,8 +86,8 @@
       <if test="foodSize != null">
         #{foodSize,jdbcType=INTEGER},
       </if>
-      <if test="foodStutas != null">
-        #{foodStutas,jdbcType=INTEGER},
+      <if test="num != null">
+        #{num,jdbcType=INTEGER},
       </if>
       <if test="time != null">
         #{time,jdbcType=TIMESTAMP},
@@ -103,8 +103,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.wp.order.entity.Order">
     update t_order
     <set>
-      <if test="seatMark != null">
-        seat_mark = #{seatMark,jdbcType=VARCHAR},
+      <if test="foodID != null">
+        food_id = #{foodID,jdbcType=VARCHAR},
       </if>
       <if test="foodName != null">
         food_name = #{foodName,jdbcType=VARCHAR},
@@ -115,8 +115,8 @@
       <if test="foodSize != null">
         food_size = #{foodSize,jdbcType=INTEGER},
       </if>
-      <if test="foodStutas != null">
-        Food_stutas = #{foodStutas,jdbcType=INTEGER},
+      <if test="num != null">
+        num = #{num,jdbcType=INTEGER},
       </if>
       <if test="time != null">
         time = #{time,jdbcType=TIMESTAMP},
@@ -132,18 +132,18 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.wp.order.entity.Order">
     update t_order
-    set seat_mark = #{seatMark,jdbcType=VARCHAR},
+    set food_id = #{foodID,jdbcType=VARCHAR},
       food_name = #{foodName,jdbcType=VARCHAR},
       food_type = #{foodType,jdbcType=VARCHAR},
       food_size = #{foodSize,jdbcType=INTEGER},
-      Food_stutas = #{foodStutas,jdbcType=INTEGER},
+      num = #{num,jdbcType=INTEGER},
       time = #{time,jdbcType=TIMESTAMP},
       la = #{la,jdbcType=VARCHAR},
       food_price = #{foodPrice,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
   <select id="findBySeat" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select * from t_order where seat_mark=#{tab}
+    select * from t_order where food_id=#{tab}
   </select>
 
   <select id="findAllOrder" parameterType="java.lang.Integer" resultMap="BaseResultMap">
@@ -155,7 +155,7 @@
   </select>
 
   <delete id="deleteBySeat" parameterType="java.lang.Integer">
-    delete from t_order where seat_mark=#{tab}
+    delete from t_order where food_id=#{tab}
   </delete>
 
   <select id="search" parameterType="java.lang.Boolean" resultMap="BaseResultMap">

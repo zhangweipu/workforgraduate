@@ -5,7 +5,7 @@ import java.util.Date;
 public class Order {
     private Integer id;
 
-    private String seatMark;
+    private Integer foodID;
 
     private String foodName;
 
@@ -13,7 +13,7 @@ public class Order {
 
     private Integer foodSize;
 
-    private Integer foodStutas;
+    private Integer num;
 
     private Date time;
 
@@ -31,12 +31,12 @@ public class Order {
         this.id = id;
     }
 
-    public String getSeatMark() {
-        return seatMark;
+    public Integer getfoodID() {
+        return foodID;
     }
 
-    public void setSeatMark(String seatMark) {
-        this.seatMark = seatMark;
+    public void setfoodID(Integer foodID) {
+        this.foodID = foodID;
     }
 
     public String getFoodName() {
@@ -63,12 +63,12 @@ public class Order {
         this.foodSize = foodSize;
     }
 
-    public Integer getFoodStutas() {
-        return foodStutas;
+    public Integer getnum() {
+        return num;
     }
 
-    public void setFoodStutas(Integer foodStutas) {
-        this.foodStutas = foodStutas;
+    public void setnum(Integer num) {
+        this.num = num;
     }
 
     public Date getTime() {
@@ -105,13 +105,13 @@ public class Order {
 
     public Order(){}
 
-    public Order(Integer id, String seatMark, String foodName, String foodType, Integer foodSize, Integer foodStutas, Date time, String la, Integer foodPrice, Integer orderId) {
+    public Order(Integer id, Integer foodID, String foodName, String foodType, Integer foodSize, Integer num, Date time, String la, Integer foodPrice, Integer orderId) {
         this.id = id;
-        this.seatMark = seatMark;
+        this.foodID = foodID;
         this.foodName = foodName;
         this.foodType = foodType;
         this.foodSize = foodSize;
-        this.foodStutas = foodStutas;
+        this.num = num;
         this.time = time;
         this.la = la;
         this.foodPrice = foodPrice;
