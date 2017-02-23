@@ -2,14 +2,13 @@ package com.wp.service.controller;
 
 import com.wp.food.entity.foods;
 import com.wp.order.entity.Order;
-import com.wp.order.entity.OrderId;
+import com.wp.order.entity.OrderID;
 import com.wp.service.dao.TableTools;
 import com.wp.service.entity.Table;
 import com.wp.service.service.ServiceService;
 import com.wp.utils.Conditions;
 import com.wp.utils.ImportMenu;
 import net.sf.json.JSONObject;
-import org.apache.avalon.framework.logger.Logger;
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -159,7 +158,7 @@ public class ServiceController {
 
     @RequestMapping(value = "/showOrder",method = RequestMethod.GET)
     public String showOrder(ModelMap modelMap){
-        List<OrderId> list=serviceService.findAllorderId();
+        List<OrderID> list=serviceService.findAllorderId();
         modelMap.put("list",list);
         return "service/orderlist";
     }

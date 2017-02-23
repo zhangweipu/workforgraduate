@@ -2,7 +2,7 @@ package com.wp.service.service;
 
 import com.wp.food.entity.foods;
 import com.wp.order.entity.Order;
-import com.wp.order.entity.OrderId;
+import com.wp.order.entity.OrderID;
 import com.wp.utils.Conditions;
 
 import java.util.List;
@@ -21,6 +21,6 @@ public interface ServiceService {
     void delete(Integer id);
     List<Order> findAllOrder();
     List<Order> findBySeatOrTime();
-    List<OrderId> findAllorderId();
+    List<OrderID> findAllorderId();
     List<Order> findOrderDetail(Integer id);
 }

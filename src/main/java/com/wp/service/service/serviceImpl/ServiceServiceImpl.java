@@ -5,7 +5,7 @@ import com.wp.food.entity.foods;
 import com.wp.order.dao.OrderIdMapper;
 import com.wp.order.dao.OrderMapper;
 import com.wp.order.entity.Order;
-import com.wp.order.entity.OrderId;
+import com.wp.order.entity.OrderID;
 import com.wp.service.service.ServiceService;
 import com.wp.utils.Conditions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,7 +72,7 @@ public class ServiceServiceImpl implements ServiceService{
     }
 
     @Override
-    public List<OrderId> findAllorderId() {
+    public List<OrderID> findAllorderId() {
         return orderIdMapper.selectAll();
     }
 
