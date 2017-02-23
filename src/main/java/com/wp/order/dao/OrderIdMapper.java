@@ -1,10 +1,7 @@
 package com.wp.order.dao;
 
-import com.wp.order.entity.OrderId;
-import com.wp.utils.MyBatis;
+import com.wp.food.entity.OrderId;
 
-import java.util.List;
-@MyBatis
 public interface OrderIdMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -13,8 +10,6 @@ public interface OrderIdMapper {
     int insertSelective(OrderId record);
 
     OrderId selectByPrimaryKey(Integer id);
-
-    List<OrderId> selectAll();
 
     int updateByPrimaryKeySelective(OrderId record);
 
