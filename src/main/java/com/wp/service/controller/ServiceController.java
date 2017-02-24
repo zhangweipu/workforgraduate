@@ -62,7 +62,7 @@ public class ServiceController {
 
     @RequestMapping(value = "/add",method = RequestMethod.GET)
     public String add(){
-        return "service/add";
+        return "service/editmenu/add";
     }
 
     @RequestMapping(value = "/add",method = RequestMethod.POST)
@@ -87,7 +87,7 @@ public class ServiceController {
     }
     @RequestMapping(value = "/addmany",method = RequestMethod.GET)
     public String toaddmany(){
-        return "service/addMany";
+        return "service/editmenu/addMany";
     }
 
     @RequestMapping(value = "/addmany",method = RequestMethod.POST)
@@ -126,14 +126,14 @@ public class ServiceController {
         modelMap.addAttribute("currentPage",currentPage);
         modelMap.addAttribute("pageCount",pageCount);
         modelMap.addAttribute("url","/service/list");
-        return "service/list";
+        return "service/editmenu/list";
     }
 
     @RequestMapping(value = "/update",method = RequestMethod.GET)
     public String update(Integer id, Model model){
         foods food=serviceService.findById(id);
         model.addAttribute("food",food);
-        return "service/update";
+        return "service/editmenu/update";
     }
 
     @RequestMapping(value = "/update",method = RequestMethod.POST)
@@ -160,19 +160,19 @@ public class ServiceController {
     public String showOrder(ModelMap modelMap){
         List<OrderID> list=serviceService.findAllorderId();
         modelMap.put("list",list);
-        return "service/orderlist";
+        return "service/findorder/orderlist";
     }
 
     @RequestMapping(value = "/orderList",method = RequestMethod.GET)
     public String toOrderList(){
-        return "service/orderList";
+        return "service/findorder/orderlist";
     }
 
     @RequestMapping("/orderdetail")
     public String orderDetial(String id,Model model){
         List<Order> list=serviceService.findOrderDetail(Integer.valueOf(id));
         model.addAttribute("list",list);
-        return "service/orderdetail";
+        return "service/findorder/orderdetail";
     }
 
     @RequestMapping(value = "/getTable",method = RequestMethod.POST)

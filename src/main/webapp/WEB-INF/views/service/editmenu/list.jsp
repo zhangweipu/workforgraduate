@@ -40,7 +40,7 @@
     </tbody>
 </table>
 
-<%@include file="../common/page.jsp"%>
+<%@include file="../../common/page.jsp"%>
 <script type="text/javascript">
 
 </script>

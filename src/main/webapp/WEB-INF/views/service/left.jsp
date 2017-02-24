@@ -4,7 +4,7 @@
             <div class="panel-heading" role="tab" id="headingOne">
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion"  href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                     添加菜单
+                     菜单管理
                     </a>
                 </h4>
             </div>
@@ -13,6 +13,7 @@
                     <ul  class="nav nav-sidebar">
                         <li ><a href="/service/add" class="btn " role="button">添加一个</a></li>
                         <li ><a href="/service/addmany" class="btn " role="button">批量添加</a></li>
+                        <li ><a href="/service/list" class="btn " role="button">菜单列表</a></li>
                     </ul>
                 </div> 
             </div>
@@ -22,7 +23,7 @@
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse"
                        data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        编辑菜单
+                        订单管理
                     </a>
                 </h4>
             </div>
@@ -30,9 +31,9 @@
                 <div class="panel-body">
                     <ul class="nav nav-sidebar">
                         <%--<li ><a href="/service/add" class="btn " role="button">添加菜单</a></li>--%>
-
-                        <li ><a href="/service/list" class="btn " role="button">菜单列表</a></li>
-
+                            <%--<li ><a href="/service/add" class="btn " role="button">添加菜单</a></li>--%>
+                            <li ><a href="/service/showOrder" class="btn " role="button">订单记录</a></li>
+                            <li ><a href="#" class="btn " role="button">Primary link</a></li>
                     </ul>
                 </div>
             </div>
@@ -41,7 +42,7 @@
             <div class="panel-heading" role="tab" id="headingThree">
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        订单列表
+                        财务管理
                     </a>
                 </h4>
             </div>
@@ -49,8 +50,9 @@
                 <div class="panel-body">
                     <ul  class="nav nav-sidebar">
                         <%--<li ><a href="/service/add" class="btn " role="button">添加菜单</a></li>--%>
-                        <li ><a href="/service/showOrder" class="btn " role="button">订单列表</a></li>
-                        <li ><a href="#" class="btn " role="button">Primary link</a></li>
+                        <li ><a href="/service/showOrder" class="btn " role="button">支出账单</a></li>
+                        <li ><a href="#" class="btn " role="button">收入账单</a></li>
+                        <li ><a href="#" class="btn " role="button">财务分析</a></li>
 
                     </ul>
                 </div>

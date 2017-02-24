@@ -2,19 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wp.order.dao.OrderMapper">
   <resultMap id="BaseResultMap" type="com.wp.order.entity.Order">
-    <constructor>
-      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
-      <arg column="food_id" javaType="java.lang.String" jdbcType="VARCHAR" />
-      <arg column="food_name" javaType="java.lang.String" jdbcType="VARCHAR" />
-      <arg column="food_type" javaType="java.lang.String" jdbcType="VARCHAR" />
-      <arg column="food_size" javaType="java.lang.Integer" jdbcType="INTEGER" />
-      <arg column="num" javaType="java.lang.Integer" jdbcType="INTEGER" />
-      <arg column="time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
-      <arg column="la" javaType="java.lang.String" jdbcType="VARCHAR" />
-      <arg column="food_price" javaType="java.lang.Integer" jdbcType="INTEGER" />
-      <arg column="orderid" javaType="java.lang.Integer" jdbcType="INTEGER"/>
-    </constructor>
-  </resultMap>
+    <id property="id" column="id"/>
+    <result property="foodID" column="food_id"/>
+    <result property="foodName" column="food_name"/>
+    <result property="foodType" column="food_type"/>
+    <result property="foodSize" column="food_size"/>
+    <result property="num" column="num"/>
+    <result property="time" column="time"/>
+    <result property="la" column="la"/>
+    <result property="foodPrice" column="food_price"/>
+    <result property="orderId" column="orderid"/>
+   </resultMap>
+
   <sql id="Base_Column_List">
     id, food_id, food_name, food_type, food_size, num, time, la, food_price
   </sql>
@@ -151,7 +150,8 @@
   </select>
 
   <select id="findOrder" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select * from t_order where orderid=#{0}
+    select food_name,food_price,count(num) as num from t_order
+    where orderid=#{0} group by food_id
   </select>
 
   <delete id="deleteBySeat" parameterType="java.lang.Integer">

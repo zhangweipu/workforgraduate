@@ -44,23 +44,23 @@ public class ClientController {
 //        JSONArray jsonArray;
 //        jsonArray = new JSONArray("["+str+"]");
 //        String a=(String)jsonArray.getJSONObject(0).get("str");//这样操作json字符中的值太麻烦
-        String a=str.getStr();
-        String b=str.getTab();
-        System.out.print(b);
-        String []s=Pattern.compile(",").split(a);
-        List<Order> list=new ArrayList<Order>();
-        for(String l:s){
-            Order o=new Order();
-            foods food=foodsMapper.findSizePriceByName(l);
-            o.setFoodSize(food.getSize());
-            o.setFoodName(l);
-            o.setSeatMark(str.getTab());
-            o.setFoodStutas(1);//设置订单状态
-            o.setTime(new Date());
-            orderMapper.insert(o);//信息存储到数据库
-            list.add(o);
-        }
-        System.out.print(list.size());
+//        String a=str.getStr();
+//        String b=str.getTab();
+//        System.out.print(b);
+//        String []s=Pattern.compile(",").split(a);
+//        List<Order> list=new ArrayList<Order>();
+//        for(String l:s){
+//            Order o=new Order();
+//            foods food=foodsMapper.findSizePriceByName(l);
+//            o.setFoodSize(food.getSize());
+//            o.setFoodName(l);
+////            o.setSeatMark(str.getTab());
+////            o.setFoodStutas(1);//设置订单状态
+//            o.setTime(new Date());
+//            orderMapper.insert(o);//信息存储到数据库
+//            list.add(o);
+//        }
+//        System.out.print(list.size());
         return "client/lsOrder";//因为是使用的ajax的异步刷新所以没办法转发到指定页面
     }
 

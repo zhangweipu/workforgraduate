@@ -63,11 +63,11 @@ public class Order {
         this.foodSize = foodSize;
     }
 
-    public Integer getnum() {
+    public Integer getNum() {
         return num;
     }
 
-    public void setnum(Integer num) {
+    public void setNum(Integer num) {
         this.num = num;
     }
 
