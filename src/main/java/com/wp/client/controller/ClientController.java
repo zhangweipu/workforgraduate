@@ -1,6 +1,5 @@
 package com.wp.client.controller;
 
-import com.wp.client.entity.GetTable;
 import com.wp.client.entity.Str;
 import com.wp.food.dao.foodsMapper;
 import com.wp.food.entity.foods;
@@ -14,10 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.regex.Pattern;
 
 /**
  * Created by admin on 2016/10/5.
@@ -35,7 +31,7 @@ public class ClientController {
     @RequestMapping(value = "/index",method = RequestMethod.GET)
     public String index(ModelMap modelMap){
         //先整十张桌子
-        return "client/index";
+        return "client/main";
     }
 
     @RequestMapping(value = "/addOrder",method = RequestMethod.POST)
@@ -72,9 +68,8 @@ public class ClientController {
     }
 
     @RequestMapping(value = "/list",method = RequestMethod.GET)
-    public String list(@RequestParam Integer tab, ModelMap modelMap){
+    public String list(Integer tab, ModelMap modelMap){
         List<foods> foodsList=foodsMapper.findAll();
-        modelMap.put("tab",tab);
         modelMap.put("foodList",foodsList);
         modelMap.put("url","/static/images/");
         return "client/list";

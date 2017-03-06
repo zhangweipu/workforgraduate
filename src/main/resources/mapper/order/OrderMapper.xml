@@ -38,7 +38,8 @@
       #{orderid,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.wp.order.entity.Order">
+  <insert id="insertSelective" parameterType="com.wp.order.entity.Order" useGeneratedKeys="true"
+             keyProperty="id">
     insert into t_order
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">

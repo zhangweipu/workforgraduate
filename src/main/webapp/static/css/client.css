@@ -1,0 +1,40 @@
+.container {
+    margin-left: 100px;
+}
+
+.container h1 {
+
+}
+
+.row {
+    margin-left: 100px;
+}
+.footer{
+    width:90%;
+    margin-left:50px;
+
+}
+.header{
+    width:90%;
+    margin-left:50px;
+}
+.left{
+    width:40%;
+    margin-left:50px;
+    height: 800px;
+}
+.footer{
+    width:90%;
+}
+.main{
+    position:absolute;
+    margin-top:-400px;
+    margin-left:157px;
+    width:880px;
+    height:800PX;
+}
+.order{
+    background-color:aqua;
+    margin-left:160px;
+    margin-top:300px;
+}

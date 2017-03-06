@@ -1,6 +1,24 @@
+body{
+ //   background-image: url("../images/backpicture.jpg");
+    background-repeat: no-repeat;
+}
 table{
     table-layout:fixed;
 }
 table td{
     word-wrap:break-word;
+}
+.container{
+    //background-color:red;
+    height:900px;
+}
+.container .tab{
+   // background-color:black;
+    height:200px;
+    width:200px;
+    float:left;
+    border:2px solid;
+    border-radius:25px;
+    padding:20px;
+    margin:20px 20px 50px 60px;
 }

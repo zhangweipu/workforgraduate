@@ -1,47 +1,48 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
-<head>
-    <title>菜单列表</title>
-    <script src="/static/bootstrap3/js/bootstrap.js"></script>
-    <link rel="shortcut icon" href="/static/images/bushuohua.ico" type="image/x-icon"/>
-    <link href="/static/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
-    <script src="/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
-    <script src="/static/bootstrap3/js/json2.js"></script>
-
-</head>
-<body>
-<div class="container">
-<h1>菜单</h1>
-        <h1>${tab}</h1>
-    <div id="xie">
-        <li class="li" style="list-style-type: none">
-        </li>
-    </div>
-    <div class="row">
-    <table class="table">
+<script src="/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
+<div class="row">
     <c:forEach items="${foodList}" var="li">
-
-        <div class="col-md-4">
-
-           <div> <img  src="${url}${li.imageName}" width="100" height="100" title="张伟普本人"></div>
-           <div> <input name="id" value="${li.id}" hidden></div>
-            <div><input name="name" value="${li.name}" readonly><br/></div>
-            <div> <button class="tijiao" value="${li.name}">添加</button></div>
-            <%--<input class="tijiao" type="button" value="添加">--%>
-            <%--<input class="yichu" type="button" value="移除">--%>
-
+        <li class="fl rest-li">    <div class="j-rest-outer rest-outer transition hover">
+            <div data-title="${li.name}" data-price="${li.price}" data-poiid="${li.id}" class="restaurant" data-all="1" data-invoice="1" data-minpricelevel="5">
+                <a class="rest-atag" href="" target="_blank">
+                    <div class="top-content">
+                        <div class="preview">
+                            <img data-rid="" data-index="1" class="scroll-loading" src="${url}${li.imageName}" data-src="" data-max-width="208" data-max-height="156">
+                            <div class="rest-tags">
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                <span title="${li.name}">
+                        ${li.name}
+                </span>
+                            </div>
+                            <div class="rank clearfix">
+                  <span class="star-ranking fl">
+                    <span class="star-score" style="width: 67px"></span>
+                  </span>
+                                <span class="score-num fl">4.6分</span>
+                            </div>
+                            <div class="price">
+                                <span class="start-price">起送:${li.price}</span>
+                                <span class="send-price">
+                  配送费:￥5
+                </span>
+                                <span class="send-time"><i class="icon i-poi-timer"></i>
+                      45分钟
+                </span>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" class="addorder" data-poiid="" title="">
+                    添加
+                </a>
             </div>
-
-
+        </div>
+        </li>
     </c:forEach>
-    </table>
-    </div>
-
-</div>
-<div>
-    <button class="submi" value="${tab}">提交</button>
 </div>
 <script src="/static/js/client.js"></script>
-</body>
-</html>

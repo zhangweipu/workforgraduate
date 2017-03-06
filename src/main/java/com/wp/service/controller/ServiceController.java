@@ -45,7 +45,7 @@ public class ServiceController {
     private ServiceService serviceService;
     //文件上传路径
     //
-    public final static String path="D:/gitCode/workforgraduate/src/main/webapp/static/images/";
+    public final static String path="F:/workforgraduate/src/main/webapp/static/images/";
     @RequestMapping(value = "/index",method = RequestMethod.GET)
     public String index(HttpServletRequest request,ModelMap modelMap){
         List<foods> list=serviceService.findAll();
@@ -67,8 +67,7 @@ public class ServiceController {
 
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     public String add(foods food, MultipartFile icon, HttpServletRequest request,ModelMap modelMap){
-
-        String imageName=food.getName()+icon.getOriginalFilename();
+        String imageName=food.getName()+".jpg";
         //String path = request.getSession().getServletContext().getRealPath("images");//获取服务器文件夹地址 不能长期存储 服务重启就消失
 
         File image=new File(path,imageName);

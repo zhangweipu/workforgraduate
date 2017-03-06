@@ -47,7 +47,14 @@ $(function () {
     //      a="";
     //     $(".li").html(a);
     // })
+$(".addorder").on("click",function () {
+    $father=$(this).parent();
+    var name=$father.data("title");
+    var id=$father.data("id");
+    var price=$father.data("price")
+    alert(price);
+    $("#money").html(price);
 
-
+})
 
 })
