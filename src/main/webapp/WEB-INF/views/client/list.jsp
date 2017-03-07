@@ -4,7 +4,7 @@
 <div class="row">
     <c:forEach items="${foodList}" var="li">
         <li class="fl rest-li">    <div class="j-rest-outer rest-outer transition hover">
-            <div data-title="${li.name}" data-price="${li.price}" data-poiid="${li.id}" class="restaurant" data-all="1" data-invoice="1" data-minpricelevel="5">
+            <div data-title="${li.name}" data-price="${li.price}" data-id="${li.id}" class="restaurant" data-all="1" data-invoice="1" data-minpricelevel="5">
                 <a class="rest-atag" href="" target="_blank">
                     <div class="top-content">
                         <div class="preview">

@@ -51,9 +51,33 @@ $(".addorder").on("click",function () {
     $father=$(this).parent();
     var name=$father.data("title");
     var id=$father.data("id");
-    var price=$father.data("price")
-    alert(price);
-    $("#money").html(price);
+    var price=$father.data("price");
+    var $order=$('.order',parent.document);
+    var $nums=$('#nums',parent.document);
+    var a=$order.data("id");
+    var jsonObject={
+        "orderId":a,
+        "foodID":id,
+        "foodName":name,
+        "foodPrice":price
+    }
+    $.ajax({
+        url:'/order/addorder',
+        data:jsonObject,
+        dataType:'json',
+        type:'post',
+        success:function (data) {
+            var str="<div class='list cai'>菜</div><div class='list money'>钱</div>";
+            var a=data;
+            for(var i=0;i<a.length;i++){
+                str+='<div class="list name">'+a[i].foodName+'</div><div class="list num">'+a[i].num+'</div>';
+            }
+            $nums.html(str);
+        },
+        error:function (data) {
+            alert("error"+data);
+        }
+    });
 
 })
 

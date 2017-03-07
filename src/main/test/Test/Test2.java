@@ -2,6 +2,7 @@ package Test;
 
 import com.wp.client.service.ClientService;
 import com.wp.order.entity.Order;
+import net.sf.json.JSONObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,5 +35,17 @@ public class Test2 {
         o.setFoodPrice(5);
         o.setOrderId(3);
        int i= clientService.addOrder(o);
+    }
+
+    @Test
+    public void testJson(){
+        Order o=new Order();
+        o.setTime(new Date());
+        o.setfoodID(1);
+        o.setFoodPrice(5);
+        o.setOrderId(3);
+        JSONObject jso=JSONObject.fromObject(o);
+        System.out.println(jso.toString());
+        System.out.println(o.toString());
     }
 }

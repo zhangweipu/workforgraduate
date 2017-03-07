@@ -69,6 +69,9 @@
       <if test="foodPrice != null">
         food_price,
       </if>
+      <if test="orderId != null">
+       orderid,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -97,6 +100,9 @@
       </if>
       <if test="foodPrice != null">
         #{foodPrice,jdbcType=INTEGER},
+      </if>
+      <if test="orderId != null">
+        #{orderId,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -151,7 +157,7 @@
   </select>
 
   <select id="findOrder" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select food_name,food_price,count(num) as num from t_order
+    select food_name,food_price,count(food_id) as num from t_order
     where orderid=#{0} group by food_id
   </select>
 

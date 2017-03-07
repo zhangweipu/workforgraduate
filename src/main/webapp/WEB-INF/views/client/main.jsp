@@ -21,11 +21,10 @@
     <iframe frameborder="0" scrolling="auto"  class="iframe main"src="/client/list?tab=${tab}">
 
     </iframe>
-    <div class="menu order">
+    <div class="menu order" data-id="${id}">
         here
-        <div>订单数量：<span id="nums"> </span></div>
+        <div><span id="nums"> </span></div>
         <div>总价格：<span id="money"> </span></div>
-        <div><a href="#">查看订单</a> </div>
         <div><a href="#">提交订单</a> </div>
     </div>
 </div>

@@ -117,4 +117,20 @@ public class Order {
         this.foodPrice = foodPrice;
         this.orderId = orderId;
     }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", foodID=" + foodID +
+                ", foodName='" + foodName + '\'' +
+                ", foodType='" + foodType + '\'' +
+                ", foodSize=" + foodSize +
+                ", num=" + num +
+                ", time=" + time +
+                ", la='" + la + '\'' +
+                ", foodPrice=" + foodPrice +
+                ", orderId=" + orderId +
+                '}';
+    }
 }

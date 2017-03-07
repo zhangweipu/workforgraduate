@@ -17,6 +17,9 @@
 .header{
     width:90%;
     margin-left:50px;
+    z-index: 3;
+    position:fixed;
+    background-color:aliceblue;
 }
 .left{
     width:40%;
@@ -28,13 +31,23 @@
 }
 .main{
     position:absolute;
-    margin-top:-400px;
+    margin-top:-320px;
     margin-left:157px;
     width:880px;
     height:800PX;
+    z-index: 1;
 }
 .order{
     background-color:aqua;
-    margin-left:160px;
-    margin-top:300px;
+    width:200px;
+    margin-left:-50px;
+    position:fixed;
+}
+.list{
+    margin:0px;
+    padding:0px;
+}
+.money, .num{
+    margin-left:60px;
+    margin-top:-19px;
 }

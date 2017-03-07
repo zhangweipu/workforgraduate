@@ -1,7 +1,9 @@
 package com.wp.order.entity;
 
-import java.util.Date;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
+@Transactional
 public class OrderID {
     private Integer id;
 
@@ -63,5 +65,16 @@ public class OrderID {
 
     public void setSeat(String seat) {
         this.seat = seat == null ? null : seat.trim();
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "id=" + id +
+                ", time=" + time +
+                ", stat='" + stat + '\'' +
+                ", money=" + money +
+                ", seat='" + seat + '\'' +
+                '}';
     }
 }

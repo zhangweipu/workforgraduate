@@ -31,6 +31,7 @@ public class ClientController {
     @RequestMapping(value = "/index",method = RequestMethod.GET)
     public String index(ModelMap modelMap){
         //先整十张桌子
+        modelMap.addAttribute("id",10);
         return "client/main";
     }
 
