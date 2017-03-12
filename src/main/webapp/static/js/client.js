@@ -65,16 +65,7 @@ $(".addorder").on("click",function () {
         dataType:'json',
         type:'post',
         success:function (data) {
-            var str="<a href='javascript:void(0);' class='reset'>取消订单</a></div>" +
-                "<div class='list cai'>菜</div><div class='list money'>钱</div>";
-            var a=data;
-            for(var i=0;i<a.length;i++){
-                str+='<div class="list name">'+a[i].foodName+'</div>' +
-                    '<div class="list num">' +
-                    '<div class="jia"><a class="a" href="javascript:void(0);"  data-name="'+a[i].foodName+'"' +
-                    'data-id="'+a[i].foodID+'" data-price="'+a[i].foodPrice+'">+</a></div> <div class="number">'+a[i].num+'</div>' +
-                    '<div class="jian"><a href="javascript:void(0);"  data-id="'+a[i].foodID+'">-</a> </div></div>';
-            }
+            var str=toshow(data);
             $nums.html(str);
         },
         error:function (data) {
@@ -88,13 +79,12 @@ $(".addorder").on("click",function () {
     })
 //动态添加绑定事件
     $("body").on("click",".a",function () {
-        alert("aaa");
       var $this=$(this);
       var name=$this.data('name');
       var id=$this.data('id');
       var price=$this.data('price');
       var orderid=$('.order').data('id');
-
+      var $nums=$('#nums',parent.document);
       var jsonObject={
           "orderId":orderid,
           "foodID":id,
@@ -102,7 +92,18 @@ $(".addorder").on("click",function () {
           "foodPrice":price
       }
     $.post('/order/addorder',jsonObject,function (data) {
-        alert(data);
+        // var str="<a href='javascript:void(0);' class='reset'>取消订单</a></div>" +
+        //     "<div class='list cai'>菜</div><div class='list money'>钱</div>";
+        // var a=data;
+        // for(var i=0;i<a.length;i++){
+        //     str+='<div class="list name">'+a[i].foodName+'</div>' +
+        //         '<div class="list num">' +
+        //         '<div class="jia"><a class="a" href="javascript:void(0);"  data-name="'+a[i].foodName+'"' +
+        //         'data-id="'+a[i].foodID+'" data-price="'+a[i].foodPrice+'">+</a></div> <div class="number">'+a[i].num+'</div>' +
+        //         '<div class="jian"><a href="javascript:void(0);"  data-id="'+a[i].foodID+'">-</a> </div></div>';
+        // }
+        var str=toshow(data);
+        $nums.html(str);
     })
 
     })
@@ -110,5 +111,17 @@ $(".addorder").on("click",function () {
     // $("body").on("click",".a",function () {
     //     alert("aaaa");
     // })
-
+      function toshow(data) {
+       var str="<a href='javascript:void(0);' class='reset'>取消订单</a></div>" +
+           "<div class='list cai'>菜</div><div class='list money'>钱</div>";
+       var a=data;
+       for(var i=0;i<a.length;i++){
+           str+='<div class="list name">'+a[i].foodName+'</div>' +
+               '<div class="list num">' +
+               '<div class="jia"><a class="a" href="javascript:void(0);"  data-name="'+a[i].foodName+'"' +
+               'data-id="'+a[i].foodID+'" data-price="'+a[i].foodPrice+'">+</a></div> <div class="number">'+a[i].num+'</div>' +
+               '<div class="jian"><a href="javascript:void(0);"  data-id="'+a[i].foodID+'">-</a> </div></div>';
+       }
+       return str;
+   }
 })
