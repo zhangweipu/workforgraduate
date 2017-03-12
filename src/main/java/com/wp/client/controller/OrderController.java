@@ -37,7 +37,7 @@ public class OrderController {
 //        }
         order.setOrderId(10);
         clientService.addOrder(order);
-       List<Order> list=serviceService.findOrderDetail(10);
+        List<Order> list=serviceService.findOrderDetail(10);
         return list;
     }
 }

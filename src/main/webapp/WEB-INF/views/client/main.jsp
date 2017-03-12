@@ -10,6 +10,8 @@
     <script src="/static/bootstrap3/js/json2.js"></script>
     <link href="/static/css/client.css" rel="stylesheet">
     <link href="/static/css/common.css" rel="stylesheet">
+    <script src="/static/js/client.js"></script>
+    <script src="/static/js/common.js"></script>
 </head>
 <body>
 <div class="menu header"><%@include file="header.jsp"%></div>
@@ -25,14 +27,14 @@
         here
         <div><span id="nums"> </span></div>
         <div>总价格：<span id="money"> </span></div>
-        <div><a href="#">提交订单</a> </div>
+        <div><a class="tijiao" href="#">提交订单</a> </div>
     </div>
 </div>
   <div class="menu footer"><%@include file="footer.jsp"%></div>
 
 
 </div>
-<script src="/static/js/client.js"></script>
+
 <div class="stop">
     <h1>啊哈哈哈</h1>
 </div>
