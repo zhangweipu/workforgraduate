@@ -1,8 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="header">
-    <div class="header h">
-       这是头部
-    </div>
     <h1>菜单</h1>
     <h1>你好${tab}号桌的顾客</h1>
     <div id="xie">

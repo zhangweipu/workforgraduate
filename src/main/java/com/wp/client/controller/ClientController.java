@@ -73,7 +73,7 @@ public class ClientController {
         List<foods> foodsList=foodsMapper.findAll();
         modelMap.put("foodList",foodsList);
         modelMap.put("url","/static/images/");
-        return "client/list";
+        return "client/main";
     }
 
     @RequestMapping("/sure")

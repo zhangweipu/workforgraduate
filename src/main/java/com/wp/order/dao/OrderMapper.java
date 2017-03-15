@@ -24,6 +24,8 @@ public interface OrderMapper {
 
     void deleteBySeat(Integer tab);//删除订单
 
+    void deleteOrder(Order order);
+
     List<Order> findAllOrder();
 
     List<Order> findOrder(Integer id);

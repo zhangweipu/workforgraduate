@@ -14,29 +14,15 @@
     <script src="/static/js/common.js"></script>
 </head>
 <body>
-<div class="menu header"><%@include file="header.jsp"%></div>
-<div class="menu">
-
-    <div class="menu left"> <%@include file="left.jsp"%></div>
-<div class="main">
-
-    <iframe frameborder="0" scrolling="auto"  class="iframe main"src="/client/list?tab=${tab}">
-
-    </iframe>
+<%@include file="header.jsp"%>
+  <%@include file="left.jsp"%>
+    <%@include file="ls.jsp"%>
     <div class="menu order" data-id="${id}">
         here
         <div><span id="nums"> </span></div>
         <div>总价格：<span id="money"> </span></div>
         <div><a class="tijiao" href="#">提交订单</a> </div>
     </div>
-</div>
-  <div class="menu footer"><%@include file="footer.jsp"%></div>
-
-
-</div>
-
-<div class="stop">
-    <h1>啊哈哈哈</h1>
-</div>
+ <%@include file="footer.jsp"%>
 </body>
 </html>

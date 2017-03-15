@@ -10,4 +10,7 @@ import com.wp.order.entity.OrderID;
 public interface ClientService {
     int addOrderID(String seat);
     int addOrder(Order order);
+    void subOrder(Order order);
+    void delOrder(Integer id);
+    void addOrderId(OrderID orderID);
 }

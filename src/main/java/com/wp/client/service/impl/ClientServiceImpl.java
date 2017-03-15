@@ -37,4 +37,19 @@ public class ClientServiceImpl implements ClientService{
         orderMapper.insertSelective(order);
         return order.getId();
     }
+
+    @Override
+    public void subOrder(Order order) {
+        orderMapper.deleteOrder(order);
+    }
+
+    @Override
+    public void delOrder(Integer id) {
+        orderMapper.deleteBySeat(id);
+    }
+
+    @Override
+    public void addOrderId(OrderID orderID) {
+        orderIdMapper.insert(orderID);
+    }
 }

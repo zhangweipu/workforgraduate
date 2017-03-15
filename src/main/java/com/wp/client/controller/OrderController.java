@@ -2,6 +2,7 @@ package com.wp.client.controller;
 
 import com.wp.client.service.ClientService;
 import com.wp.order.entity.Order;
+import com.wp.order.entity.OrderID;
 import com.wp.service.service.ServiceService;
 import net.sf.json.JSON;
 import net.sf.json.JSONObject;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -39,5 +41,30 @@ public class OrderController {
         clientService.addOrder(order);
         List<Order> list=serviceService.findOrderDetail(10);
         return list;
+    }
+    @RequestMapping(value = "/suborder",method = RequestMethod.POST)
+    @ResponseBody
+    public List<Order> subOrder(Order order){
+        order.setOrderId(10);
+        clientService.subOrder(order);
+        List<Order> list=serviceService.findOrderDetail(10);
+        return list;
+    }
+
+    @RequestMapping(value = "/reset",method = RequestMethod.GET)
+    @ResponseBody
+    public void reset(){
+        //取得订单号
+        clientService.delOrder(10)                                                                                                                                                                                                           ;
+    }
+
+    @RequestMapping(value = "/submit",method = RequestMethod.POST)
+    public String submitOrder(OrderID orderID){
+        //获取订单号
+        orderID.setId(10);
+        orderID.setStat("未结账");
+        orderID.setTime(new Date());
+        clientService.addOrderId(orderID);
+        return "client/index";
     }
 }
