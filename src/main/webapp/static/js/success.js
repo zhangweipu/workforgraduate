@@ -1,12 +1,14 @@
 $(function () {
     var t = $(".timer").data("time");
-       time();
+       time(t);
       // clearTimeout(timer)
 })
 
-function time() {
-    $(".showtime").html((t - 1) + "aaa");
-    timer= setTimeout(function () {
-        time();
-    }, 3000);
+function time(t) {
+    $(".showtime").html((t) + "aaa");
+    if(t>0) {
+        timer = setTimeout(function () {
+            time(t-1);
+        }, 3000);
+    }
 }
