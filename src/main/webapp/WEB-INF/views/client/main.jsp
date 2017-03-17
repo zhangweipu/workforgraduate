@@ -14,14 +14,15 @@
     <script src="/static/js/common.js"></script>
 </head>
 <body>
-<%@include file="header.jsp"%>
+  <%@include file="header.jsp"%>
+  <%@include file="test.jsp"%>
   <%@include file="left.jsp"%>
-    <%@include file="ls.jsp"%>
+  <%@include file="ls.jsp"%>
     <div class="menu order" data-id="${id}">
         here
-        <div><span id="nums"> </span></div>
-        <div>总价格：<span id="money"> </span></div>
-        <div><a class="tijiao" href="#">提交订单</a> </div>
+        <div class="order-num"><span id="nums"> </span></div>
+        <div class="order-money">总价格：<span id="money"> </span></div>
+        <div class="order-sub"><a class="tijiao" href="javascript:void(0);">提交订单</a> </div>
     </div>
  <%@include file="footer.jsp"%>
 </body>

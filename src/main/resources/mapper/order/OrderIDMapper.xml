@@ -68,7 +68,7 @@
         #{money,jdbcType=INTEGER},
       </if>
       <if test="seat != null">
-        #{seat,jdbcType=VARCHAR},
+        #{seat,jdbcType=VARCHAR}
       </if>
     </trim>
   </insert>

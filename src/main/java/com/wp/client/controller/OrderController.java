@@ -4,6 +4,7 @@ import com.wp.client.service.ClientService;
 import com.wp.order.entity.Order;
 import com.wp.order.entity.OrderID;
 import com.wp.service.service.ServiceService;
+import com.wp.utils.Constants;
 import net.sf.json.JSON;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -31,15 +34,19 @@ public class OrderController {
 
     @RequestMapping(value = "/addorder",method = RequestMethod.POST)
     @ResponseBody
-    public List<Order> addOder(Order order){
+    public List<Order> addOder(Order order, HttpServletRequest req){
 //        String seat="一号";
 //        Integer id=null;
 //        if(null==id){
 //            id=clientService.addOrderID(seat);
 //        }
-        order.setOrderId(10);
+        HttpSession session=req.getSession();
+        int id= (int) session.getAttribute("orderid");
+        order.setOrderId(id);
+        order.setTime(new Date());
+        order.setLa(Constants.FOOD_ND);
         clientService.addOrder(order);
-        List<Order> list=serviceService.findOrderDetail(10);
+        List<Order> list=serviceService.findOrderDetail(id);
         return list;
     }
     @RequestMapping(value = "/suborder",method = RequestMethod.POST)
@@ -59,12 +66,14 @@ public class OrderController {
     }
 
     @RequestMapping(value = "/submit",method = RequestMethod.POST)
-    public String submitOrder(OrderID orderID){
+    public String submitOrder(OrderID orderID,HttpServletRequest req){
         //获取订单号
-        orderID.setId(10);
-        orderID.setStat("未结账");
+        HttpSession session=req.getSession();
+        int id= (int) session.getAttribute("orderid");
+        orderID.setId(id);
+        orderID.setStat(Constants.ORDER_ND);
         orderID.setTime(new Date());
         clientService.addOrderId(orderID);
-        return "client/index";
+        return "redirect:/client/success";
     }
 }

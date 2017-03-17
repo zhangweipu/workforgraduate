@@ -50,6 +50,6 @@ public class ClientServiceImpl implements ClientService{
 
     @Override
     public void addOrderId(OrderID orderID) {
-        orderIdMapper.insert(orderID);
+        orderIdMapper.insertSelective(orderID);
     }
 }

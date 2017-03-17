@@ -10,39 +10,31 @@ $(function () {
 
     //添加订单js操作
     var a = "";
-    var objec = "";
-    $(".tijiao").on("click", function () {
-        alert("提交");
-
-    })
-    $(".submi").on("click", function (evt) {
-        var tab = $(this).val();
-        if (objec == "") {
+    // $("body").on("click","#tijiao", function () {
+    //     alert("提交");
+    //
+    // })
+    $("body").on("click","#tijiao", function () {
+        var orderid = $('.order').data('id');
+        if (false) {
             alert("请点菜");
         } else {
             jsonData = {
-                "tab": tab,
-                "str": objec
+                "id": orderid
             }
             $.ajax({
-                url: "/client/addOrder",
+                async:false,
+                url: "/order/submit",
                 type: "post",
                 dataTypes: "json",
                 data: JSON.stringify(jsonData),
                 contentType: "Application/json;charset=utf-8",
-                success: function () {
-                    window.location.href = "/client/lsOrder?tab=" + tab;
+                success: function (data) {
+                    window.location.href="/client/success";
                 }
             });
         }
     })
-    // $(".glyphicon").bind("click",function () {
-    //     alert("ss");
-    // })
-    // $(".yichu").on("click",function () {
-    //      a="";
-    //     $(".li").html(a);
-    // })
     $(".addorder").on("click", function () {
         $father = $(this).parent();
         var name = $father.data("title");
@@ -88,25 +80,11 @@ $(function () {
             "foodPrice": price
         }
         $.post('/order/addorder', jsonObject, function (data) {
-            // var str="<a href='javascript:void(0);' class='reset'>取消订单</a></div>" +
-            //     "<div class='list cai'>菜</div><div class='list money'>钱</div>";
-            // var a=data;
-            // for(var i=0;i<a.length;i++){
-            //     str+='<div class="list name">'+a[i].foodName+'</div>' +
-            //         '<div class="list num">' +
-            //         '<div class="jia"><a class="a" href="javascript:void(0);"  data-name="'+a[i].foodName+'"' +
-            //         'data-id="'+a[i].foodID+'" data-price="'+a[i].foodPrice+'">+</a></div> <div class="number">'+a[i].num+'</div>' +
-            //         '<div class="jian"><a href="javascript:void(0);"  data-id="'+a[i].foodID+'">-</a> </div></div>';
-            // }
             var str = toshow(data);
             $nums.html(str);
         })
 
     })
-    //
-    // $("body").on("click",".a",function () {
-    //     alert("aaaa");
-    // })
 
     $("body").on("click", ".b", function () {
         var id = $(this).data("id");
@@ -119,13 +97,16 @@ $(function () {
     $("body").on("click",".reset",function () {
         var str="";
         $.get("/order/reset",{},function (data) {
+            $(".tijiao").attr("id","tijiao");
         })
         $('#nums').html(str);
     })
     function toshow(data) {
         if (data.length == 0) {
             var str = "";
+            $(".tijiao").removeAttr("id","tijiao");
         } else {
+            $(".tijiao").attr("id","tijiao");
             var str = "<a href='javascript:void(0);' class='reset'>取消订单</a></div>" +
                 "<div class='list cai'>菜</div><div class='list money'>钱</div>";
             var a = data;
