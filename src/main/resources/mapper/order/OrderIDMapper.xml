@@ -24,9 +24,15 @@
     from t_order t,t_orderid o
     group by t.orderid having o.id=t.orderid
   </select>
-  <select id="selectND" resultMap="BaseResultMap">
-    select * from t_orderid
-    where stat &lt;&gt; 'DONE'
+  <select id="selectND" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  select * from t_orderid t
+  <where> 'ND' in
+  (select la from t_order where orderid=t.id)
+  and stat &lt;&gt; 'DONE'
+  <if test='_parameter!="0"'>
+    and id=#{0}
+  </if>
+  </where>
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from t_orderid
@@ -93,6 +99,11 @@
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateOrderId" parameterType="java.lang.Integer">
+     update t_orderid
+     set stat='DONE'
+     where id=#{0}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.wp.order.entity.OrderID">
     update t_orderid

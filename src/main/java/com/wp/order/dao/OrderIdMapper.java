@@ -20,5 +20,7 @@ public interface OrderIdMapper {
 
     List<OrderID> selectAll();
 
-    List<OrderID> selectND();
+    List<OrderID> selectND(Integer id);
+
+    void updateOrderId(Integer id);
 }

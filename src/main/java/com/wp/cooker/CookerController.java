@@ -24,7 +24,7 @@ public class CookerController {
 
     @RequestMapping(value = "/list",method = RequestMethod.GET)
     public String getOrderIdList(Model model){
-        List<OrderID> orderIDS=cookerService.getAllOrderID();
+        List<OrderID> orderIDS=cookerService.getAllOrderID(0);
         model.addAttribute("IDlist",orderIDS);
         return "cooker/list";
     }
@@ -34,5 +34,14 @@ public class CookerController {
         List<Order> list=cookerService.getOrder(id);
         model.addAttribute("list",list);
         return list;
+    }
+
+    @RequestMapping(value = "orderStatus",method = RequestMethod.POST)
+    public String orderStatus(Integer oid,Integer fid){
+        cookerService.updateOrder(oid,fid);
+        if(cookerService.getAllOrderID(oid).size()==0){
+            cookerService.updateOrderId(oid);
+        }
+        return "forward:/cooker/list";
     }
 }

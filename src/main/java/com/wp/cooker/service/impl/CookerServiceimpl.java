@@ -24,12 +24,22 @@ public class CookerServiceimpl implements CookerService{
     private OrderIdMapper orderIdMapper;
 
     @Override
-    public List<OrderID> getAllOrderID() {
-        return orderIdMapper.selectND();
+    public List<OrderID> getAllOrderID(Integer id) {
+        return orderIdMapper.selectND(id);
     }
 
     @Override
     public List<Order> getOrder(int id) {
         return orderMapper.findOrder(id);
+    }
+
+    @Override
+    public void updateOrder(Integer oid, Integer fid) {
+        orderMapper.updateOrder(oid,fid);
+    }
+
+    @Override
+    public void updateOrderId(Integer id) {
+        orderIdMapper.updateOrderId(id);
     }
 }

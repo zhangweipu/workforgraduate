@@ -38,3 +38,11 @@ body{
 .child{
     width:900px;
 }
+.do,.undo{
+    display:-webkit-box;
+    text-decoration: none;
+    background:aliceblue;
+    float:left;
+    position:relative;
+    left:800px;
+}
