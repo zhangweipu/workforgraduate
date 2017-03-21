@@ -3,6 +3,7 @@ package com.wp.cooker.service.impl;
 import com.wp.cooker.service.CookerService;
 import com.wp.order.dao.OrderIdMapper;
 import com.wp.order.dao.OrderMapper;
+import com.wp.order.entity.Order;
 import com.wp.order.entity.OrderID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -24,6 +25,11 @@ public class CookerServiceimpl implements CookerService{
 
     @Override
     public List<OrderID> getAllOrderID() {
-        return orderIdMapper.selectAll();
+        return orderIdMapper.selectND();
+    }
+
+    @Override
+    public List<Order> getOrder(int id) {
+        return orderMapper.findOrder(id);
     }
 }

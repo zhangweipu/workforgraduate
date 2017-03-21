@@ -24,6 +24,10 @@
     from t_order t,t_orderid o
     group by t.orderid having o.id=t.orderid
   </select>
+  <select id="selectND" resultMap="BaseResultMap">
+    select * from t_orderid
+    where stat &lt;&gt; 'DONE'
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from t_orderid
     where id = #{id,jdbcType=INTEGER}

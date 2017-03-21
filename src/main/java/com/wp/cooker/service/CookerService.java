@@ -1,5 +1,6 @@
 package com.wp.cooker.service;
 
+import com.wp.order.entity.Order;
 import com.wp.order.entity.OrderID;
 
 import java.util.List;
@@ -9,4 +10,5 @@ import java.util.List;
  */
 public interface CookerService {
     List<OrderID> getAllOrderID();
+    List<Order> getOrder(int id);
 }

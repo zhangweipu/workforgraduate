@@ -19,4 +19,6 @@ public interface OrderIdMapper {
     int updateByPrimaryKey(OrderID record);
 
     List<OrderID> selectAll();
+
+    List<OrderID> selectND();
 }
