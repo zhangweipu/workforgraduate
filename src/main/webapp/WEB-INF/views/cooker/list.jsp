@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/static/css/cooker.css">
 </head>
 <body>
+<%@include file="left.jsp"%>
 <div class="main">
             <div class="thead">
                 <span class="head">序列号</span>

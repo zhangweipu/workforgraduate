@@ -139,7 +139,7 @@
     <update id="updateOrder">
         update t_order
         set la='DONE'
-        where orderid=#{0} and id=#{1}
+        where orderid=#{0} and food_id=#{1}
     </update>
     <update id="updateByPrimaryKey" parameterType="com.wp.order.entity.Order">
     update t_order

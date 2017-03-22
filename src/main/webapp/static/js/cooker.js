@@ -10,7 +10,7 @@ $(function () {
             for (var i=0;i<data.length;i++) {
                 str+="<span>"+data[i].foodName+"</span>";
                 if(data[i].la=="ND"){
-                    str+="<span><a class='undo' href='#'>未完成</a></span></br>";
+                    str+="<span><a class='undo' data-oid='"+id+"' data-fid='"+data[i].foodID+"' href='#'>未完成</a></span></br>";
                 }else{
                     str+="<span class='do'>已完成</span></br>";
                 }
@@ -20,8 +20,12 @@ $(function () {
         })
     })
     $('body').on('click','.undo',function () {
-        alert("aaa");
-
+        $this=$(this);
+        var oid=$this.data('oid');
+        var fid=$this.data('fid');
+        $.post("/cooker/orderStatus",{"oid":oid,"fid":fid},function (data) {
+            window.location.href="/cooker/list";
+        })
     })
 
 })

@@ -9,7 +9,7 @@ CREATE TABLE `t_food` (
   `la` varchar(5) DEFAULT NULL,
   `detail` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8
 
 -- create table t_order(
 --    id int primary key auto_increment,
@@ -35,3 +35,12 @@ CREATE TABLE `t_order` (
   `orderid` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8
+
+CREATE TABLE `t_orderid` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `time` date DEFAULT NULL,
+  `stat` varchar(20) DEFAULT NULL,
+  `money` int(11) DEFAULT NULL,
+  `seat` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=935 DEFAULT CHARSET=utf8

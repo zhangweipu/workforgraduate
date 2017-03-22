@@ -36,12 +36,13 @@ public class CookerController {
         return list;
     }
 
-    @RequestMapping(value = "orderStatus",method = RequestMethod.POST)
+    @RequestMapping(value = "/orderStatus",method = RequestMethod.POST)
+    @ResponseBody
     public String orderStatus(Integer oid,Integer fid){
         cookerService.updateOrder(oid,fid);
         if(cookerService.getAllOrderID(oid).size()==0){
             cookerService.updateOrderId(oid);
         }
-        return "forward:/cooker/list";
+        return "success";
     }
 }
