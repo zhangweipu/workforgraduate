@@ -1,7 +1,7 @@
 package com.wp.algor;
 
-import com.wp.order.dao.OrderIdMapper;
-import com.wp.order.dao.OrderMapper;
+import com.wp.restuarant.order.dao.OrderIdMapper;
+import com.wp.restuarant.order.dao.OrderMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

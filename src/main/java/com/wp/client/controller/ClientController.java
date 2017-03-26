@@ -1,10 +1,10 @@
 package com.wp.client.controller;
 
 import com.wp.algor.WaitTime;
-import com.wp.food.dao.foodsMapper;
-import com.wp.food.entity.foods;
-import com.wp.order.dao.OrderMapper;
-import com.wp.order.entity.Order;
+import com.wp.restuarant.food.dao.FoodsMapper;
+import com.wp.restuarant.food.entity.Foods;
+import com.wp.restuarant.order.dao.OrderMapper;
+import com.wp.restuarant.order.entity.Order;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,7 +26,7 @@ public class ClientController {
 
     private static final Logger logger=Logger.getLogger(ClientController.class);
     @Autowired
-    private foodsMapper foodsMapper;
+    private FoodsMapper foodsMapper;
 
     @Autowired
     private OrderMapper orderMapper;
@@ -54,7 +54,7 @@ public class ClientController {
 ////        List<Order> list=new ArrayList<Order>();
 ////        for(String l:s){
 ////            Order o=new Order();
-////            foods food=foodsMapper.findSizePriceByName(l);
+////            Foods food=foodsMapper.findSizePriceByName(l);
 ////            o.setFoodSize(food.getSize());
 ////            o.setFoodName(l);
 //////            o.setSeatMark(str.getTab());
@@ -80,7 +80,7 @@ public class ClientController {
         //todo:添加订单号
        int id= (int) (Math.random()*1000);
         session.setAttribute("orderid",id);
-        List<foods> foodsList=foodsMapper.findAll();
+        List<Foods> foodsList=foodsMapper.findAll();
         modelMap.put("foodList",foodsList);
         modelMap.put("url","/static/images/");
         logger.info("查询菜单了");

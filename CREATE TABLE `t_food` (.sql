@@ -1,3 +1,4 @@
+--菜单表
 drop table if exists t_food;
 CREATE TABLE `t_food` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -11,16 +12,15 @@ CREATE TABLE `t_food` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8
 
--- create table t_order(
---    id int primary key auto_increment,
--- 	 seat_mark varchar(10),
---    food_name varchar(20),
---    food_type varchar(20),
---    food_size int,
---    Food_stutas int,
---    time date
--- )
+--菜单类型表
+create table t_foodtype(
+  type varchar(20) primary key,
+  id int
+)
 
+
+
+--每单订单列表  订单详细表
 drop table if exists t_order;
 CREATE TABLE `t_order` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -35,7 +35,7 @@ CREATE TABLE `t_order` (
   `orderid` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8
-
+--所有订单列表
 CREATE TABLE `t_orderid` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `time` date DEFAULT NULL,
@@ -44,3 +44,17 @@ CREATE TABLE `t_orderid` (
   `seat` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=935 DEFAULT CHARSET=utf8
+--账目流水表
+create table t_trans(
+  id int auto_increment primary key,
+  type varchar(20),
+  time date,
+  turnover int,
+  detail varchar(200)
+)
+--资产表
+create table t_finance(
+   id int auto_increment primary key,
+   amount int,
+   type varchar(20)
+)

@@ -1,8 +1,8 @@
 package com.wp.client.service;
 
 
-import com.wp.order.entity.Order;
-import com.wp.order.entity.OrderID;
+import com.wp.restuarant.order.entity.Order;
+import com.wp.restuarant.order.entity.OrderID;
 
 /**
  * Created by zhang on 2017/3/5.

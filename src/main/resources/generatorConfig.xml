@@ -27,7 +27,7 @@
             targetPackage     指定生成的model生成所在的包名
             targetProject     指定在该项目下所在的路径
         -->
-        <javaModelGenerator targetPackage="com.wp.food.entity" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.wp.restuarant.food.entity" targetProject="src/main/java">
             <!-- 是否在当前路径下新加一层schema,eg：fase路] entity-->
             <property name="enableSubPackages" value="false"/>
             <!-- 是否对model添加 构造函数 -->
@@ -40,7 +40,7 @@
             <!-- 是否在当前路径下新加一层schema,eg：fase路径com.m2plat.his.dao，mapper true:com.m2plat.his.dao.[schemaName] -->
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
-        <javaClientGenerator targetPackage="com.wp.order.dao" targetProject="src/main/java" type="XMLMAPPER">
+        <javaClientGenerator targetPackage="com.wp.restuarant.order.dao" targetProject="src/main/java" type="XMLMAPPER">
             <!-- 是否在当前路径下新加一层schema,eg：fase路径com.m2plat.his.dao， true:com.m2plat.his.dao.[schemaName] -->
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>

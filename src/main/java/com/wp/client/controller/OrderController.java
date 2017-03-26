@@ -1,12 +1,10 @@
 package com.wp.client.controller;
 
 import com.wp.client.service.ClientService;
-import com.wp.order.entity.Order;
-import com.wp.order.entity.OrderID;
-import com.wp.service.service.ServiceService;
+import com.wp.restuarant.order.entity.Order;
+import com.wp.restuarant.order.entity.OrderID;
+import com.wp.restuarant.service.service.ServiceService;
 import com.wp.utils.Constants;
-import net.sf.json.JSON;
-import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
