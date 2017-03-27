@@ -89,4 +89,7 @@
     <bean id="getType" class="com.wp.utils.FoodFuntion">
         <property name="foodsMapper" ref="foodsMapper"></property>
     </bean>
+    <bean id="getAllType" class="com.wp.utils.FuntionDemo">
+        <property name="foodTypeMapper" ref="foodTypeMapper"></property>
+    </bean>
 </beans>
