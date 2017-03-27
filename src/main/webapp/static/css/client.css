@@ -15,6 +15,7 @@ body{
     z-index:2;
     background:#FFFFFF;
     overflow:auto;
+    padding-top:80px;
 }
 .row{
     border:1px dashed gray;
@@ -23,6 +24,7 @@ body{
     text-align:center;
     margin-left:15px;
     background-color:#FFFFFF;
+    margin-top:20px;
 }
 .image{
     padding-top:20px;
@@ -88,4 +90,10 @@ body{
     margin-top:-111px;
     padding:0px;
     width:100px;
+}
+.food-type{
+    background-color:rgba(93, 0, 255, 0.43);
+    display:-webkit-box;
+    width:800px;
+    height:40px;
 }

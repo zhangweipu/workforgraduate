@@ -27,6 +27,9 @@
     <!--from t_food-->
     <!--where id limit #{0},20-->
     <!--</select>-->
+    <select id="selectByType" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select * from t_food where type=#{0};
+    </select>
     <select id="selectLimit" parameterType="com.wp.utils.Conditions" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>

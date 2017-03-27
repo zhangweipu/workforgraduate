@@ -8,7 +8,7 @@ import com.wp.utils.MyBatis;
 import java.util.List;
 
 @MyBatis
-public interface FoodsMapper {
+public interface    FoodsMapper {
     int deleteByPrimaryKey(Integer id);
 
     int insert(Foods record);
@@ -18,6 +18,8 @@ public interface FoodsMapper {
     int insertSelective(Foods record);
 
     Foods selectByPrimaryKey(Integer id);
+
+    List<Foods> selectByType(String type);
 
     int updateByPrimaryKeySelective(Foods record);
 

@@ -1,7 +1,9 @@
 package com.wp.client.controller;
 
 import com.wp.algor.WaitTime;
+import com.wp.restuarant.food.dao.FoodTypeMapper;
 import com.wp.restuarant.food.dao.FoodsMapper;
+import com.wp.restuarant.food.entity.FoodType;
 import com.wp.restuarant.food.entity.Foods;
 import com.wp.restuarant.order.dao.OrderMapper;
 import com.wp.restuarant.order.entity.Order;
@@ -30,6 +32,10 @@ public class ClientController {
 
     @Autowired
     private OrderMapper orderMapper;
+
+    @Autowired
+    private FoodTypeMapper foodTypeMapper;
+
     @Autowired
     private WaitTime waitTime;
 
@@ -80,8 +86,8 @@ public class ClientController {
         //todo:添加订单号
        int id= (int) (Math.random()*1000);
         session.setAttribute("orderid",id);
-        List<Foods> foodsList=foodsMapper.findAll();
-        modelMap.put("foodList",foodsList);
+        List<FoodType> typeList=foodTypeMapper.seach();
+        modelMap.put("typeList",typeList);
         modelMap.put("url","/static/images/");
         logger.info("查询菜单了");
         logger.warn("这是警告！！！！！");

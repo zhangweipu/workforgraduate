@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="food" uri="http://myFoodEL.com" %>
 <html>
 <head>
     <title>菜单列表</title>
@@ -25,5 +26,9 @@
         <div class="order-sub"><a class="tijiao" href="javascript:void(0);">提交订单</a> </div>
     </div>
  <%@include file="footer.jsp"%>
+
+<c:forEach items="${food:foodFunc('11')}" var="item">
+    ${item.type}
+</c:forEach>
 </body>
 </html>
