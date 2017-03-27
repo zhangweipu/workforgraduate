@@ -6,6 +6,15 @@ package com.wp.restuarant.food.entity;
 public class FoodType {
     private String type;
     private Integer id;
+
+    public FoodType() {
+    }
+
+    public FoodType(String type, Integer id) {
+        this.type = type;
+        this.id = id;
+    }
+
     public String getType() {
         return type;
     }

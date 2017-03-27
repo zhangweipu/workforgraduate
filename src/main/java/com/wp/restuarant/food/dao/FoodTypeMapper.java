@@ -12,6 +12,7 @@ import java.util.List;
 public interface FoodTypeMapper {
     List<FoodType> seach();
     void insert(FoodType foodType);
+    void insertBatch(List<FoodType> foodTypes);
     void update(FoodType foodType);
     void delete(String tpye);
 }
