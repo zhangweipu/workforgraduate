@@ -11,7 +11,8 @@
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
                     <ul  class="nav nav-sidebar">
-                        <li ><a href="/service/add" class="btn " role="button">添加一个</a></li>
+                        <li ><a href="/service/addFoodType" class="btn " role="button">添加类型</a></li>
+                        <li ><a href="/service/add" class="btn " role="button">添加菜单</a></li>
                         <li ><a href="/service/addmany" class="btn " role="button">批量添加</a></li>
                         <li ><a href="/service/list" class="btn " role="button">菜单列表</a></li>
                     </ul>

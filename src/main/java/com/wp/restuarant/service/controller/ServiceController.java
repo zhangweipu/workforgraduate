@@ -1,5 +1,6 @@
 package com.wp.restuarant.service.controller;
 
+import com.wp.restuarant.food.entity.FoodType;
 import com.wp.restuarant.food.entity.Foods;
 import com.wp.restuarant.order.entity.Order;
 import com.wp.restuarant.order.entity.OrderID;
@@ -46,6 +47,13 @@ public class ServiceController {
     //文件上传路径
     //
     public final static String path="F:/workforgraduate/src/main/webapp/static/images/";
+
+    /**
+     * 菜单查询
+     * @param request
+     * @param modelMap
+     * @return
+     */
     @RequestMapping(value = "/index",method = RequestMethod.GET)
     public String index(HttpServletRequest request,ModelMap modelMap){
         List<Foods> list=serviceService.findAll();
@@ -65,6 +73,14 @@ public class ServiceController {
         return "service/editmenu/add";
     }
 
+    /**
+     *
+     * @param food
+     * @param icon
+     * @param request
+     * @param modelMap
+     * @return
+     */
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     public String add(Foods food, MultipartFile icon, HttpServletRequest request, ModelMap modelMap){
         String imageName=food.getName()+".jpg";
@@ -89,6 +105,12 @@ public class ServiceController {
         return "service/editmenu/addMany";
     }
 
+    /**
+     *
+     * @param file
+     * @return
+     * @throws IOException
+     */
     @RequestMapping(value = "/addmany",method = RequestMethod.POST)
     public String addmany(MultipartFile file ) throws IOException {
 
@@ -99,6 +121,11 @@ public class ServiceController {
         return "service/index";
     }
 
+    /**
+     *
+     * @return
+     * @throws IOException
+     */
     @RequestMapping(value = "/down",method = RequestMethod.GET)
     public ResponseEntity<byte[]> downMould() throws IOException{
         String path="d://food.xlsx";
@@ -110,6 +137,12 @@ public class ServiceController {
         return new ResponseEntity<byte[]>(FileUtils.readFileToByteArray(file),httpHeaders, HttpStatus.CREATED);
     }
 
+    /**
+     *
+     * @param modelMap
+     * @param conditions
+     * @return
+     */
     @RequestMapping(value="/list",method = RequestMethod.GET)
     public String list(ModelMap modelMap, Conditions conditions){
         if(conditions.getPage()==null||conditions.getPage()==0){
@@ -128,6 +161,12 @@ public class ServiceController {
         return "service/editmenu/list";
     }
 
+    /**
+     *
+     * @param id
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/update",method = RequestMethod.GET)
     public String update(Integer id, Model model){
         Foods food=serviceService.findById(id);
@@ -135,12 +174,22 @@ public class ServiceController {
         return "service/editmenu/update";
     }
 
+    /**
+     *
+     * @param food
+     * @return
+     */
     @RequestMapping(value = "/update",method = RequestMethod.POST)
     public String update(Foods food){
         serviceService.update(food);
         return "redirect:/service/index";
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     @RequestMapping(value = "/delete",method = RequestMethod.GET)
     public String delete(Integer id){
         Foods food=serviceService.findById(id);
@@ -167,6 +216,12 @@ public class ServiceController {
         return "service/findorder/orderlist";
     }
 
+    /**
+     *
+     * @param id
+     * @param model
+     * @return
+     */
     @RequestMapping("/orderdetail")
     public String orderDetial(String id,Model model){
         List<Order> list=serviceService.findOrderDetail(Integer.valueOf(id));
@@ -174,14 +229,34 @@ public class ServiceController {
         return "service/findorder/orderdetail";
     }
 
-    @RequestMapping(value = "/addFoodType")
+    @RequestMapping(value = "/addFoodType",method = RequestMethod.GET)
     public String addFoodTtype(){
-        return "";
+        return "service/editmenu/addFoodType";
     }
 
+    /**
+     *
+     * @param type
+     * @param id
+     * @return
+     */
+    @RequestMapping(value = "/addFoodType",method = RequestMethod.POST)
+    public String addFoodTtype(String[] type,Integer[] id){
+       // System.out.println(foodTypes.size());
+        for(int i=0;i<id.length;i++){
+            FoodType foodType=new FoodType(type[i],id[i]);
+            serviceService.addFoodType(foodType);
+        }
+        return "service/success";
+    }
 
-
-
+    /**
+     *
+     * @param getTable
+     * @param response
+     * @return
+     * @throws IOException
+     */
     @RequestMapping(value = "/getTable",method = RequestMethod.POST)
     public String getTable(String getTable, HttpServletResponse response) throws IOException {
 

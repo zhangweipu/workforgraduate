@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -31,5 +32,15 @@ public class Test3 {
     @Test
     public void testsearch(){
         List<FoodType> list=foodTypeMapper.seach();
+    }
+
+    @Test
+    public void testInsertBatch(){
+        List<FoodType> foodTypes=new ArrayList<>();
+        for(int i=0;i<10;i++){
+            FoodType foodType=new FoodType(""+i,i);
+            foodTypes.add(foodType);
+        }
+        foodTypeMapper.insertBatch(foodTypes);
     }
 }

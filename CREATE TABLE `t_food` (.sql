@@ -13,9 +13,10 @@ CREATE TABLE `t_food` (
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8
 
 --菜单类型表
+drop table if exists t_foodtype;
 create table t_foodtype(
   type varchar(20) primary key,
-  id int
+  id int auto_increment
 )
 
 

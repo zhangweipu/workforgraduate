@@ -12,6 +12,12 @@
     <insert id="insert" parameterType="com.wp.restuarant.food.entity.FoodType">
         insert into t_foodtype(type,id) values(#{type},#{id})
     </insert>
+    <insert id="insertBatch" parameterType="java.util.List">
+        insert into t_foodtype values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.type},#{item.id})
+        </foreach>
+    </insert>
     <update id="update" parameterType="com.wp.restuarant.food.entity.FoodType">
         update t_foodtype set id=#{id} where type=#{type}
     </update>

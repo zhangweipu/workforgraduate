@@ -10,4 +10,5 @@ jQuery(function($) {
         var url="/service/list?condition1="+val;
         $("#main").load(url);
     })
+
 })

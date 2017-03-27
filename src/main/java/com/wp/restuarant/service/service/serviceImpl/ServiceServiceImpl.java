@@ -88,12 +88,12 @@ public class ServiceServiceImpl implements ServiceService{
 
     @Override
     public void addFoodType(FoodType foodType) {
-
+        foodTypeMapper.insert(foodType);
     }
 
     @Override
     public List<FoodType> getFoodTypes() {
-        return null;
+        return foodTypeMapper.seach();
     }
 
     @Override
