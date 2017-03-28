@@ -49,9 +49,8 @@ public class OrderController {
     @RequestMapping(value = "/suborder",method = RequestMethod.POST)
     @ResponseBody
     public List<Order> subOrder(Order order){
-        order.setOrderId(10);
         clientService.subOrder(order);
-        List<Order> list=serviceService.findOrderDetail(10);
+        List<Order> list=serviceService.findOrderDetail(order.getOrderId());
         return list;
     }
 

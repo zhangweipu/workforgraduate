@@ -89,6 +89,7 @@ public class ClientController {
         List<FoodType> typeList=foodTypeMapper.seach();
         modelMap.put("typeList",typeList);
         modelMap.put("url","/static/images/");
+        modelMap.put("id",id);
         logger.info("查询菜单了");
         logger.warn("这是警告！！！！！");
         logger.debug("这是debug！！！！");

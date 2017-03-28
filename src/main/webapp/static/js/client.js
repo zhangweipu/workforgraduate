@@ -88,8 +88,9 @@ $(function () {
 
     $("body").on("click", ".b", function () {
         var id = $(this).data("id");
+        var orderid = $('.order').data('id');
         var $nums = $('#nums');
-        $.post("/order/suborder", {"foodID": id}, function (data) {
+        $.post("/order/suborder", {"orderId":orderid,"foodID": id}, function (data) {
             var str = toshow(data);
             $nums.html(str);
         })
