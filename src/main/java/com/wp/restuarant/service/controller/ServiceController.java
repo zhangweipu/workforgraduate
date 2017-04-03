@@ -58,9 +58,9 @@ public class ServiceController {
     public String index(HttpServletRequest request,ModelMap modelMap){
         List<Foods> list=serviceService.findAll();
         List<String> urlList=new ArrayList<String>();
-        for(Foods f:list){
-        //   String url=request.getContextPath()+"/images/"+f.getImageName(); //项目发布时就行了吧
-            String url="/static/images/"+f.getImageName();
+        for(Foods f:list) {
+            //   String url=request.getContextPath()+"/images/"+f.getImageName(); //项目发布时就行了吧
+            String url = "/static/images/" + f.getImageName();
             url.trim();
             urlList.add(url);
         }

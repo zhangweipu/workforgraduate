@@ -16,6 +16,12 @@
     <sql id="Base_Column_List">
     id, name, image_name, type, size, price, la, detail
   </sql>
+    <select id="findPraise" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+        select size from t_food where id = #{0}
+    </select>
+    <update id="updatePraiseNum" parameterType="java.lang.Integer">
+        update t_food set size=size+1 where id=#{0}
+    </update>
     <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>

@@ -19,9 +19,9 @@
   <%@include file="test.jsp"%>
   <%@include file="left.jsp"%>
   <%@include file="ls.jsp"%>
-    <div class="menu order" data-id="${id}">
+    <div class="order" data-id="${id}">
         here
-        <div class="order-num"><span id="nums"> </span></div>
+        <div class="order-num"><div id="nums"> </div></div>
         <div class="order-money">总价格：<span id="money"> </span></div>
         <div class="order-sub"><a class="tijiao" href="javascript:void(0);">提交订单</a> </div>
     </div>

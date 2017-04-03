@@ -1,6 +1,7 @@
 package com.wp.client.service.impl;
 
 import com.wp.client.service.ClientService;
+import com.wp.restuarant.food.dao.FoodsMapper;
 import com.wp.restuarant.order.dao.OrderIdMapper;
 import com.wp.restuarant.order.dao.OrderMapper;
 import com.wp.restuarant.order.entity.Order;
@@ -16,11 +17,13 @@ import java.util.Date;
  */
 @Service
 public class ClientServiceImpl implements ClientService{
-
     @Autowired
     OrderIdMapper orderIdMapper;
     @Autowired
     OrderMapper orderMapper;
+
+    @Autowired
+    FoodsMapper foodsMapper;
 
     @Override
     public int addOrderID(String seat) {
@@ -52,4 +55,15 @@ public class ClientServiceImpl implements ClientService{
     public void addOrderId(OrderID orderID) {
         orderIdMapper.insertSelective(orderID);
     }
+
+    @Override
+    public void markOrder(Integer orderid) {
+       orderMapper.UpdateLa(orderid);
+    }
+
+    @Override
+    public void markPraise(Integer id) {
+        foodsMapper.findPraise(id);
+    }
+
 }

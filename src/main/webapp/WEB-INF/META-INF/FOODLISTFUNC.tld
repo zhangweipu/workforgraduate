@@ -8,9 +8,17 @@
     <tlib-version>1.0</tlib-version>
     <short-name>myFoodEL</short-name>
     <uri>http://myFoodEL.com</uri>
+
 <function>
     <name>foodFunc</name>
     <function-class>com.wp.utils.FoodFuntion</function-class>
-    <function-signature>java.util.List getByType(java.lang.String))</function-signature>
+    <function-signature>java.util.List getByType(java.lang.String)</function-signature>
 </function>
+
+    <function>
+        <name>foodP</name>
+        <function-class>com.wp.utils.FoodFuntion</function-class>
+        <function-signature>java.lang.Integer findPraise(java.lang.Integer)</function-signature>
+    </function>
+
 </taglib>

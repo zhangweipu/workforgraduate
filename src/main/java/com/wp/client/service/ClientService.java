@@ -13,4 +13,6 @@ public interface ClientService {
     void subOrder(Order order);
     void delOrder(Integer id);
     void addOrderId(OrderID orderID);
+    void markOrder(Integer orderid);
+    void markPraise(Integer id);
 }

@@ -14,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -102,7 +103,25 @@ public class ClientController {
         HttpSession session=request.getSession();
         int id= (int) session.getAttribute("orderid");
         int time=waitTime.getTime(id);
+        List<Order> orders=orderMapper.findOrder(id);
+        model.addAttribute("orders",orders);
         model.addAttribute("time",time);
         return "client/success";
+    }
+
+    @RequestMapping(value = "/beginEat",method = RequestMethod.GET)
+    public String beginEat(HttpServletRequest req,Model model){
+        HttpSession session=req.getSession();
+        Integer id=(Integer) session.getAttribute("orderid");
+        List<Order> orders=orderMapper.findOrder(id);
+        model.addAttribute("orders",orders);
+        return "client/eat";
+    }
+
+    @RequestMapping(value = "/praise")
+    @ResponseBody
+    public Integer praise(Integer id){
+        foodsMapper.updatePraiseNum(id);
+        return foodsMapper.findPraise(id);
     }
 }

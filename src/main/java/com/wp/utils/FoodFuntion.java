@@ -24,4 +24,9 @@ public class FoodFuntion {
     public static List<Foods> getByType(String type){
         return foodsMapper.selectByType(type);
     }
+
+    public static Integer findPraise(Integer id){
+        return foodsMapper.findPraise(id);
+    }
+
 }

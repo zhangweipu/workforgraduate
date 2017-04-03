@@ -56,9 +56,11 @@ public class OrderController {
 
     @RequestMapping(value = "/reset",method = RequestMethod.GET)
     @ResponseBody
-    public void reset(){
+    public void reset(HttpServletRequest request){
+        HttpSession session=request.getSession();
+        Integer id=(Integer)session.getAttribute("orderid");
         //取得订单号
-        clientService.delOrder(10)                                                                                                                                                                                                           ;
+        clientService.delOrder(id)                                                                                                                                                                                                           ;
     }
 
     @RequestMapping(value = "/submit",method = RequestMethod.POST)
@@ -66,6 +68,7 @@ public class OrderController {
         //获取订单号
         HttpSession session=req.getSession();
         int id= (int) session.getAttribute("orderid");
+        clientService.markOrder(id);
         orderID.setId(id);
         orderID.setStat(Constants.ORDER_ND);
         orderID.setTime(new Date());

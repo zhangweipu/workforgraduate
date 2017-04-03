@@ -16,6 +16,7 @@ $(function () {
     // })
     $("body").on("click","#tijiao", function () {
         var orderid = $('.order').data('id');
+        //TODO:或许验证
         if (false) {
             alert("请点菜");
         } else {
@@ -31,6 +32,9 @@ $(function () {
                 contentType: "Application/json;charset=utf-8",
                 success: function (data) {
                     window.location.href="/client/success";
+                },
+                error:function (data) {
+                    alert("error");
                 }
             });
         }
@@ -121,4 +125,14 @@ $(function () {
         }
         return str;
     }
+
+
+    $(".food-praise").on("click",function () {
+        $this=$(this);
+        var id=$this.data("id");
+
+        $.get("/client/praise",{"id":id},function (data) {
+            $(".praise"+id).html(data);
+        })
+    })
 })

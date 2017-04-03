@@ -32,4 +32,8 @@ public interface    FoodsMapper {
     int count();
 
     Foods findSizePriceByName(String tab);
+
+    Integer findPraise(Integer id);
+
+    void updatePraiseNum(Integer id);
 }
