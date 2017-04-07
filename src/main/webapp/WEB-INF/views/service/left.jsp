@@ -11,10 +11,10 @@
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
                     <ul  class="nav nav-sidebar">
-                        <li ><a href="/service/addFoodType" class="btn " role="button">添加类型</a></li>
-                        <li ><a href="/service/add" class="btn " role="button">添加菜单</a></li>
-                        <li ><a href="/service/addmany" class="btn " role="button">批量添加</a></li>
-                        <li ><a href="/service/list" class="btn " role="button">菜单列表</a></li>
+                        <li ><a href="/admin/addFoodType" class="btn " role="button">添加类型</a></li>
+                        <li ><a href="/admin/add" class="btn " role="button">添加菜单</a></li>
+                        <li ><a href="/admin/addmany" class="btn " role="button">批量添加</a></li>
+                        <li ><a href="/admin/list" class="btn " role="button">菜单列表</a></li>
                     </ul>
                 </div> 
             </div>
@@ -31,8 +31,8 @@
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
                     <ul class="nav nav-sidebar">
-                        <%--<li ><a href="/service/add" class="btn " role="button">添加菜单</a></li>--%>
-                            <%--<li ><a href="/service/add" class="btn " role="button">添加菜单</a></li>--%>
+                        <%--<li ><a href="/adminer/add" class="btn " role="button">添加菜单</a></li>--%>
+                            <%--<li ><a href="/adminer/add" class="btn " role="button">添加菜单</a></li>--%>
                             <li ><a href="/service/showOrder" class="btn " role="button">订单记录</a></li>
                             <li ><a href="#" class="btn " role="button">Primary link</a></li>
                     </ul>
@@ -50,7 +50,7 @@
             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                 <div class="panel-body">
                     <ul  class="nav nav-sidebar">
-                        <%--<li ><a href="/service/add" class="btn " role="button">添加菜单</a></li>--%>
+                        <%--<li ><a href="/adminer/add" class="btn " role="button">添加菜单</a></li>--%>
                         <li ><a href="/service/showOrder" class="btn " role="button">支出账单</a></li>
                         <li ><a href="#" class="btn " role="button">收入账单</a></li>
                         <li ><a href="#" class="btn " role="button">财务分析</a></li>

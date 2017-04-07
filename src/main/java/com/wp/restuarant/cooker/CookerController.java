@@ -1,8 +1,8 @@
 package com.wp.restuarant.cooker;
 
 import com.wp.restuarant.cooker.service.CookerService;
-import com.wp.restuarant.order.entity.Order;
-import com.wp.restuarant.order.entity.OrderID;
+import com.wp.restuarant.data.order.entity.Order;
+import com.wp.restuarant.data.order.entity.OrderID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +16,7 @@ import java.util.List;
  * Created by admin on 2016/10/13.
  */
 @Controller
-@RequestMapping("/cooker")
+@RequestMapping("/admin/cooker")
 public class CookerController {
 
     @Autowired

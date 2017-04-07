@@ -5,7 +5,7 @@ $(function () {
             $('.child').remove();
         }
         var id=$(this).data('id');
-        $.post("/cooker/orderdetail",{"id":id},function (data) {
+        $.post("/admin/cooker/orderdetail",{"id":id},function (data) {
             var str="<div class='child'>";
             for (var i=0;i<data.length;i++) {
                 str+="<span>"+data[i].foodName+"</span>";
@@ -23,8 +23,8 @@ $(function () {
         $this=$(this);
         var oid=$this.data('oid');
         var fid=$this.data('fid');
-        $.post("/cooker/orderStatus",{"oid":oid,"fid":fid},function (data) {
-            window.location.href="/cooker/list";
+        $.post("/admin/cooker/orderStatus",{"oid":oid,"fid":fid},function (data) {
+            window.location.href="/admin/cooker/list";
         })
     })
 

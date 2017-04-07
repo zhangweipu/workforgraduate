@@ -2,7 +2,7 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 
-    <form:form id="formid" action="/service/update" method="post" modelAttribute="food">
+    <form:form id="formid" action="/admin/update" method="post" modelAttribute="food">
         <table class="table">
         <form:hidden path="id"/>
         <form:hidden path="imageName"/>

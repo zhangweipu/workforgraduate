@@ -1,7 +1,7 @@
 package com.wp.restuarant.cooker.service;
 
-import com.wp.restuarant.order.entity.Order;
-import com.wp.restuarant.order.entity.OrderID;
+import com.wp.restuarant.data.order.entity.Order;
+import com.wp.restuarant.data.order.entity.OrderID;
 
 import java.util.List;
 

@@ -24,7 +24,7 @@
     </script>
 </head>
 <body>
-<form action="/service/add" method="post" enctype="multipart/form-data">
+<form action="/admin/add" method="post" enctype="multipart/form-data">
         <table class="table">
             <tr ><td colspan="2" align="center">添加菜品</td></tr>
         <%--<input type="text" class="form-control" name="id" placeholder=".col-xs-4">--%>

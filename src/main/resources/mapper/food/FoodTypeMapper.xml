@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.wp.restuarant.food.dao.FoodTypeMapper">
-   <resultMap id="BaseParam" type="com.wp.restuarant.food.entity.FoodType">
+<mapper namespace="com.wp.restuarant.data.food.dao.FoodTypeMapper">
+   <resultMap id="BaseParam" type="com.wp.restuarant.data.food.entity.FoodType">
        <id column="tpye" property="type" javaType="java.lang.String" jdbcType="VARCHAR"/>
        <result column="id" property="id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
    </resultMap>
@@ -9,7 +9,7 @@
         select * from t_foodtype
         order by id asc
     </select>
-    <insert id="insert" parameterType="com.wp.restuarant.food.entity.FoodType">
+    <insert id="insert" parameterType="com.wp.restuarant.data.food.entity.FoodType">
         insert into t_foodtype(type,id) values(#{type},#{id})
     </insert>
     <insert id="insertBatch" parameterType="java.util.List">
@@ -18,7 +18,7 @@
             (#{item.type},#{item.id})
         </foreach>
     </insert>
-    <update id="update" parameterType="com.wp.restuarant.food.entity.FoodType">
+    <update id="update" parameterType="com.wp.restuarant.data.food.entity.FoodType">
         update t_foodtype set id=#{id} where type=#{type}
     </update>
     <delete id="delete" parameterType="java.lang.String">

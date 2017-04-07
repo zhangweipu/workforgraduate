@@ -1,11 +1,11 @@
 package com.wp.client.service.impl;
 
 import com.wp.client.service.ClientService;
-import com.wp.restuarant.food.dao.FoodsMapper;
-import com.wp.restuarant.order.dao.OrderIdMapper;
-import com.wp.restuarant.order.dao.OrderMapper;
-import com.wp.restuarant.order.entity.Order;
-import com.wp.restuarant.order.entity.OrderID;
+import com.wp.restuarant.data.food.dao.FoodsMapper;
+import com.wp.restuarant.data.order.dao.OrderIdMapper;
+import com.wp.restuarant.data.order.dao.OrderMapper;
+import com.wp.restuarant.data.order.entity.Order;
+import com.wp.restuarant.data.order.entity.OrderID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,12 +1,11 @@
 package com.wp.client.controller;
 
 import com.wp.algor.WaitTime;
-import com.wp.restuarant.food.dao.FoodTypeMapper;
-import com.wp.restuarant.food.dao.FoodsMapper;
-import com.wp.restuarant.food.entity.FoodType;
-import com.wp.restuarant.food.entity.Foods;
-import com.wp.restuarant.order.dao.OrderMapper;
-import com.wp.restuarant.order.entity.Order;
+import com.wp.restuarant.data.food.dao.FoodTypeMapper;
+import com.wp.restuarant.data.food.dao.FoodsMapper;
+import com.wp.restuarant.data.food.entity.FoodType;
+import com.wp.restuarant.data.order.dao.OrderMapper;
+import com.wp.restuarant.data.order.entity.Order;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

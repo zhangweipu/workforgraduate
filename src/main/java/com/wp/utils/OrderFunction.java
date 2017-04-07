@@ -1,6 +1,6 @@
 package com.wp.utils;
 
-import com.wp.restuarant.order.dao.OrderMapper;
+import com.wp.restuarant.data.order.dao.OrderMapper;
 
 /**
  * Created by zhang on 2017/4/3.

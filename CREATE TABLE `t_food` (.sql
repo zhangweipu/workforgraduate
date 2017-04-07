@@ -16,9 +16,8 @@ CREATE TABLE `t_food` (
 drop table if exists t_foodtype;
 create table t_foodtype(
   type varchar(20) primary key,
-  id int auto_increment
+  id int
 )
-
 
 
 --每单订单列表  订单详细表
