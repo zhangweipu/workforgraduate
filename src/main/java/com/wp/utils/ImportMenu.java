@@ -1,6 +1,6 @@
 package com.wp.utils;
 
-import com.wp.restuarant.food.entity.Foods;
+import com.wp.restuarant.data.food.entity.Foods;
 import org.apache.poi.hwpf.extractor.WordExtractor;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;

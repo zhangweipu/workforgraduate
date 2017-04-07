@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.wp.restuarant.food.dao.FoodsMapper">
-    <resultMap id="BaseResultMap" type="com.wp.restuarant.food.entity.Foods">
+<mapper namespace="com.wp.restuarant.data.food.dao.FoodsMapper">
+    <resultMap id="BaseResultMap" type="com.wp.restuarant.data.food.entity.Foods">
         <constructor>
             <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
             <arg column="name" javaType="java.lang.String" jdbcType="VARCHAR"/>
@@ -60,7 +60,7 @@
     delete from t_food
     where id = #{id,jdbcType=INTEGER}
   </delete>
-    <insert id="insert" parameterType="com.wp.restuarant.food.entity.Foods">
+    <insert id="insert" parameterType="com.wp.restuarant.data.food.entity.Foods">
     insert into t_food (id, name, image_name, 
       type, size, price, 
       la, detail)
@@ -79,7 +79,7 @@
             #{item.la,jdbcType=VARCHAR}, #{item.detail,jdbcType=VARCHAR})
         </foreach>
     </insert>
-    <insert id="insertSelective" parameterType="com.wp.restuarant.food.entity.Foods">
+    <insert id="insertSelective" parameterType="com.wp.restuarant.data.food.entity.Foods">
         insert into t_food
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
@@ -134,7 +134,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.wp.restuarant.food.entity.Foods">
+    <update id="updateByPrimaryKeySelective" parameterType="com.wp.restuarant.data.food.entity.Foods">
         update t_food
         <set>
             <if test="name != null">
@@ -161,7 +161,7 @@
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.wp.restuarant.food.entity.Foods">
+    <update id="updateByPrimaryKey" parameterType="com.wp.restuarant.data.food.entity.Foods">
     update t_food
     set name = #{name,jdbcType=VARCHAR},
       image_name = #{imageName,jdbcType=VARCHAR},

@@ -1,7 +1,7 @@
 package Test;
 
-import com.wp.restuarant.food.dao.FoodTypeMapper;
-import com.wp.restuarant.food.entity.FoodType;
+import com.wp.restuarant.data.food.dao.FoodTypeMapper;
+import com.wp.restuarant.data.food.entity.FoodType;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,10 +1,8 @@
 package com.wp.utils;
 
-import com.wp.restuarant.food.dao.FoodTypeMapper;
-import com.wp.restuarant.food.entity.FoodType;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.wp.restuarant.data.food.dao.FoodTypeMapper;
+import com.wp.restuarant.data.food.entity.FoodType;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

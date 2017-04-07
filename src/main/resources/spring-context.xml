@@ -81,7 +81,7 @@
     <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
     <!--<aop:config>-->
     <!--<aop:aspect id="order" ref="clientServiceImpl">-->
-    <!--<aop:pointcut id="addorder" expression="execution(* com.wp.client.service.ClientService.addOrder(..))"/>-->
+    <!--<aop:pointcut id="addorder" expression="execution(* com.wp.cliadminervice.ClientService.addOrder(..))"/>-->
     <!--<aop:before method="addOrderID"  pointcut-ref="addorder"/>-->
     <!--</aop:aspect>-->
     <!--</aop:config>-->

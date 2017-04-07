@@ -1,7 +1,7 @@
 package Test;
 
 import com.wp.client.service.ClientService;
-import com.wp.restuarant.order.entity.Order;
+import com.wp.restuarant.data.order.entity.Order;
 import net.sf.json.JSONObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;

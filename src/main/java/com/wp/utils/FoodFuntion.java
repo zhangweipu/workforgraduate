@@ -1,7 +1,7 @@
 package com.wp.utils;
 
-import com.wp.restuarant.food.dao.FoodsMapper;
-import com.wp.restuarant.food.entity.Foods;
+import com.wp.restuarant.data.food.dao.FoodsMapper;
+import com.wp.restuarant.data.food.entity.Foods;
 
 import java.util.List;
 

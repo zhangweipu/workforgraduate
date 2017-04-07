@@ -1,9 +1,9 @@
 package com.wp.client.controller;
 
 import com.wp.client.service.ClientService;
-import com.wp.restuarant.order.entity.Order;
-import com.wp.restuarant.order.entity.OrderID;
-import com.wp.restuarant.service.service.ServiceService;
+import com.wp.restuarant.data.order.entity.Order;
+import com.wp.restuarant.data.order.entity.OrderID;
+import com.wp.restuarant.adminer.service.ServiceService;
 import com.wp.utils.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

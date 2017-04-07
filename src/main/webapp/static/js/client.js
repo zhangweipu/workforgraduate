@@ -133,6 +133,7 @@ $(function () {
 
         $.get("/client/praise",{"id":id},function (data) {
             $(".praise"+id).html(data);
+            $this.unbind();
         })
     })
 })
