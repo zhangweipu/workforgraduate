@@ -33,8 +33,8 @@
       <td> ${ls.type}</td>
       <td> ${ls.price}</td>
       <td>${ls.size}</td>
-      <td>  <a href="/service/update?id=${ls.id}" class="btn btn-primary btn-lg active" role="button">修改</a></td>
-      <td>  <a href="/service/delete?id=${ls.id}" class="btn btn-primary btn-lg active" role="button">删除</a></td>
+      <td>  <a href="/admin/update?id=${ls.id}" class="btn btn-primary btn-lg active" role="button">修改</a></td>
+      <td>  <a href="/admin/delete?id=${ls.id}" class="btn btn-primary btn-lg active" role="button">删除</a></td>
   </tr>
 </c:forEach>
     </tbody>
