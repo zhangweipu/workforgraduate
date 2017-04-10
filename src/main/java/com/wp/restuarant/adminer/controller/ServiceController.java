@@ -45,8 +45,8 @@ public class ServiceController {
     @Autowired
     private ServiceService serviceService;
     //文件上传路径
-    //
-    public final static String path="F:/workforgraduate/src/main/webapp/static/images/";
+    //TODO：更改文件路径
+    public final static String path="E:/workforgraduate/src/main/webapp/static/images/";
 
     /**
      * 菜单查询
@@ -59,7 +59,7 @@ public class ServiceController {
         List<Foods> list=serviceService.findAll();
         List<String> urlList=new ArrayList<String>();
         for(Foods f:list) {
-            //   String url=request.getContextPath()+"/images/"+f.getImageName(); //项目发布时就行了吧
+            //   String url=request.getContextPath()+"/images/"+f.getImageName();
             String url = "/static/images/" + f.getImageName();
             url.trim();
             urlList.add(url);

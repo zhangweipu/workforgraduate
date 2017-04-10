@@ -90,10 +90,6 @@ public class ClientController {
         modelMap.put("typeList",typeList);
         modelMap.put("url","/static/images/");
         modelMap.put("id",id);
-        logger.info("查询菜单了");
-        logger.warn("这是警告！！！！！");
-        logger.debug("这是debug！！！！");
-        logger.error("这是错误");
         return "client/main";
     }
 
