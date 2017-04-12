@@ -28,8 +28,8 @@
         <table class="table">
             <tr ><td colspan="2" align="center">添加菜品</td></tr>
         <%--<input type="text" class="form-control" name="id" placeholder=".col-xs-4">--%>
-      <tr><td>菜名：</td> <td>
-          <select class="form-control required" name="name">
+      <tr><td>种类：</td> <td>
+          <select class="form-control required" name="type">
               <option value="">请选择是食物类型</option>
               <c:forEach items="${my:myFunc()}" var="item">
               <option value="${item.type}">${item.type}</option>
@@ -38,7 +38,7 @@
       </td></tr>
 
         <%--<input type="text" class="form-control" name="imageName" placeholder=".col-xs-4">--%>
-            <tr> <td>菜的种类：</td><td> <input type="text" class="form-control required" name="type" placeholder="种类"></td></tr>
+            <tr> <td>菜名：</td><td> <input type="text" class="form-control required" name="name" placeholder="菜名"></td></tr>
             <tr><td> 菜的规格：</td><td><input type="text" class="form-control" name="size" placeholder="大小"></td></tr>
             <tr><td> 菜的价格：</td><td><input type="text" class="form-control required" name="price" placeholder="价格"></td></tr>
             <tr><td>菜品图片：</td><td><input type="file" name="icon" class="form-control" placeholder="请上传图片" ></td></tr>
