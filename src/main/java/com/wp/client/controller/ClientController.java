@@ -88,6 +88,7 @@ public class ClientController {
         session.setAttribute("orderid",id);
         List<FoodType> typeList=foodTypeMapper.seach();
         modelMap.put("typeList",typeList);
+        //TODO:路径
         modelMap.put("url","/static/images/");
         modelMap.put("id",id);
         return "client/main";
