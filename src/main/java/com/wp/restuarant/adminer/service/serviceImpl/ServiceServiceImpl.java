@@ -83,6 +83,11 @@ public class ServiceServiceImpl implements ServiceService{
 
     @Override
     public List<Order> findOrderDetail(Integer id) {
+        return orderMapper.findOrder(id);
+    }
+
+    @Override
+    public List<Order> findOrder(Integer id) {
         return orderMapper.findOrderDetail(id);
     }
 

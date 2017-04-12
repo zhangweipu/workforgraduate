@@ -24,6 +24,7 @@ public interface ServiceService {
     List<Order> findBySeatOrTime();
     List<OrderID> findAllorderId();
     List<Order> findOrderDetail(Integer id);
+    List<Order> findOrder(Integer id);
     void addFoodType(FoodType foodType);
     List<FoodType> getFoodTypes();
     void updateFoodType(FoodType foodType);

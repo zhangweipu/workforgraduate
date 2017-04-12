@@ -48,7 +48,7 @@ public class ServiceController {
     private ServiceService serviceService;
     //文件上传路径
     //TODO：更改文件路径
-    public final static String path="E:/workforgraduate/src/main/webapp/static/images/";
+    public final static String path="/out/workforgraduate/src/main/webapp/static/images/";
 
     /**
      * 菜单查询
@@ -245,11 +245,14 @@ public class ServiceController {
      */
     @RequestMapping(value = "/addFoodType",method = RequestMethod.POST)
     public String addFoodTtype(String[] type,Integer[] id){
+
+
        // System.out.println(foodTypes.size());
         for(int i=0;i<id.length;i++){
-            FoodType foodType=new FoodType(type[i],id[i]);
-            serviceService.addFoodType(foodType);
+                FoodType foodType = new FoodType(type[i], id[i]);
+                serviceService.addFoodType(foodType);
         }
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++");
         return "service/success";
     }
 
