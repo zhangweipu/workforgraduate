@@ -66,3 +66,15 @@ create table t_finance(
    amount int,
    type varchar(20)
 );
+
+##--职员表
+drop table if exists t_emp;
+create table t_emp(
+  id int auto_increment primary key,
+  name varchar(20),
+  age int,
+  duty int,
+  worktime date,
+  salary int,
+  power int
+);
