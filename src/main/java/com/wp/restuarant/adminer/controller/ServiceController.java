@@ -24,8 +24,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -212,19 +214,20 @@ public class ServiceController {
     }
 
     @RequestMapping(value = "/orderList",method = RequestMethod.GET)
-    public String toOrderList(){
+    public String toOrderList() {
+
         return "service/findorder/orderlist";
     }
 
     /**
      *
-     * @param id
      * @param model
      * @return
      */
     @RequestMapping("/orderdetail")
-    public String orderDetial(String id,Model model){
-        List<Order> list=serviceService.findOrderDetail(Integer.valueOf(id));
+    public String orderDetial(HttpServletRequest request,Model model){
+        Integer id=getId(request);
+        List<Order> list=serviceService.findOrderDetail(id);
         model.addAttribute("list",list);
         return "service/findorder/orderdetail";
     }
@@ -292,5 +295,12 @@ public class ServiceController {
         outputstream.flush();
         outputstream.close();
         return null;
+    }
+
+    private Integer getId(HttpServletRequest request){
+
+        HttpSession session=request.getSession();
+        int a=(Integer) session.getAttribute("orderid");
+        return a;
     }
 }

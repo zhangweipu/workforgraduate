@@ -29,6 +29,8 @@ public interface OrderMapper {
 
     List<Order> findOrder(Integer id);
 
+    List<Order> findOrderDetail(Integer id);
+
     List<Order> search(int a,boolean b);
 
     int getBefore(Integer id);

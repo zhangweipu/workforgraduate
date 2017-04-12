@@ -19,7 +19,7 @@
             <td><fmt:formatDate value="${ls.time}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate></td>
             <td>${ls.stat}</td>
             <td>${ls.money}</td>
-            <td><a class="btn" href="/service/orderdetail?id=${ls.id}">详情</a></td>
+            <td><a class="btn" href="/admin/orderdetail?id=${ls.id}">详情</a></td>
         </tr>
     </c:forEach>
     </tbody>

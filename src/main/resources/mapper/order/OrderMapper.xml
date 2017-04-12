@@ -172,6 +172,9 @@
     select food_id,food_name,food_price,count(food_id) as num,la from t_order
     where la='ND' and orderid=#{0} group by food_id
   </select>
+    <select id="findOrderDetail" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select * from t_order where orderid=#{0}
+    </select>
     <select id="getBefore" parameterType="java.lang.Integer" resultType="java.lang.Integer">
     select count(*) from t_order
     where time  &lt; (select time from t_order where orderid=#{0} limit 1)
