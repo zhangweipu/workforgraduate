@@ -33,7 +33,7 @@
                     <ul class="nav nav-sidebar">
                         <%--<li ><a href="/adminer/add" class="btn " role="button">添加菜单</a></li>--%>
                             <%--<li ><a href="/adminer/add" class="btn " role="button">添加菜单</a></li>--%>
-                            <li ><a href="/service/showOrder" class="btn " role="button">订单记录</a></li>
+                            <li ><a href="/admin/showOrder" class="btn " role="button">订单记录</a></li>
                             <li ><a href="#" class="btn " role="button">Primary link</a></li>
                     </ul>
                 </div>
