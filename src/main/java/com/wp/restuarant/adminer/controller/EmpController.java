@@ -32,6 +32,15 @@ public class EmpController {
     }
 
     /**
+     * 批量添加员工信息
+     * @return
+     */
+    @RequestMapping(value = "/addBatch",method = RequestMethod.GET)
+    public String addBatch(){
+        return "/service/emp/addBatch";
+    }
+
+    /**
      * 修改员工信息
      * @return
      */

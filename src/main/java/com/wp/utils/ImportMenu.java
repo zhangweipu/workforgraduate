@@ -1,7 +1,9 @@
 package com.wp.utils;
 
 import com.wp.restuarant.data.food.entity.Foods;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.hwpf.extractor.WordExtractor;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -56,25 +58,30 @@ public class ImportMenu {
         try {
            // InputStream in=new FileInputStream(file);
             try {
-                XSSFWorkbook xssfWorkbook=new XSSFWorkbook(in);
+                Workbook xssfWorkbook=null;
+                try{
+                    xssfWorkbook=new XSSFWorkbook(in);
+                }catch (Exception e){
+                    xssfWorkbook=new HSSFWorkbook(in);
+                }
                 Foods Foods =null;
                 List<Foods> list=new ArrayList<Foods>();
                 for(int numSheet=0;numSheet<xssfWorkbook.getNumberOfSheets();
                         numSheet++){
-                    XSSFSheet xssfSheet=xssfWorkbook.getSheetAt(numSheet);
+                    Sheet xssfSheet=xssfWorkbook.getSheetAt(numSheet);
                     if(xssfSheet==null){
                         continue;
                     }
                     for(int rowNum=1;rowNum<=xssfSheet.getLastRowNum();rowNum++)
                     {
-                        XSSFRow xssfRow=xssfSheet.getRow(rowNum);
+                        Row xssfRow=xssfSheet.getRow(rowNum);
                         if(xssfRow!=null){
                             Foods =new Foods();
                             Foods.setName(String.valueOf(xssfRow.getCell(0)));
                             Foods.setType(String.valueOf(xssfRow.getCell(1)));
-                            XSSFCell size=xssfRow.getCell(2);
+                            Cell size=xssfRow.getCell(2);
                             Foods.setSize(1);
-                            XSSFCell price=xssfRow.getCell(3);
+                            Cell price=xssfRow.getCell(3);
                             Foods.setPrice(1);
                             Foods.setLa(String.valueOf(xssfRow.getCell(4)));
                             Foods.setImageName(String.valueOf(xssfRow.getCell(5)));

@@ -72,6 +72,7 @@ drop table if exists t_emp;
 create table t_emp(
   id int auto_increment primary key,
   name varchar(20),
+  sex varchar(20),
   age int,
   duty int,
   worktime date,
