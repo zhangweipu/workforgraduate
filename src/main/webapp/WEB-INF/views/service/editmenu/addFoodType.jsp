@@ -20,6 +20,13 @@
         </table>
         <input type="submit" value="确定">
         <input type="reset" value="重置">
+        <a href="/admin/addmany" class="btn">批量添加</a>
     </form>
     <div class="display"><span>设置优先级，越小越优先展示</span></div>
+    <div class="out-main">
+        <div class="out-header"></div>
+        <div class="out-close"></div>
+        <div class="out-context"></div>
+        <div class="out-footer"></div>
+    </div>
 </div>

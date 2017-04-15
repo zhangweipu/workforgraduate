@@ -2,17 +2,6 @@ package com.wp.restuarant.data.emp.entity;
 
 import java.util.Date;
 
-/**
- *  id int auto_increment primary key,
- name varchar(20),
- age int,
- duty int,
- worktime date,
- salary int,
- power int
- *
- * Created by zwp on 17-4-12.
- */
 public class Emp {
 
     private Integer id;
@@ -78,6 +67,8 @@ public class Emp {
     public void setPower(Integer power) {
         this.power = power;
     }
+
+    public Emp(){}
 
     public Emp(Integer id, String name, int age, Integer duty, Date worktime, Integer salary, Integer power) {
         this.id = id;
