@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * Created by zwp on 17-4-13.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:spring-context.xml")
+@ContextConfiguration("classpath:spring-test.xml")
 public class Test4 {
 
     @Autowired
@@ -23,6 +23,6 @@ public class Test4 {
         Emp emp=new Emp();
         emp.setId(1);
         emp.setName("tom");
-        //empDao.insert(emp);
+        empDao.insert(emp);
     }
 }

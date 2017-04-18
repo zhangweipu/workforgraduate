@@ -14,7 +14,7 @@ import java.util.List;
  * Created by admin on 2016/10/9.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:spring-context.xml")
+@ContextConfiguration("classpath:spring-test.xml")
 public class Test1 {
 
     @Autowired
