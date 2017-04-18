@@ -3,14 +3,18 @@
 <mapper namespace="com.wp.restuarant.data.emp.dao.EmpDao">
   <resultMap id="BaseResultMap" type="com.wp.restuarant.data.emp.entity.Emp">
     <result property="id" column="id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
-    <result property="name" column="name" javaType="java.lang.String" jdbcType="INTEGER"/>
+    <result property="name" column="name" javaType="java.lang.String" jdbcType="VARCHAR"/>
     <result property="age" column="age" javaType="java.lang.Integer" jdbcType="INTEGER"/>
     <result property="duty" column="duty" javaType="java.lang.Integer" jdbcType="INTEGER"/>
     <result property="salary" column="salary" javaType="java.lang.Integer" jdbcType="INTEGER"/>
     <result property="power" column="power" javaType="java.lang.Integer" jdbcType="INTEGER"/>
     <result property="worktime" column="worktime" javaType="java.util.Date" jdbcType="DATE"/>
+    <result property="sex" column="sex" jdbcType="VARCHAR" javaType="java.lang.String"/>
   </resultMap>
   <update id="insert" parameterType="com.wp.restuarant.data.emp.entity.Emp">
-    insert into t_emp values(#{id},#{name},#{age},#{duty},#{salary},#{power},#{worktime})
+    insert into t_emp(name,age,duty,salary,power,worktime,sex) values(#{name},#{age},#{duty},#{salary},#{power},#{worktime},#{sex})
   </update>
+  <select id="select" resultMap="BaseResultMap">
+    select * from t_emp
+  </select>
 </mapper>

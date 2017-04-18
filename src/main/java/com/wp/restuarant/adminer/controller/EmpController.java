@@ -1,8 +1,14 @@
 package com.wp.restuarant.adminer.controller;
 
+import com.wp.restuarant.data.emp.dao.EmpDao;
+import com.wp.restuarant.data.emp.entity.Emp;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.util.List;
 
 /**
  * 员工管理
@@ -12,12 +18,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/admin/emp")
 public class EmpController {
 
+    @Autowired
+    private EmpDao empDao;
+
     /**
      * 查找员工信息
      * @return
      */
     @RequestMapping(value = "/find",method = RequestMethod.GET)
-    public String find(){
+    public String find(Model model){
+        List<Emp> list=empDao.select();
+        model.addAttribute("list",list);
+        String a="aa";
+        System.out.println("aa");
         return "/service/emp/find";
     }
 
@@ -29,6 +42,17 @@ public class EmpController {
     @RequestMapping(value = "/add" ,method = RequestMethod.GET)
     public String add(){
         return "/service/emp/add";
+    }
+
+    /**
+     * 提交表格信息
+     * @param emp
+     * @return
+     */
+    @RequestMapping(value = "/add",method = RequestMethod.POST)
+    public String add(Emp emp){
+        empDao.insert(emp);
+        return "/service/success";
     }
 
     /**

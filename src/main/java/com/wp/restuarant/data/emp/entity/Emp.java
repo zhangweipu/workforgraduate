@@ -1,16 +1,32 @@
 package com.wp.restuarant.data.emp.entity;
 
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.NumberFormat;
+
 import java.util.Date;
 
 public class Emp {
 
+    @NotEmpty
     private Integer id;
     private String name;
+    @NumberFormat
     private int age;
     private Integer duty;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date worktime;
     private Integer salary;
     private Integer power;
+    private String sex;
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
 
     public Integer getId() {
         return id;
@@ -78,5 +94,19 @@ public class Emp {
         this.worktime = worktime;
         this.salary = salary;
         this.power = power;
+    }
+
+    @Override
+    public String toString() {
+        return "Emp{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", duty=" + duty +
+                ", worktime=" + worktime +
+                ", salary=" + salary +
+                ", power=" + power +
+                ", sex='" + sex + '\'' +
+                '}';
     }
 }

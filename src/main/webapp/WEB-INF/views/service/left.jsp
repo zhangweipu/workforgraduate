@@ -70,9 +70,8 @@
                 <div class="panel-body">
                     <ul  class="nav nav-sidebar">
                         <li ><a href="/admin/emp/add" class="btn " role="button">添加员工信息</a></li>
-                        <li ><a href="/admin/emp/update" class="btn " role="button">修改员工信息</a></li>
                         <li ><a href="/admin/emp/find" class="btn " role="button">查找员工信息</a></li>
-                        <li ><a href="/admin/emp/delete" class="btn " role="button">删除员工信息</a></li>
+                        <li ><a href="/admin/emp/find" class="btn " role="button">编辑员工信息</a></li>
 
                     </ul>
                 </div>
