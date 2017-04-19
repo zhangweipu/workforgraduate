@@ -1,5 +1,5 @@
 body{
- //   background-image: url("../images/backpicture.jpg");
+//   background-image: url("../images/backpicture.jpg");
     background-repeat: no-repeat;
 }
 table{
@@ -9,11 +9,12 @@ table td{
     word-wrap:break-word;
 }
 .container{
-    //background-color:red;
+//background-color:red;
     height:900px;
+    z-index:1;
 }
 .container .tab{
-   // background-color:black;
+// background-color:black;
     height:200px;
     width:200px;
     float:left;
@@ -21,4 +22,13 @@ table td{
     border-radius:25px;
     padding:20px;
     margin:20px 20px 50px 60px;
+}
+.out-main{
+    background-color:#f2dede;
+    width:200px;
+    height:300px;
+    display: none;
+    margin-top:-500px;
+    z-index:3;
+    position:absolute;
 }

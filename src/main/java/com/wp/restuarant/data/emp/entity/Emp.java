@@ -1,27 +1,32 @@
 package com.wp.restuarant.data.emp.entity;
 
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.NumberFormat;
+
 import java.util.Date;
 
-/**
- *  id int auto_increment primary key,
- name varchar(20),
- age int,
- duty int,
- worktime date,
- salary int,
- power int
- *
- * Created by zwp on 17-4-12.
- */
 public class Emp {
 
+    @NotEmpty
     private Integer id;
     private String name;
+    @NumberFormat
     private int age;
     private Integer duty;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date worktime;
     private Integer salary;
     private Integer power;
+    private String sex;
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
 
     public Integer getId() {
         return id;
@@ -79,6 +84,8 @@ public class Emp {
         this.power = power;
     }
 
+    public Emp(){}
+
     public Emp(Integer id, String name, int age, Integer duty, Date worktime, Integer salary, Integer power) {
         this.id = id;
         this.name = name;
@@ -87,5 +94,19 @@ public class Emp {
         this.worktime = worktime;
         this.salary = salary;
         this.power = power;
+    }
+
+    @Override
+    public String toString() {
+        return "Emp{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", duty=" + duty +
+                ", worktime=" + worktime +
+                ", salary=" + salary +
+                ", power=" + power +
+                ", sex='" + sex + '\'' +
+                '}';
     }
 }

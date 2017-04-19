@@ -1,29 +1,28 @@
 package Test;
 
-import com.wp.restuarant.data.order.dao.OrderMapper;
-import com.wp.restuarant.data.order.entity.Order;
+import com.wp.restuarant.data.emp.dao.EmpDao;
+import com.wp.restuarant.data.emp.entity.Emp;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import java.util.List;
-
 /**
- * Created by admin on 2016/10/9.
+ * Created by zwp on 17-4-13.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:spring-test.xml")
-public class Test1 {
+public class Test4 {
 
     @Autowired
-    OrderMapper orderMapper;
+    private EmpDao empDao;
+
     @Test
-    public void test(){
-        List<Order> list=orderMapper.search(1,false);
-        for(Order o:list){
-            System.out.println(o);
-        }
+    public void testInsert(){
+        Emp emp=new Emp();
+        emp.setId(1);
+        emp.setName("tom");
+        empDao.insert(emp);
     }
 }

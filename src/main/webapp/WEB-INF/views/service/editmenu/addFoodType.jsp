@@ -20,6 +20,8 @@
         </table>
         <input type="submit" value="确定">
         <input type="reset" value="重置">
+
     </form>
     <div class="display"><span>设置优先级，越小越优先展示</span></div>
+
 </div>

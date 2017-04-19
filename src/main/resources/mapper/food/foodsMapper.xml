@@ -179,4 +179,7 @@
     <select id="findSizePriceByName" resultMap="BaseResultMap" parameterType="String">
     select * from t_food where name=#{tab,jdbcType=VARCHAR}
   </select>
+    <select id="findByType" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select * from t_food where type=#{0}
+    </select>
 </mapper>

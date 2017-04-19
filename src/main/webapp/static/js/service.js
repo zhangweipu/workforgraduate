@@ -11,4 +11,9 @@ jQuery(function($) {
         $("#main").load(url);
     })
 
+    $(".out-btn").on("click",function (evt) {
+        evt.preventDefault();
+        $(".out-main").fadeIn();
+    })
+
 })
