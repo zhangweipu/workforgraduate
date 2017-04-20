@@ -19,7 +19,8 @@ public class TestController {
 
         Foods foods=new Foods();
         foods.setDetail("ssss");
-
+        
+        System.out.printf("hahahha");
         Emp emp=new Emp();
         emp.setId(1);
         emp.setAge(2);
