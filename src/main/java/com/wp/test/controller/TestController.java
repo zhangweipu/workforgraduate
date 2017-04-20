@@ -23,7 +23,7 @@ public class TestController {
         System.out.printf("hahahha");
         Emp emp=new Emp();
         emp.setId(1);
-        emp.setAge(2);
+        emp.setAge(3);
         emp.setPower(1);
 
         return "test/index";
