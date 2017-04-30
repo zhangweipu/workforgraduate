@@ -250,7 +250,9 @@ public class ServiceController {
        // System.out.println(foodTypes.size());
         for(int i=0;i<id.length;i++){
                 FoodType foodType = new FoodType(type[i], id[i]);
-                serviceService.addFoodType(foodType);
+                if(foodType.getId()!=null) {
+                    serviceService.addFoodType(foodType);
+                }
         }
         System.out.println("+++++++++++++++++++++++++++++++++++++++++");
         return "service/success";
