@@ -8,20 +8,7 @@
     <style type="text/css">
 
     </style>
-    <script type="text/javascript">
-        $("#subm").on("click",function (evt) {
-            $(".required").each(function () {
-                var inp=$(this).val();
-                if(inp==""){
-             //       alert("kong");
-                    evt.preventDefault();
-                    return;
-                }else{
-//                    alert(inp);
-                }
-            })
-        })
-    </script>
+
 <form action="/admin/add" method="post" enctype="multipart/form-data">
         <table class="table">
             <tr ><td colspan="2" align="center">添加菜品</td></tr>
@@ -41,7 +28,7 @@
             <tr><td> 菜的价格：</td><td><input type="text" class="form-control required" name="price" placeholder="价格"></td></tr>
             <tr><td>菜品图片：</td><td><input type="file" name="icon" class="form-control" placeholder="请上传图片" ></td></tr>
            <tr> <td>详细介绍：</td><td><textarea name="detail" class="form-control" rows="3"></textarea></td></tr>
-            <tr><td><button type="submit" id="subm" class="btn btn-primary">提交</button></td>
+            <tr><td><button type="submit" >提交</button></td>
                 <td><a class="btn" href="/admin/addmany">批量添加</a></td></tr>
         </table>
 </form>

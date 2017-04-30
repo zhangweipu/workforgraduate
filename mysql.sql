@@ -19,7 +19,7 @@ CREATE TABLE `t_food` (
 ##--菜单类型表
 drop table if exists t_foodtype;
 create table t_foodtype(
-  type varchar(20) primary key,
+  type varchar(20),
   id int
 );
 
