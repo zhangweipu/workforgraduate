@@ -16,7 +16,7 @@
                 <td>职位：</td><td><input class="input" type="text" name="duty"></td>
             </tr>
             <tr>
-                <td>入职时间：</td><td><input class="input" type="text" name="worktime" placeholder="YYYY-MM-DD"></td>
+                <td>入职时间：</td><td><input onclick="WdatePicker();" class="input" type="text" name="worktime" placeholder="YYYY-MM-DD"></td>
             </tr>
             <tr>
                 <td>薪资：</td><td><input class="input" type="text" name="salary"></td>

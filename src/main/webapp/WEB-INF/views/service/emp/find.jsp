@@ -15,7 +15,10 @@
             <td>操作</td>
         </tr>
         </thead>
+        <tbody>
+
     <c:forEach items="${list}" var="ls" varStatus="status">
+        <tr>
         <td>${status.index}</td>
         <td>${ls.id}</td>
         <td>${ls.name}</td>
@@ -24,7 +27,11 @@
         <td>${ls.worktime}</td>
         <td>${ls.salary}</td>
         <td>${ls.power}</td>
-        <td><a>修改</a><a>删除</a></td>
+        <td><a href="/admin/emp/update?id=${ls.id}">修改</a>
+            <a href="/admin/emp/delete?id=${ls.id}">删除</a></td>
+        </tr>
     </c:forEach>
+
+        </tbody>
     </table>
 </div>

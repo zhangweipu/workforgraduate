@@ -10,7 +10,8 @@
     <link href="/static/css/common.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="/static/css/dashboard.css" rel="stylesheet">
-
+    <script src="/static/my97date/calendar.js"></script>
+    <script src="/static/my97date/WdatePicker.js"></script>
 
 </head>
 

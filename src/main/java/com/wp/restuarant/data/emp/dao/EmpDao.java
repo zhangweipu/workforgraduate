@@ -13,4 +13,7 @@ import java.util.List;
 public interface EmpDao {
     void insert(Emp emp);
     List<Emp> select();
+    void update(Emp emp);
+    void delete(Integer id);
+    Emp selectById(Integer id);
 }

@@ -17,4 +17,37 @@
   <select id="select" resultMap="BaseResultMap">
     select * from t_emp
   </select>
+  <select id="selectById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select * form t_emp where id=#{0}
+  </select>
+  <update id="update" parameterType="com.wp.restuarant.data.emp.entity.Emp">
+    update t_emp
+    <set>
+      <if test="name!=null">
+        name=#{name},
+      </if>
+      <if test="age!=null">
+        age=#{age},
+      </if>
+      <if test="duty!=null">
+        duty=#{duty},
+      </if>
+      <if test="salary!=null">
+        salary=#{salary},
+      </if>
+      <if test="power!=null">
+        power=#{power},
+      </if>
+      <if test="worktime!=null">
+        worktime=#{worktime},
+      </if>
+      <if test="sex!=null">
+        sex=#{sex}
+      </if>
+    </set>
+    where id=#{id}
+  </update>
+  <delete id="delete" parameterType="java.lang.Integer">
+    delete from t_emp where id=#{0}
+  </delete>
 </mapper>

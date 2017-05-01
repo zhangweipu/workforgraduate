@@ -2,6 +2,7 @@ package com.wp.restuarant.adminer.controller;
 
 import com.wp.restuarant.data.emp.dao.EmpDao;
 import com.wp.restuarant.data.emp.entity.Emp;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +19,8 @@ import java.util.List;
 @RequestMapping("/admin/emp")
 public class EmpController {
 
+    private static final Logger logger=Logger.getLogger(EmpController.class);
+
     @Autowired
     private EmpDao empDao;
 
@@ -29,7 +32,6 @@ public class EmpController {
     public String find(Model model){
         List<Emp> list=empDao.select();
         model.addAttribute("list",list);
-        String a="aa";
         System.out.println("aa");
         return "/service/emp/find";
     }
@@ -70,7 +72,9 @@ public class EmpController {
      */
 
     @RequestMapping(value = "/update",method = RequestMethod.GET)
-    public String update(){
+    public String update(Integer id,Model model){
+        Emp emp=empDao.selectById(id);
+        model.addAttribute("emp",emp);
         return "/service/emp/update";
     }
 
@@ -79,7 +83,8 @@ public class EmpController {
      * @return
      */
     @RequestMapping(value = "/delete",method = RequestMethod.GET)
-    public String delete(){
-        return "/service/emp/delete";
+    public String delete(Integer id){
+        empDao.delete(id);
+        return "/service/success";
     }
 }
