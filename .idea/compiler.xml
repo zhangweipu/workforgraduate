@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="com.wp" />
         <module name="workforgraduate" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="com.wp" target="1.7" />
       <module name="workforgraduate" target="1.7" />
     </bytecodeTargetLevel>
   </component>
