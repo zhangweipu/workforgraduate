@@ -9,6 +9,7 @@ import com.wp.restuarant.adminer.entity.Table;
 import com.wp.restuarant.adminer.service.ServiceService;
 import com.wp.utils.Conditions;
 import com.wp.utils.ImportMenu;
+import com.wp.utils.PropertyUtil;
 import net.sf.json.JSONObject;
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -48,7 +49,7 @@ public class ServiceController {
     private ServiceService serviceService;
     //文件上传路径
     //TODO：更改文件路径
-    public final static String path="/out/workforgraduate/src/main/webapp/static/images/";
+    public final static String path= PropertyUtil.getProperty("imageUrl");
 
     /**
      * 菜单查询
@@ -85,7 +86,10 @@ public class ServiceController {
      */
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     public String add(Foods food, MultipartFile icon, HttpServletRequest request, ModelMap modelMap){
-        String imageName=food.getName()+".jpg";
+
+        byte[] bytes=food.getName().getBytes();
+        String ne=String.valueOf(bytes);
+        String imageName=ne+".jpg";
         //String path = request.getSession().getServletContext().getRealPath("images");//获取服务器文件夹地址 不能长期存储 服务重启就消失
 
         File image=new File(path,imageName);
