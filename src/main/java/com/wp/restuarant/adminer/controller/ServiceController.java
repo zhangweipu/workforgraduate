@@ -7,6 +7,7 @@ import com.wp.restuarant.data.order.entity.OrderID;
 import com.wp.restuarant.adminer.dao.TableTools;
 import com.wp.restuarant.adminer.entity.Table;
 import com.wp.restuarant.adminer.service.ServiceService;
+import com.wp.utils.ChineseToPinyinUtil;
 import com.wp.utils.Conditions;
 import com.wp.utils.ImportMenu;
 import com.wp.utils.PropertyUtil;
@@ -88,7 +89,7 @@ public class ServiceController {
     public String add(Foods food, MultipartFile icon, HttpServletRequest request, ModelMap modelMap){
 
         byte[] bytes=food.getName().getBytes();
-        String ne=String.valueOf(bytes);
+        String ne= ChineseToPinyinUtil.getPinYin(food.getName());
         String imageName=ne+".jpg";
         //String path = request.getSession().getServletContext().getRealPath("images");//获取服务器文件夹地址 不能长期存储 服务重启就消失
 
