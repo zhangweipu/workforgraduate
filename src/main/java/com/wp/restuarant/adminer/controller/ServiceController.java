@@ -189,7 +189,7 @@ public class ServiceController {
     @RequestMapping(value = "/update",method = RequestMethod.POST)
     public String update(Foods food){
         serviceService.update(food);
-        return "redirect:/service/index";
+        return "redirect:/admin/index";
     }
 
     /**
@@ -208,7 +208,7 @@ public class ServiceController {
             }
         }
         serviceService.delete(id);//删除数据库信息
-        return "redirect:/service/list";
+        return "redirect:/admin/list";
     }
 
     @RequestMapping(value = "/showOrder",method = RequestMethod.GET)

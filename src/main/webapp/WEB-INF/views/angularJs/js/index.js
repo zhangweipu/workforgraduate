@@ -1,3 +1,6 @@
-/**
- * Created by zwp on 17-4-30.
- */
+var app=angular.module("app",[]);
+app.controller("controller",function($scope){
+   $scope.init=function(){
+       alert("init");
+   };
+});
