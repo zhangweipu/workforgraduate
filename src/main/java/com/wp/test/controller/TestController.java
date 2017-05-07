@@ -13,10 +13,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/test")
 public class TestController {
 
-    @RequestMapping(value = "/index", method = RequestMethod.GET)
-    
-    public String index(){
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    public String home(){
 
-        return "Test/Test";
+        return "pages/home";
+    }
+
+    @RequestMapping(value = "/products",method = RequestMethod.GET)
+    public String ProductsPage(){
+        return "pages/products";
+    }
+
+    @RequestMapping(value = "/contactus",method = RequestMethod.GET)
+    public String ContactUsPage(){
+        return "pages/contactus";
     }
 }

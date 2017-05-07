@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wp.restuarant.data.emp.dao.EmpDao">
+  <resultMap id="BaseResultMap" type="com.wp.restuarant.data.emp.entity.Emp">
+    <result property="id" column="id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+    <result property="name" column="name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+    <result property="age" column="age" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+    <result property="duty" column="duty" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+    <result property="salary" column="salary" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+    <result property="power" column="power" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+    <result property="worktime" column="worktime" javaType="java.util.Date" jdbcType="DATE"/>
+    <result property="sex" column="sex" jdbcType="VARCHAR" javaType="java.lang.String"/>
+  </resultMap>
+  <update id="insert" parameterType="com.wp.restuarant.data.emp.entity.Emp">
+    insert into t_emp(name,age,duty,salary,power,worktime,sex) values(#{name},#{age},#{duty},#{salary},#{power},#{worktime},#{sex})
+  </update>
+  <select id="select" resultMap="BaseResultMap">
+    select * from t_emp
+  </select>
+  <select id="selectById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select * from  t_emp where id=#{0}
+  </select>
+  <update id="update" parameterType="com.wp.restuarant.data.emp.entity.Emp">
+    update t_emp
+    <set>
+      <if test="name!=null">
+        name=#{name},
+      </if>
+      <if test="age!=null">
+        age=#{age},
+      </if>
+      <if test="duty!=null">
+        duty=#{duty},
+      </if>
+      <if test="salary!=null">
+        salary=#{salary},
+      </if>
+      <if test="power!=null">
+        power=#{power},
+      </if>
+      <if test="worktime!=null">
+        worktime=#{worktime},
+      </if>
+      <if test="sex!=null">
+        sex=#{sex}
+      </if>
+    </set>
+    where id=#{id}
+  </update>
+  <delete id="delete" parameterType="java.lang.Integer">
+    delete from t_emp where id=#{0}
+  </delete>
+</mapper>
