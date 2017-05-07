@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<script src="/static/js/service.js"></script>
 <div class="emp-find">
     <table>
         <thead>
@@ -27,8 +28,8 @@
         <td>${ls.worktime}</td>
         <td>${ls.salary}</td>
         <td>${ls.power}</td>
-        <td><a href="/admin/emp/update?id=${ls.id}">修改</a>
-            <a href="/admin/emp/delete?id=${ls.id}">删除</a></td>
+        <td><a class="btn" href="/admin/emp/update?id=${ls.id}">修改</a>
+            <a class="btn" href="/admin/emp/delete?id=${ls.id}">删除</a></td>
         </tr>
     </c:forEach>
 

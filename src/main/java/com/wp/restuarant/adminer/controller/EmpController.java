@@ -78,6 +78,12 @@ public class EmpController {
         return "/service/emp/update";
     }
 
+    @RequestMapping(value = "/toUpdate",method = RequestMethod.POST)
+    public String update(Emp emp){
+        empDao.update(emp);
+        return "/service/success";
+    }
+
     /**
      * 删除员工信息
      * @return
