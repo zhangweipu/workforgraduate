@@ -17,15 +17,6 @@ public class TestController {
     
     public String index(){
 
-        Foods foods=new Foods();
-        foods.setDetail("ssss");
-        
-        System.out.printf("hahahha");
-        Emp emp=new Emp();
-        emp.setId(1);
-        emp.setAge(3);
-        emp.setPower(1);
-
-        return "test/index";
+        return "Test/Test";
     }
 }
