@@ -12,7 +12,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class FinanceController {
 
     @RequestMapping(value = "/outlist",method = RequestMethod.GET)
-    public String list(){
+    public String outList(){
         return "service/finance/outlist";
     }
+
+    @RequestMapping(value = "/inlist", method = RequestMethod.GET)
+    public String inList(){
+        return "service/finance/inlist";
+    }
+
+    @RequestMapping(value = "analyse",method = RequestMethod.GET)
+    public String listAnaly(){
+        return "service/finance/Analy";
+    }
+
+
 }

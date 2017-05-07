@@ -50,8 +50,8 @@
                 <div class="panel-body">
                     <ul  class="nav nav-sidebar">
                         <%--<li ><a href="/adminer/add" class="btn " role="button">添加菜单</a></li>--%>
-                        <li ><a href="/service/showOrder" class="btn " role="button">支出账单</a></li>
-                        <li ><a href="#" class="btn " role="button">收入账单</a></li>
+                        <li ><a href="/admin/finance/outlist" class="btn " role="button">支出账单</a></li>
+                        <li ><a href="/" class="btn " role="button">收入账单</a></li>
                         <li ><a href="#" class="btn " role="button">财务分析</a></li>
 
                     </ul>
