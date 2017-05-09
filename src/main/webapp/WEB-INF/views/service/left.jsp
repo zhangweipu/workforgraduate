@@ -61,7 +61,7 @@
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingFour">
                 <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                         人事管理
                     </a>
                 </h4>
@@ -71,6 +71,23 @@
                     <ul  class="nav nav-sidebar">
                         <li ><a href="/admin/emp/add" class="btn " role="button">添加员工信息</a></li>
                         <li ><a href="/admin/emp/find" class="btn " role="button">查找员工信息</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingFive">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        安全设置
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                <div class="panel-body">
+                    <ul  class="nav nav-sidebar">
+                        <li ><a href="/admin" class="btn " role="button">管理员管理</a></li>
+                        <li ><a href="/admin" class="btn " role="button">员工安全管理</a></li>
                     </ul>
                 </div>
             </div>

@@ -1,7 +1,6 @@
-create database forgradute default charset utf8;
+##create database forgradute default charset utf8;
 
   use forgradute;
-
 ##--菜单表
 drop table if exists t_food;
 CREATE TABLE `t_food` (
@@ -53,17 +52,17 @@ CREATE TABLE `t_orderid` (
 ##--账目流水表
 drop table if exists t_trans;
 create table t_trans(
-  id int auto_increment primary key,
-  type varchar(20),
+  transId int auto_increment primary key,
+  type int,
   time date,
-  turnover int,
+  turnover double,
   detail varchar(200)
 );
 ##--资产表
 drop table if exists t_finance;
-create table t_finance(
-   id int auto_increment primary key,
-   amount int,
+create table t_account(
+   accountId int auto_increment primary key,
+   amount double,
    type varchar(20)
 );
 
@@ -77,5 +76,6 @@ create table t_emp(
   duty int,
   worktime date,
   salary int,
-  power int
+  power int,
+  password varchar(20)
 );

@@ -10,9 +10,10 @@
     <result property="power" column="power" javaType="java.lang.Integer" jdbcType="INTEGER"/>
     <result property="worktime" column="worktime" javaType="java.util.Date" jdbcType="DATE"/>
     <result property="sex" column="sex" jdbcType="VARCHAR" javaType="java.lang.String"/>
+    <result property="password" column="password" jdbcType="VARCHAR" javaType="java.lang.String"/>
   </resultMap>
   <update id="insert" parameterType="com.wp.restuarant.data.emp.entity.Emp">
-    insert into t_emp(name,age,duty,salary,power,worktime,sex) values(#{name},#{age},#{duty},#{salary},#{power},#{worktime},#{sex})
+    insert into t_emp(name,age,duty,salary,power,worktime,sex,password) values(#{name},#{age},#{duty},#{salary},#{power},#{worktime},#{sex},'111111')
   </update>
   <select id="select" resultMap="BaseResultMap">
     select * from t_emp
@@ -42,7 +43,10 @@
         worktime=#{worktime},
       </if>
       <if test="sex!=null">
-        sex=#{sex}
+        sex=#{sex},
+      </if>
+      <if test="password != null">
+        password=#{password}
       </if>
     </set>
     where id=#{id}
