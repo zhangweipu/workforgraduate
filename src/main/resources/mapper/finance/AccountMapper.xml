@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wp.restuarant.data.finance.dao.AccountDao">
+    <resultMap id="BaseMap" type="com.wp.restuarant.data.finance.entity.Account">
+        <result property="accountId" column="accountId" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+        <result property="amount" column="amount" javaType="java.lang.Double" jdbcType="DOUBLE"/>
+        <result property="type" column="type" javaType="java.lang.String" jdbcType="VARCHAR"/>
+    </resultMap>
+    <insert id="insert" parameterType="com.wp.restuarant.data.finance.entity.Account">
+        insert into t_account
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            accountId,amount,
+            <if test="type != null">
+                type
+            </if>
+        </trim>
+        values
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            #{accountId},
+            #{amount},
+            <if test="type != null">
+                #{type}
+            </if>
+        </trim>
+    </insert>
+    <select id="select" resultMap="BaseMap">
+        select * from t_account
+    </select>
+    <select id="selectById" parameterType="java.lang.Integer" resultMap="BaseMap">
+        SELECT * FROM t_account WHERE accountId=#{0}
+    </select>
+    <update id="update" parameterType="com.wp.restuarant.data.finance.entity.Account">
+        UPDATE t_account
+        <set>
+            <if test="amount !=null">
+                amount=#{amount}
+            </if>
+        </set>
+    </update>
+    <delete id="delete" parameterType="java.lang.Integer">
+        DELETE FROM t_account
+        WHERE accountId = #{0}
+    </delete>
+</mapper>
