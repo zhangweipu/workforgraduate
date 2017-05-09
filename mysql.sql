@@ -59,7 +59,7 @@ create table t_trans(
   detail varchar(200)
 );
 ##--资产表
-drop table if exists t_finance;
+drop table if exists t_account;
 create table t_account(
    accountId int auto_increment primary key,
    amount double,
