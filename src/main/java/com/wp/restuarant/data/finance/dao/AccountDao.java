@@ -1,8 +1,9 @@
 package com.wp.restuarant.data.finance.dao;
 
-import com.sun.tools.javac.util.List;
 import com.wp.restuarant.data.finance.entity.Account;
 import com.wp.utils.MyBatis;
+
+import java.util.List;
 
 /**
  * 餐厅资金账户
