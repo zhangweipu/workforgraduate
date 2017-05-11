@@ -3,7 +3,7 @@
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingOne">
                 <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion"  href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion"  href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                      菜单管理
                     </a>
                 </h4>
@@ -33,7 +33,6 @@
                         <%--<li ><a href="/adminer/add" class="btn " role="button">添加菜单</a></li>--%>
                             <%--<li ><a href="/adminer/add" class="btn " role="button">添加菜单</a></li>--%>
                             <li ><a href="/admin/showOrder" class="btn " role="button">订单记录</a></li>
-                            <li ><a href="#" class="btn " role="button">Primary link</a></li>
                     </ul>
                 </div>
             </div>
@@ -50,9 +49,10 @@
                 <div class="panel-body">
                     <ul  class="nav nav-sidebar">
                         <%--<li ><a href="/adminer/add" class="btn " role="button">添加菜单</a></li>--%>
-                        <li ><a href="/admin/finance/outlist" class="btn " role="button">支出账单</a></li>
-                        <li ><a href="/" class="btn " role="button">收入账单</a></li>
-                        <li ><a href="#" class="btn " role="button">财务分析</a></li>
+                        <li ><a href="/admin/finance/index" class="btn " role="button">账户信息</a></li>
+                        <li ><a href="/admin/finance/outlist" class="btn " role="button">支出明细</a></li>
+                        <li ><a href="/admin/finance/inlist" class="btn " role="button">收入明细</a></li>
+                        <li ><a href="/admin/finance/analyse" class="btn " role="button">财务分析</a></li>
 
                     </ul>
                 </div>

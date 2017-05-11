@@ -1,5 +1,8 @@
 package com.wp.restuarant.adminer.controller;
 
+import com.wp.restuarant.data.finance.dao.AccountDao;
+import com.wp.restuarant.data.finance.dao.TransDao;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -10,6 +13,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("/admin/finance")
 public class FinanceController {
+
+    @Autowired
+    AccountDao accountDao;
+
+    @Autowired
+    TransDao transDao;
+
+    @RequestMapping("/index")
+    public String index(){
+
+
+        return "service/finance/index";
+    }
 
     @RequestMapping(value = "/outlist",method = RequestMethod.GET)
     public String outList(){
