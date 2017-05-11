@@ -3,104 +3,72 @@ package com.wp.restuarant.data.finance.entity;
 import java.util.Date;
 
 /**
+ * create table t_trans(
+ transId int auto_increment primary key,
+ type int,
+ time date,
+ turnover double,
+ detail varchar(200)
+ );
+ *
  * 支出/收入表
  * Created by zwp on 17-5-9.
  */
 public class Trans {
-    private Integer id;
-    private String name;
-    private String sex;
-    private Integer age;
-    private Integer duty;
-    private Date worktime;
-    private Integer salary;
-    private Integer power;
-    private String password;
+   private Integer transId;
+   private Integer type;
+   private  Date time;
+   private Double turnover;
+   private String detail;
 
-    public Integer getId() {
-        return id;
+    public Integer getTransId() {
+        return transId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setTransId(Integer transId) {
+        this.transId = transId;
     }
 
-    public String getName() {
-        return name;
+    public Integer getType() {
+        return type;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setType(Integer type) {
+        this.type = type;
     }
 
-    public String getSex() {
-        return sex;
+    public Date getTime() {
+        return time;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setTime(Date time) {
+        this.time = time;
     }
 
-    public Integer getAge() {
-        return age;
+    public Double getTurnover() {
+        return turnover;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setTurnover(Double turnover) {
+        this.turnover = turnover;
     }
 
-    public Integer getDuty() {
-        return duty;
+    public String getDetail() {
+        return detail;
     }
 
-    public void setDuty(Integer duty) {
-        this.duty = duty;
-    }
-
-    public Date getWorktime() {
-        return worktime;
-    }
-
-    public void setWorktime(Date worktime) {
-        this.worktime = worktime;
-    }
-
-    public Integer getSalary() {
-        return salary;
-    }
-
-    public void setSalary(Integer salary) {
-        this.salary = salary;
-    }
-
-    public Integer getPower() {
-        return power;
-    }
-
-    public void setPower(Integer power) {
-        this.power = power;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setDetail(String detail) {
+        this.detail = detail;
     }
 
     @Override
     public String toString() {
         return "Trans{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", sex='" + sex + '\'' +
-                ", age=" + age +
-                ", duty=" + duty +
-                ", worktime=" + worktime +
-                ", salary=" + salary +
-                ", power=" + power +
-                ", password='" + password + '\'' +
+                "transId=" + transId +
+                ", type=" + type +
+                ", time=" + time +
+                ", turnover=" + turnover +
+                ", detail='" + detail + '\'' +
                 '}';
     }
 }
