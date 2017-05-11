@@ -19,8 +19,21 @@
         UPDATE  t_trans
         <set>
             <if test="type !=null">
-
+                  type=#{type},
+            </if>
+            <if test="time !=null">
+                time=#{time},
+            </if>
+            <if test="turnover">
+                turnover=#{turnover},
+            </if>
+            <if test="detail">
+                detail=#{detail}
             </if>
         </set>
+        where transId=#{transId}
     </update>
+    <delete id="delete" parameterType="java.lang.Integer">
+            DELETE  FROM t_trans WHEN transId
+    </delete>
 </mapper>
