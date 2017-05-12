@@ -34,6 +34,6 @@
         where transId=#{transId}
     </update>
     <delete id="delete" parameterType="java.lang.Integer">
-            DELETE  FROM t_trans WHEN transId
+            DELETE  FROM t_trans WHERE transId=#{0}
     </delete>
 </mapper>
