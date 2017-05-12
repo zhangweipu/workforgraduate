@@ -2,10 +2,14 @@ package com.wp.restuarant.adminer.controller;
 
 import com.wp.restuarant.data.finance.dao.AccountDao;
 import com.wp.restuarant.data.finance.dao.TransDao;
+import com.wp.restuarant.data.finance.entity.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.util.List;
 
 /**
  * Created by zhang on 2017/2/24.
@@ -21,9 +25,10 @@ public class FinanceController {
     TransDao transDao;
 
     @RequestMapping("/index")
-    public String index(){
+    public String index(Model model){
 
-
+        List<Account> account=accountDao.select();
+        model.addAttribute("account",account);
         return "service/finance/index";
     }
 
@@ -39,7 +44,7 @@ public class FinanceController {
 
     @RequestMapping(value = "analyse",method = RequestMethod.GET)
     public String listAnaly(){
-        return "service/finance/Analy";
+        return "service/finance/analyse ";
     }
 
 
