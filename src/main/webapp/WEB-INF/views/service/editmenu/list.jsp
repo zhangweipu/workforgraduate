@@ -6,8 +6,6 @@
     <script src="/static/js/angular.min.js"></script>
     <script src="/static/bootstrap3/js/bootstrap.min.js"></script>
 
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div>
     <div class="bg-light lter b-b wrapper-md">
         <h1 class="m-n font-thin h3">批量添加菜单类型</h1>
