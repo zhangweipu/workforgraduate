@@ -5,31 +5,63 @@
     <title>添加菜</title>
     <script src="/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
 <script src="/static/js/service.js"></script>
-    <style type="text/css">
+    <div class="add">
+        <div class="bg-light lter b-b wrapper-md">
+            <h1 class="m-n font-thin h3">添加菜品</h1>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form class="form-horizontal" action="/admin/add" method="post" enctype="multipart/form-data" name="user">
+                    <div class="line line-dashed b-b line-lg pull-in"></div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label ">种类：</label>
+                        <div class="col-sm-10">
+                            <select  name="type">
+                                <option value="">请选择是食物类型</option>
+                                <c:forEach items="${my:myFunc()}" var="item">
+                                    <option value="${item.type}">${item.type}</option>
+                                </c:forEach>
+                            </select>
+                        </div>
+                    </div>
 
-    </style>
+                    <div class="form-group" >
+                        <label class="col-sm-2 control-label ">菜名：</label>
+                        <div class="col-sm-10" >
+                            <input type="text" name="name" placeholder="菜名">
+                        </div>
+                    </div>
+                    <div class="form-group" >
+                        <label class="col-sm-2 control-label ">菜的规格：</label>
+                        <div class="col-sm-10" >
+                            <input type="text" name="size" placeholder="大小">
+                        </div>
+                    </div>
+                    <div class="form-group" >
+                        <label class="col-sm-2 control-label ">菜的价格：</label>
+                        <div class="col-sm-10" >
+                            <input type="text"  name="price" placeholder="价格"></td>
+                        </div>
+                    </div>
+                    <div class="form-group" >
+                        <label class="col-sm-2 control-label ">菜品图片：</label>
+                        <div class="col-sm-10" >
+                            <input type="file" name="icon"  placeholder="请上传图片" >
+                        </div>
+                    </div>
+                    <div class="form-group" >
+                        <label class="col-sm-2 control-label ">详细介绍：</label>
+                        <div class="col-sm-10" >
+                            <textarea name="detail" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div  align="center">
+                        <button type="submit" >提交</button>
+                        <a class="btn btn-default" href="/admin/addmany">批量添加</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
-<form action="/admin/add" method="post" enctype="multipart/form-data">
-        <table class="table">
-            <tr ><td colspan="2" align="center">添加菜品</td></tr>
-        <%--<input type="text" class="form-control" name="id" placeholder=".col-xs-4">--%>
-      <tr><td>种类：</td> <td>
-          <select class="form-control required" name="type">
-              <option value="">请选择是食物类型</option>
-              <c:forEach items="${my:myFunc()}" var="item">
-              <option value="${item.type}">${item.type}</option>
-              </c:forEach>
-          </select>
-      </td></tr>
-
-        <%--<input type="text" class="form-control" name="imageName" placeholder=".col-xs-4">--%>
-            <tr> <td>菜名：</td><td> <input type="text" class="form-control required" name="name" placeholder="菜名"></td></tr>
-            <tr><td> 菜的规格：</td><td><input type="text" class="form-control" name="size" placeholder="大小"></td></tr>
-            <tr><td> 菜的价格：</td><td><input type="text" class="form-control required" name="price" placeholder="价格"></td></tr>
-            <tr><td>菜品图片：</td><td><input type="file" name="icon" class="form-control" placeholder="请上传图片" ></td></tr>
-           <tr> <td>详细介绍：</td><td><textarea name="detail" class="form-control" rows="3"></textarea></td></tr>
-            <tr><td><button type="submit" >提交</button></td>
-                <td><a class="btn" href="/admin/addmany">批量添加</a></td></tr>
-        </table>
-</form>
 

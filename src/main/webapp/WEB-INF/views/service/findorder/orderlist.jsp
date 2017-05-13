@@ -24,4 +24,5 @@
     </c:forEach>
     </tbody>
 </table>
+    ${list}
 </div>

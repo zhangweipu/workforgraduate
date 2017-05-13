@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wp.restuarant.data.finance.dao.AccountDao">
     <resultMap id="BaseMap" type="com.wp.restuarant.data.finance.entity.Account">
-        <result property="accountId" column="accountId" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+        <id property="accountId" column="accountId" javaType="java.lang.Integer" jdbcType="INTEGER"/>
         <result property="amount" column="amount" javaType="java.lang.Double" jdbcType="DOUBLE"/>
         <result property="type" column="type" javaType="java.lang.String" jdbcType="VARCHAR"/>
     </resultMap>
