@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -65,6 +66,17 @@ public class EmpController {
     public String addBatch(){
         return "/service/emp/addBatch";
     }
+
+
+    /**
+     *
+     */
+    @RequestMapping(value = "/toAddBatch", method = RequestMethod.POST)
+    public String addBath(MultipartFile file){
+
+        return "service/success";
+    }
+
 
     /**
      * 修改员工信息
