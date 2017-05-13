@@ -15,7 +15,7 @@
     <div class="panel panel-default">
 
         <div class="panel-body">
-            <form class="form-horizontal" action="/admin/addFoodType"   method="post" name="user">
+            <form class="form-horizontal" action="/admin/addFoodType"   method="post">
                 <div class="ng-scope">
                     <div class="table-header">
                         <input type="text" id="find" placeholder="请输入菜名"/>

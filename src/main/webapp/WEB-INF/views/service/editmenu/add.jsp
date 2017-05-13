@@ -11,7 +11,7 @@
         </div>
         <div class="panel panel-default">
             <div class="panel-body">
-                <form class="form-horizontal" action="/admin/add" method="post" enctype="multipart/form-data" name="user">
+                <form class="form-horizontal" action="/admin/add" method="post" enctype="multipart/form-data">
                     <div class="line line-dashed b-b line-lg pull-in"></div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label ">种类：</label>

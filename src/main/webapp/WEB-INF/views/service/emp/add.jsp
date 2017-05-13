@@ -1,31 +1,62 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<div class="add-emp">
-    <div class="emp-head"><h3>添加员工信息</h3></div>
-    <form action="/admin/emp/add" method="post">
-        <table class="emp-table">
-            <tr>
-                <td>姓名：</td><td><input class="input" type="text" name="name"></td>
-            </tr>
-            <tr>
-                <td>年龄：</td><td><input class="input" type="text" name="age"></td>
-            </tr>
-            <tr>
-                <td>性别：</td><td><select class="input" name="sex"><option value="1">男</option><option value="0">女</option></select></td>
-            </tr>
-            <tr>
-                <td>职位：</td><td><input class="input" type="text" name="duty"></td>
-            </tr>
-            <tr>
-                <td>入职时间：</td><td><input onclick="WdatePicker();" class="input" type="text" name="worktime" placeholder="YYYY-MM-DD"></td>
-            </tr>
-            <tr>
-                <td>薪资：</td><td><input class="input" type="text" name="salary"></td>
-            </tr>
-            <tr>
-                <td>状态：</td><td><input class="input" type="text" name="power"></td>
-            </tr>
-            <tr><td><input type="submit" value="保存"></td>
-                <td><a href="">批量添加</a></td></tr>
-        </table>
-    </form>
+<div>
+    <div class="bg-light lter b-b wrapper-md">
+        <h1 class="m-n font-thin h3">添加员工信息</h1>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form  action="/admin/emp/add" class="form-horizontal" method="post">
+                <div class="line line-dashed b-b line-lg pull-in"></div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">姓名：</label>
+                    <div class="col-sm-10">
+                        <input class="input" type="text" name="name">
+                    </div>
+                </div>
+
+                <div class="form-group" >
+                    <label class="col-sm-2 control-label">年龄：</label>
+                    <div class="col-sm-10" >
+                        <input class="input" type="text" name="age">
+                    </div>
+                </div>
+                <div class="form-group" >
+                    <label class="col-sm-2 control-label">性别：</label>
+                    <div class="col-sm-10" >
+                        <select class="input" name="sex"><option value="1">男</option><option value="0">女</option></select>
+                    </div>
+                </div>
+                <div class="form-group" >
+                    <label class="col-sm-2 control-label">职位：</label>
+                    <div class="col-sm-10" >
+                        <input class="input" type="text" name="duty">
+                    </div>
+                </div>
+                <div class="form-group" >
+                    <label class="col-sm-2 control-label">入职时间：</label>
+                    <div class="col-sm-10" >
+                        <input onclick="WdatePicker();" class="input" type="text" name="worktime" placeholder="YYYY-MM-DD">
+                    </div>
+                </div>
+                <div class="form-group" >
+                    <label class="col-sm-2 control-label">薪资：</label>
+                    <div class="col-sm-10" >
+                        <input class="input" type="text" name="salary">
+                    </div>
+                </div>
+                <div class="form-group" >
+                    <label class="col-sm-2 control-label">状态：</label>
+                    <div class="col-sm-10" >
+                        <input class="input" type="text" name="power">
+                    </div>
+                </div>
+
+                <div  align="center">
+                    <input type="submit" value="保存">
+                    <a href="">批量添加</a>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>

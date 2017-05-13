@@ -7,7 +7,7 @@
     </div>
     <div class="panel panel-default">
         <div class="panel-body">
-            <form:form  action="/admin/update" class="form-horizontal" method="post" modelAttribute="food" name="user">
+            <form:form  action="/admin/update" class="form-horizontal" method="post" modelAttribute="food">
                 <div class="line line-dashed b-b line-lg pull-in"></div>
 
                 <div class="form-group">

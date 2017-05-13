@@ -6,7 +6,7 @@
     </div>
     <div class="panel panel-default">
         <div class="panel-body">
-            <form  action="/admin/addmany" class="form-horizontal" method="post"  enctype="multipart/form-data" name="user">
+            <form  action="/admin/addmany" class="form-horizontal" method="post"  enctype="multipart/form-data">
                 <div class="line line-dashed b-b line-lg pull-in"></div>
 
                 <div class="form-group">
