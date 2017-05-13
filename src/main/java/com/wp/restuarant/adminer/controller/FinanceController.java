@@ -39,7 +39,7 @@ public class FinanceController {
 
     @RequestMapping(value = "analyse",method = RequestMethod.GET)
     public String listAnaly(){
-        return "service/finance/Analy";
+        return "service/finance/analyse";
     }
 
 

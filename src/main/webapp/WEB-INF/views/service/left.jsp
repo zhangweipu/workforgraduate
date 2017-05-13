@@ -86,8 +86,8 @@
             <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
                 <div class="panel-body">
                     <ul  class="nav nav-sidebar">
-                        <li ><a href="/admin" class="btn " role="button">管理员管理</a></li>
-                        <li ><a href="/admin" class="btn " role="button">员工安全管理</a></li>
+                        <li ><a href="/admin/security/index" class="btn " role="button">管理员管理</a></li>
+                        <li ><a href="/admin/security/emp" class="btn " role="button">员工安全管理</a></li>
                     </ul>
                 </div>
             </div>
