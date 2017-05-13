@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>安全</title>
+    <link href="/static/css/security.css" rel="stylesheet">
 </head>
 <body>
 

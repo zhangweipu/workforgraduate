@@ -1,16 +1,13 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: zwp
-  Date: 17-5-13
-  Time: 上午9:43
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+    <link href="/static/css/finance.css" rel="stylesheet">
+<div class="finance">
+    <div class="top1">
+        ${account}
+    </div>
+    <div class="top2">
 
-</body>
-</html>
+    </div>
+    <div class="top3">
+
+    </div>
+</div>
