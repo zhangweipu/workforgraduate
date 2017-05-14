@@ -79,3 +79,14 @@ create table t_emp(
   power int,
   password varchar(20)
 );
+##餐厅信息表
+| t_resturant | CREATE TABLE `t_resturant` (
+  `id` int(11) DEFAULT NULL,
+  `name` varchar(20) DEFAULT NULL,
+  `begindate` date DEFAULT NULL,
+  `duedate` date DEFAULT NULL,
+  `auth` varchar(20) DEFAULT NULL,
+  `changedate` date DEFAULT NULL,
+  `detail` varchar(100) DEFAULT NULL,
+  `address` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

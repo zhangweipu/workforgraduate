@@ -33,7 +33,6 @@ public class EmpController {
     public String find(Model model){
         List<Emp> list=empDao.select();
         model.addAttribute("list",list);
-        System.out.println("aa");
         return "/service/emp/find";
     }
 
