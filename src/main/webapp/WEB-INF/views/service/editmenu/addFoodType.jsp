@@ -21,9 +21,9 @@
                         <thead>
                         <tr role="row">
                             <th class="sorting" tabindex="0"
-                                aria-controls="DataTables_Table_4" rowspan="1" colspan="1"
+                                aria-controls="DataTables_Table_1" rowspan="1" colspan="1"
                                 aria-label="Domain: activate to sort column ascending"
-                                style="width: 10px;">序列
+                                style="width: 1px;">序列
                             </th>
                             <th class="sorting" tabindex="0"
                                 aria-controls="DataTables_Table_4" rowspan="1" colspan="1"
@@ -35,6 +35,16 @@
                                 aria-label="Domain: activate to sort column ascending"
                                 style="width: 10px;">优先级
                             </th>
+                            <th class="sorting" tabindex="0"
+                                aria-controls="DataTables_Table_4" rowspan="1" colspan="1"
+                                aria-label="Domain: activate to sort column ascending"
+                                style="width: 10px;">
+                            </th>
+                            <th class="sorting" tabindex="0"
+                                aria-controls="DataTables_Table_4" rowspan="1" colspan="1"
+                                aria-label="Domain: activate to sort column ascending"
+                                style="width: 10px;">
+                            </th>
 
                         </tr>
                         </thead>
@@ -45,6 +55,11 @@
                                 <td>${status.index}</td>
                                 <td><input class="type${status.index}" type="text" name="type"></td>
                                 <td><input class="type${status.index}" type="text" name="id"></td>
+                                <td></td>
+                                <td></td>
+
+
+
                             </tr>
                         </c:forEach>
                         </tbody>

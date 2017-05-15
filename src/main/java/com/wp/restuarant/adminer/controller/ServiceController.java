@@ -164,7 +164,7 @@ public class ServiceController {
         modelMap.addAttribute("list",list);
         modelMap.addAttribute("currentPage",currentPage);
         modelMap.addAttribute("pageCount",pageCount);
-        modelMap.addAttribute("url","/adminer/list");
+        modelMap.addAttribute("url","/admin/list");
         return "service/editmenu/list";
     }
 

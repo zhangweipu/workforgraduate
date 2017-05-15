@@ -19,7 +19,7 @@
                             <select  name="type">
                                 <option value="">请选择是食物类型</option>
                                 <c:forEach items="${my:myFunc()}" var="item">
-                                    <option value="${item.type}">${item.type}</option>
+                                    <option value="${item.id}">${item.type}</option>
                                 </c:forEach>
                             </select>
                         </div>

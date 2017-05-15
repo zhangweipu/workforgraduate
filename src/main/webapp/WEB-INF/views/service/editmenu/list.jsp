@@ -19,7 +19,7 @@
                         <input type="text" id="find" placeholder="请输入菜名"/>
                         <a id="findBy" href="#">查找</a><br>
                         <c:forEach begin="0" end="${FUNC:myFunc().size()}" items="${FUNC:myFunc()}" var="ls" >
-                            <a class="btn" href="${url}?condition=${ls}">${ls}</a>
+                            <a class="btn" href="${url}?condition=${ls.id}">${ls.type}</a>
                         </c:forEach>
                     </div>
                     <div id="DataTables_Table_4_wrapper"

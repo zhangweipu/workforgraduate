@@ -28,7 +28,7 @@
                     <div class="col-sm-10" >
                         <form:select path="type">
                             <form:option value="">请选择是食物类型</form:option>
-                                <form:options items="${my:myFunc()}" itemValue="id" itemLabel="id"></form:options>
+                                <form:options items="${my:myFunc()}" itemValue="id" itemLabel="type"></form:options>
                         </form:select>
                     </div>
                 </div>
