@@ -22,7 +22,7 @@ public class AccountTest {
     @Test
     public void add(){
         Account account=new Account();
-        account.setAccountId(123333);
+        account.setAccountId(1333);
         account.setAmount(12.22);
         account.setType("suoyou");
         accountDao.insert(account);

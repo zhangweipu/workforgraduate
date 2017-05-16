@@ -42,14 +42,14 @@ public class FinanceController {
 
     @RequestMapping(value = "/inlist", method = RequestMethod.GET)
     public String inList(Model model){
-        List<Trans> list=transDao.selectIncome();
+       List<Trans> list=transDao.selectIncome();
         model.addAttribute("list",list);
         return "service/finance/inlist";
     }
 
     @RequestMapping(value = "analyse",method = RequestMethod.GET)
     public String listAnaly(){
-        return "service/finance/analyse ";
+        return "service/finance/analyse";
     }
 
 
