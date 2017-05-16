@@ -66,4 +66,9 @@ public class ClientServiceImpl implements ClientService{
         foodsMapper.findPraise(id);
     }
 
+    @Override
+    public int getMoney(Integer id) {
+        return orderMapper.selectSum(id);
+    }
+
 }

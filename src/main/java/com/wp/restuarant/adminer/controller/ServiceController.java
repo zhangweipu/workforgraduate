@@ -229,9 +229,9 @@ public class ServiceController {
      * @param model
      * @return
      */
-    @RequestMapping("/orderdetail")
-    public String orderDetial(HttpServletRequest request,Model model){
-        Integer id=getId(request);
+    @RequestMapping(value = "/orderdetail",method = RequestMethod.GET)
+    public String orderDetial(int id,Model model){
+       // Integer id=getId(request);
         List<Order> list=serviceService.findOrderDetail(id);
         model.addAttribute("list",list);
         return "service/findorder/orderdetail";

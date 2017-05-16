@@ -17,6 +17,9 @@
     <sql id="Base_Column_List">
     id, food_id, food_name, food_type, food_size, num, time, la, food_price
   </sql>
+    <select id="selectSum" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+        select sum(food_price) from t_order where orderid=#{0}
+    </select>
     <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
@@ -170,7 +173,7 @@
     </select>
     <select id="findOrder" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select food_id,food_name,food_price,count(food_id) as num,la from t_order
-    where la='ND' and orderid=#{0} group by food_id
+    where la='DO' and orderid=#{0} group by food_id
   </select>
     <select id="findOrderDetail" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         select * from t_order where orderid=#{0}

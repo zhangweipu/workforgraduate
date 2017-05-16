@@ -15,4 +15,5 @@ public interface ClientService {
     void addOrderId(OrderID orderID);
     void markOrder(Integer orderid);
     void markPraise(Integer id);
+    int getMoney(Integer id);
 }

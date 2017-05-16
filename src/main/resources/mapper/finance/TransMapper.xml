@@ -15,6 +15,13 @@
     <select id="select" resultMap="BaseMap">
         SELECT * FROM t_trans
     </select>
+
+    <select id="selectIncome" resultMap="BaseMap">
+        SELECT * FROM t_trans WHERE type='IN'
+    </select>
+    <select id="selectOutcome" resultMap="BaseMap">
+        SELECT * FROM t_trans WHERE type='IN'
+    </select>
     <update id="update" parameterType="com.wp.restuarant.data.finance.entity.Trans">
         UPDATE  t_trans
         <set>

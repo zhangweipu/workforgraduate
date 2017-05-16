@@ -72,6 +72,7 @@ public class OrderController {
         orderID.setId(id);
         orderID.setStat(Constants.ORDER_ND);
         orderID.setTime(new Date());
+        orderID.setMoney(clientService.getMoney(id));
         clientService.addOrderId(orderID);
         return "redirect:/client/success";
     }

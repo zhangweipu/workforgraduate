@@ -3,6 +3,7 @@ package com.wp.restuarant.adminer.controller;
 import com.wp.restuarant.data.finance.dao.AccountDao;
 import com.wp.restuarant.data.finance.dao.TransDao;
 import com.wp.restuarant.data.finance.entity.Account;
+import com.wp.restuarant.data.finance.entity.Trans;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,12 +34,16 @@ public class FinanceController {
     }
 
     @RequestMapping(value = "/outlist",method = RequestMethod.GET)
-    public String outList(){
+    public String outList(Model model){
+        List<Trans> list=transDao.selectOutcome();
+        model.addAttribute("list",list);
         return "service/finance/outlist";
     }
 
     @RequestMapping(value = "/inlist", method = RequestMethod.GET)
-    public String inList(){
+    public String inList(Model model){
+        List<Trans> list=transDao.selectIncome();
+        model.addAttribute("list",list);
         return "service/finance/inlist";
     }
 

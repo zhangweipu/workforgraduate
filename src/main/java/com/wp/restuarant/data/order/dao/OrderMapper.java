@@ -11,6 +11,8 @@ public interface OrderMapper {
 
     int insert(Order record);
 
+    int selectSum(Integer id);
+
     int insertSelective(Order record);
 
     Order selectByPrimaryKey(Integer id);

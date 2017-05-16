@@ -24,9 +24,7 @@
                     </div>
                 </div>
                 </c:forEach>
-                <div  align="center">
-                    <button type="button" class="btn btn-primary">查询</button>
-                </div>
+
             </form>
         </div>
     </div>

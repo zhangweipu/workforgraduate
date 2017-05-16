@@ -12,6 +12,8 @@ import java.util.List;
 public interface TransDao {
     void insert(Trans trans);
     List<Trans> select();
+    List<Trans> selectIncome();
+    List<Trans> selectOutcome();
     void update(Trans trans);
     void delete(Integer TransId);
 }
