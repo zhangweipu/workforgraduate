@@ -7,7 +7,7 @@ jQuery(function($) {
 
     $("#findBy").on("click",function () {
         var val=$("#find").val();
-        var url="/adminer/list?condition1="+val;
+        var url="<%=path%>/adminer/list?condition1="+val;
         $("#main").load(url);
     })
 

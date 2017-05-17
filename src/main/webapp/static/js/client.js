@@ -31,7 +31,7 @@ $(function () {
                 data: JSON.stringify(jsonData),
                 contentType: "Application/json;charset=utf-8",
                 success: function (data) {
-                    window.location.href="/client/success";
+                    window.location.href="<%=path%>/client/success";
                 },
                 error:function (data) {
                     alert("error");
@@ -54,7 +54,7 @@ $(function () {
             "foodPrice": price
         }
         $.ajax({
-            url: '/order/addorder',
+            url: '<%=path%>/order/addorder',
             data: jsonObject,
             dataType: 'json',
             type: 'post',
@@ -83,7 +83,7 @@ $(function () {
             "foodName": name,
             "foodPrice": price
         }
-        $.post('/order/addorder', jsonObject, function (data) {
+        $.post('<%=path%>/order/addorder', jsonObject, function (data) {
             var str = toshow(data);
             $nums.html(str);
         })
@@ -94,14 +94,14 @@ $(function () {
         var id = $(this).data("id");
         var orderid = $('.order').data('id');
         var $nums = $('#nums');
-        $.post("/order/suborder", {"orderId":orderid,"foodID": id}, function (data) {
+        $.post("<%=path%>/order/suborder", {"orderId":orderid,"foodID": id}, function (data) {
             var str = toshow(data);
             $nums.html(str);
         })
     })
     $("body").on("click",".reset",function () {
         var str="";
-        $.get("/order/reset",{},function (data) {
+        $.get("<%=path%>/order/reset",{},function (data) {
             $(".tijiao").attr("id","tijiao");
         })
         $('#nums').html(str);
@@ -131,7 +131,7 @@ $(function () {
         $this=$(this);
         var id=$this.data("id");
 
-        $.get("/client/praise",{"id":id},function (data) {
+        $.get("<%=path%>/client/praise",{"id":id},function (data) {
             $(".praise"+id).html(data);
             $this.unbind();
         })

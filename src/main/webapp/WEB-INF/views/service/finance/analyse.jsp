@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<link href="/static/css/finance.css" rel="stylesheet">
+<%@include file="../../common.jsp"%>
+<link href="<%=path%>/static/css/finance.css" rel="stylesheet">
 <div>
     <div class="bg-light lter b-b wrapper-md">
         <h1 class="m-n font-thin h3">账户信息</h1>

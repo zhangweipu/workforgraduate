@@ -4,15 +4,16 @@
 <html>
 <head>
     <title>菜单列表</title>
-    <script src="/static/bootstrap3/js/bootstrap.js"></script>
-    <link rel="shortcut icon" href="/static/images/bushuohua.ico" type="image/x-icon"/>
-    <link href="/static/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
-    <script src="/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
-    <script src="/static/bootstrap3/js/json2.js"></script>
-    <link href="/static/css/client.css" rel="stylesheet">
-    <link href="/static/css/common.css" rel="stylesheet">
-    <script src="/static/js/client.js"></script>
-    <script src="/static/js/common.js"></script>
+    <%@include file="../common.jsp"%>
+    <script src="<%=path%>/static/bootstrap3/js/bootstrap.js"></script>
+    <link rel="shortcut icon" href="<%=path%>/static/images/bushuohua.ico" type="image/x-icon"/>
+    <link href="<%=path%>/static/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="<%=path%>/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
+    <script src="<%=path%>/static/bootstrap3/js/json2.js"></script>
+    <link href="<%=path%>/static/css/client.css" rel="stylesheet">
+    <link href="<%=path%>/static/css/common.css" rel="stylesheet">
+    <script src="<%=path%>/static/js/client.js"></script>
+    <script src="<%=path%>/static/js/common.js"></script>
 </head>
 <body>
   <%@include file="header.jsp"%>

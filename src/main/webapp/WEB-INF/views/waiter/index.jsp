@@ -3,10 +3,11 @@
 <%@taglib prefix="type" uri="http://myel.com" %>
 <html>
 <head>
+    <% String path=request.getContextPath();%>
     <title>waiter</title>
-    <link href="/static/css/waiter.css" rel="stylesheet"/>
-    <script src="/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
-    <script src="/static/js/waiter.js"></script>
+    <link href="<%=path%>/static/css/waiter.css" rel="stylesheet"/>
+    <script src="<%=path%>/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
+    <script src="<%=path%>/static/js/waiter.js"></script>
 </head>
 <body>
 <div class="top">top</div>
@@ -16,7 +17,7 @@
         <h3>种类选择</h3>
     <ul>
     <c:forEach items="${type:myFunc()}" var="type" varStatus="status">
-        <li><a href="/admin/waiter/list?type=${type.type}" >${type.id}--${type.type}</a></li>
+        <li><a href="<%=path%>/admin/waiter/list?type=${type.type}" >${type.id}--${type.type}</a></li>
     </c:forEach>
     </ul>
     </div>

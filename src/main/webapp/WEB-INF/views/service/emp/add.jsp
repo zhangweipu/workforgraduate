@@ -1,11 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="../../common.jsp"%>
 <div>
     <div class="bg-light lter b-b wrapper-md">
         <h1 class="m-n font-thin h3">添加员工信息</h1>
     </div>
     <div class="panel panel-default">
         <div class="panel-body">
-            <form  action="/admin/emp/add" class="form-horizontal" method="post">
+            <form  action="<%=path%>/admin/emp/add" class="form-horizontal" method="post">
                 <div class="line line-dashed b-b line-lg pull-in"></div>
 
                 <div class="form-group">

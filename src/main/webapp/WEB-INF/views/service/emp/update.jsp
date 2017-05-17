@@ -1,12 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@include file="../../common.jsp"%>
 <div>
     <div class="bg-light lter b-b wrapper-md">
         <h1 class="m-n font-thin h3">修改员工信息</h1>
     </div>
     <div class="panel panel-default">
         <div class="panel-body">
-            <form  action="/admin/emp/toUpdate" class="form-horizontal" method="post">
+            <form  action="<%=path%>/admin/emp/toUpdate" class="form-horizontal" method="post">
                 <div class="line line-dashed b-b line-lg pull-in"></div>
                 <input type="text" name="id" hidden value="${emp.id}">
                 <div class="form-group">

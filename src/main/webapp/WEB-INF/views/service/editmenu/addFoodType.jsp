@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@include file="../../common.jsp"%>
 <div>
 <div class="bg-light lter b-b wrapper-md">
     <h1 class="m-n font-thin h3">批量添加菜单类型</h1>
@@ -7,7 +8,7 @@
 <div class="panel panel-default">
 
     <div class="panel-body">
-        <form class="form-horizontal" action="/admin/addFoodType" method="post">
+        <form class="form-horizontal" action="<%=path%>/admin/addFoodType" method="post">
             <div class="ng-scope">
                 <div class="table-header">
                     添加食物种类

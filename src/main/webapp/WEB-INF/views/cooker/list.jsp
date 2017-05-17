@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@include file="../common.jsp"%>
 <html>
 <head>
     <title>foodlist</title>
@@ -22,7 +23,7 @@
         </c:forEach>
 
 </div>
-<script type="text/javascript" src="/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="/static/js/cooker.js"></script>
+<script type="text/javascript" src="<%=path%>/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="<%=path%>/static/js/cooker.js"></script>
 </body>
 </html>

@@ -1,13 +1,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="my" uri="http://myel.com" %>
+<%@include file="../../common.jsp"%>
 <div>
     <div class="bg-light lter b-b wrapper-md">
         <h1 class="m-n font-thin h3">修改食物信息</h1>
     </div>
     <div class="panel panel-default">
         <div class="panel-body">
-            <form:form  action="/admin/update" class="form-horizontal" method="post" modelAttribute="food">
+            <form:form  action="<%=path%>/admin/update" class="form-horizontal" method="post" modelAttribute="food">
                 <div class="line line-dashed b-b line-lg pull-in"></div>
 
                 <div class="form-group">

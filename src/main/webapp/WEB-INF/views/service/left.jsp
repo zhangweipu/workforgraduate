@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% String path=request.getContextPath();%>
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingOne">
@@ -11,9 +12,9 @@
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
                     <ul  class="nav nav-sidebar">
-                        <li ><a href="/admin/addFoodType" class="btn " role="button">添加食物类型</a></li>
-                        <li ><a href="/admin/add" class="btn " role="button">添加食物菜单</a></li>
-                        <li ><a href="/admin/list" class="btn " role="button">编辑菜单列表</a></li>
+                        <li ><a href="<%=path%>/admin/addFoodType" class="btn " role="button">添加食物类型</a></li>
+                        <li ><a href="<%=path%>/admin/add" class="btn " role="button">添加食物菜单</a></li>
+                        <li ><a href="<%=path%>/admin/list" class="btn " role="button">编辑菜单列表</a></li>
                     </ul>
                 </div> 
             </div>
@@ -32,7 +33,7 @@
                     <ul class="nav nav-sidebar">
                         <%--<li ><a href="/adminer/add" class="btn " role="button">添加菜单</a></li>--%>
                             <%--<li ><a href="/adminer/add" class="btn " role="button">添加菜单</a></li>--%>
-                            <li ><a href="/admin/showOrder" class="btn " role="button">订单记录</a></li>
+                            <li ><a href="<%=path%>/admin/showOrder" class="btn " role="button">订单记录</a></li>
                     </ul>
                 </div>
             </div>
@@ -49,10 +50,10 @@
                 <div class="panel-body">
                     <ul  class="nav nav-sidebar">
                         <%--<li ><a href="/adminer/add" class="btn " role="button">添加菜单</a></li>--%>
-                        <li ><a href="/admin/finance/index" class="btn " role="button">账户信息</a></li>
-                        <li ><a href="/admin/finance/outlist" class="btn " role="button">支出明细</a></li>
-                        <li ><a href="/admin/finance/inlist" class="btn " role="button">收入明细</a></li>
-                        <li ><a href="/admin/finance/analyse" class="btn " role="button">财务分析</a></li>
+                        <li ><a href="<%=path%>/admin/finance/index" class="btn " role="button">账户信息</a></li>
+                        <li ><a href="<%=path%>/admin/finance/outlist" class="btn " role="button">支出明细</a></li>
+                        <li ><a href="<%=path%>/admin/finance/inlist" class="btn " role="button">收入明细</a></li>
+                        <li ><a href="<%=path%>/admin/finance/analyse" class="btn " role="button">财务分析</a></li>
 
                     </ul>
                 </div>
@@ -69,8 +70,8 @@
             <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                 <div class="panel-body">
                     <ul  class="nav nav-sidebar">
-                        <li ><a href="/admin/emp/add" class="btn " role="button">添加员工信息</a></li>
-                        <li ><a href="/admin/emp/find" class="btn " role="button">查找员工信息</a></li>
+                        <li ><a href="<%=path%>/admin/emp/add" class="btn " role="button">添加员工信息</a></li>
+                        <li ><a href="<%=path%>/admin/emp/find" class="btn " role="button">查找员工信息</a></li>
                     </ul>
                 </div>
             </div>
@@ -86,8 +87,8 @@
             <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
                 <div class="panel-body">
                     <ul  class="nav nav-sidebar">
-                        <li ><a href="/admin/security/index" class="btn " role="button">管理员管理</a></li>
-                        <li ><a href="/admin/security/emp" class="btn " role="button">员工安全管理</a></li>
+                        <li ><a href="<%=path%>/admin/security/index" class="btn " role="button">管理员管理</a></li>
+                        <li ><a href="<%=path%>/admin/security/emp" class="btn " role="button">员工安全管理</a></li>
                     </ul>
                 </div>
             </div>

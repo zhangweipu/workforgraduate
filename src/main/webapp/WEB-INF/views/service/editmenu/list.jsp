@@ -1,10 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
  <%@taglib prefix="FUNC" uri="http://myel.com" %>
+<%@include file="../../common.jsp"%>
 <%--<script src="/static/bootstrap3/js/jquery-1.11.2.min.js"></script>--%>
-    <script src="/static/js/service.js"></script>
-    <script src="/static/js/angular.min.js"></script>
-    <script src="/static/bootstrap3/js/bootstrap.min.js"></script>
+    <script src="<%=path%>/static/js/service.js"></script>
+    <script src="<%=path%>/static/js/angular.min.js"></script>
+    <script src="<%=path%>/static/bootstrap3/js/bootstrap.min.js"></script>
 
 <div>
     <div class="bg-light lter b-b wrapper-md">
@@ -13,13 +14,13 @@
     <div class="panel panel-default">
 
         <div class="panel-body">
-            <form class="form-horizontal" action="/admin/addFoodType"   method="post">
+            <form class="form-horizontal" action="<%=path%>/admin/addFoodType"   method="post">
                 <div class="ng-scope">
                     <div class="table-header">
                         <input type="text" id="find" placeholder="请输入菜名"/>
                         <a id="findBy" href="#">查找</a><br>
                         <c:forEach begin="0" end="${FUNC:myFunc().size()}" items="${FUNC:myFunc()}" var="ls" >
-                            <a class="btn" href="${url}?condition=${ls.id}">${ls.type}</a>
+                            <a class="btn" href="<%=path%>${url}?condition=${ls.id}">${ls.type}</a>
                         </c:forEach>
                     </div>
                     <div id="DataTables_Table_4_wrapper"
@@ -77,8 +78,8 @@
                                     <td> ${ls.type}</td>
                                     <td> ${ls.price}</td>
                                     <td>${ls.size}</td>
-                                    <td>  <a href="/admin/update?id=${ls.id}" class="btn btn-default" role="button">修改</a></td>
-                                    <td>  <a href="/admin/delete?id=${ls.id}" class="btn btn-default" role="button">删除</a></td>
+                                    <td>  <a href="<%=path%>/admin/update?id=${ls.id}" class="btn btn-default" role="button">修改</a></td>
+                                    <td>  <a href="<%=path%>/admin/delete?id=${ls.id}" class="btn btn-default" role="button">删除</a></td>
                                 </tr>
                             </c:forEach>
                             </tbody>

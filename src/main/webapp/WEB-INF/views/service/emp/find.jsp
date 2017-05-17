@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<script src="/static/js/service.js"></script>
+<%@include file="../../common.jsp"%>
+<script src="<%=path%>/static/js/service.js"></script>
 <div>
     <div class="bg-light lter b-b wrapper-md">
         <h1 class="m-n font-thin h3">员工信息</h1>
@@ -81,8 +82,8 @@
                                     <td>${ls.worktime}</td>
                                     <td>${ls.salary}</td>
                                     <td>${ls.power}</td>
-                                    <td><a class="btn" href="/admin/emp/update?id=${ls.id}">修改</a></td>
-                                    <td><a class="btn" href="/admin/emp/delete?id=${ls.id}">删除</a></td>
+                                    <td><a class="btn" href="<%=path%>/admin/emp/update?id=${ls.id}">修改</a></td>
+                                    <td><a class="btn" href="<%=path%>/admin/emp/delete?id=${ls.id}">删除</a></td>
                                 </tr>
                             </c:forEach>
                             </tbody>

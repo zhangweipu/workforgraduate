@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<script src="/static/js/service.js"></script>
+<%@include file="../../common.jsp"%>
+<script src="<%=path%>/static/js/service.js"></script>
 <div>
     <div class="bg-light lter b-b wrapper-md">
         <h1 class="m-n font-thin h3">订单详情</h1>

@@ -1,7 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<script src="/static/js/service.js"></script>
+<% String path=request.getContextPath();%>
+<script src="<%=path%>/static/js/service.js"></script>
 <div>
     <div class="bg-light lter b-b wrapper-md">
         <h1 class="m-n font-thin h3">历史订单</h1>
@@ -56,7 +57,7 @@
                                     <td><fmt:formatDate value="${ls.time}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate></td>
                                     <td>${ls.stat}</td>
                                     <td>${ls.money}</td>
-                                    <td><a class="btn" href="/admin/orderdetail?id=${ls.id}">详情</a></td>
+                                    <td><a class="btn" href="<%=path%>/admin/orderdetail?id=${ls.id}">详情</a></td>
                                 </tr>
                             </c:forEach>
                             </tbody>

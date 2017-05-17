@@ -1,8 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="my" uri="http://myel.com" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
     <title>添加菜</title>
+<%@include file="../../common.jsp"%>
     <script src="/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
 <script src="/static/js/service.js"></script>
     <div class="add">
@@ -11,7 +11,7 @@
         </div>
         <div class="panel panel-default">
             <div class="panel-body">
-                <form class="form-horizontal" action="/admin/add" method="post" enctype="multipart/form-data">
+                <form class="form-horizontal" action="<%=path%>/admin/add" method="post" enctype="multipart/form-data">
                     <div class="line line-dashed b-b line-lg pull-in"></div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label ">种类：</label>
@@ -57,7 +57,7 @@
                     </div>
                     <div  align="center">
                         <button type="submit" >提交</button>
-                        <a class="btn btn-default" href="/admin/addmany">批量添加</a>
+                        <a class="btn btn-default" href="<%=path%>/admin/addmany">批量添加</a>
                     </div>
                 </form>
             </div>
