@@ -3,22 +3,23 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <link rel="shortcut icon" href="../static/image/bushuohua.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/static/image/bushuohua.ico" type="image/x-icon"/>
     <title>fuwu</title>
     <%
         String basePath = request.getScheme() + "://"
                 + request.getServerName() + ":" + request.getServerPort();
         basePath += request.getContextPath() + "/";
+        String path=request.getContextPath();
     %>
     <base href="<%=basePath%>">
 
     <!-- Bootstrap core CSS -->
-    <link href="/static/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/css/common.css" rel="stylesheet">
+    <link href="<%=path%>/static/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<%=path%>/static/css/common.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="/static/css/dashboard.css" rel="stylesheet">
-    <script src="/static/my97date/calendar.js"></script>
-    <script src="/static/my97date/WdatePicker.js"></script>
+    <link href="<%=path%>/static/css/dashboard.css" rel="stylesheet">
+    <script src="<%=path%>/static/my97date/calendar.js"></script>
+    <script src="<%=path%>/static/my97date/WdatePicker.js"></script>
 
 </head>
 
@@ -61,10 +62,10 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
-<script src="/static/bootstrap3/js/bootstrap.min.js"></script>
-<script src="/static/bootstrap3/js/json2.js"></script>
-<script  src="/static/js/service.js"></script>
-<script src="/static/js/angular.min.js"></script>
+<script src="<%=path%>/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
+<script src="<%=path%>/static/bootstrap3/js/bootstrap.min.js"></script>
+<script src="<%=path%>/static/bootstrap3/js/json2.js"></script>
+<script  src="<%=path%>/static/js/service.js"></script>
+<script src="<%=path%>/static/js/angular.min.js"></script>
 </body>
 </html>
