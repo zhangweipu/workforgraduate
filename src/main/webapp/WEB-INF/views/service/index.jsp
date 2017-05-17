@@ -5,6 +5,13 @@
 <head>
     <link rel="shortcut icon" href="../static/image/bushuohua.ico" type="image/x-icon"/>
     <title>fuwu</title>
+    <%
+        String basePath = request.getScheme() + "://"
+                + request.getServerName() + ":" + request.getServerPort();
+        basePath += request.getContextPath() + "/";
+    %>
+    <base href="<%=basePath%>">
+
     <!-- Bootstrap core CSS -->
     <link href="/static/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/css/common.css" rel="stylesheet">
