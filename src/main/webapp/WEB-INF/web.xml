@@ -46,7 +46,7 @@
     <filter-name>encodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
-  <!--配置tiles视图解析器-->
+  <!--配置日志监听器-->
   <context-param>
     <param-name>log4jConfigLocation</param-name>
     <param-value>/WEB-INF/log4j.xml</param-value>
@@ -55,5 +55,15 @@
     <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
   </listener>
 
+  <!--配置登录过滤器-->
+  <filter>
+    <filter-name>securityFilter</filter-name>
+    <filter-class>com.wp.utils.SecurityFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>securityFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
 
 </web-app>

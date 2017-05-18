@@ -15,8 +15,4 @@ public class MainController {
         return "main";
     }
 
-    @RequestMapping("/success")
-    public String success(){
-        return "service/success";
-    }
 }
