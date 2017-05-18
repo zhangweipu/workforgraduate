@@ -10,7 +10,7 @@
     </resultMap>
     <insert id="insert" parameterType="com.wp.restuarant.data.finance.entity.Trans">
         INSERT  INTO t_trans(transId,type,time,turnover,detail)
-        VALUES (#{transId},#{type},#{time},#{turnover},#{detaill})
+        VALUES (#{transId},#{type},#{time},#{turnover},#{detail})
     </insert>
     <select id="select" resultMap="BaseMap">
         SELECT * FROM t_trans

@@ -1,6 +1,8 @@
 package com.wp.client.controller;
 
 import com.wp.client.service.ClientService;
+import com.wp.restuarant.data.finance.dao.TransDao;
+import com.wp.restuarant.data.finance.entity.Trans;
 import com.wp.restuarant.data.order.entity.Order;
 import com.wp.restuarant.data.order.entity.OrderID;
 import com.wp.restuarant.adminer.service.ServiceService;
@@ -27,6 +29,9 @@ public class OrderController {
     private ClientService clientService;
 
     @Autowired
+    private TransDao transDao;
+
+    @Autowired
     private ServiceService serviceService;
 
     @RequestMapping(value = "/addorder",method = RequestMethod.POST)
@@ -43,7 +48,7 @@ public class OrderController {
         order.setTime(new Date());
         order.setLa(Constants.FOOD_ND);
         clientService.addOrder(order);
-        List<Order> list=serviceService.findOrderDetail(id);
+        List<Order> list=serviceService.findOrder(id);
         return list;
     }
     @RequestMapping(value = "/suborder",method = RequestMethod.POST)
@@ -74,6 +79,13 @@ public class OrderController {
         orderID.setTime(new Date());
         orderID.setMoney(clientService.getMoney(id));
         clientService.addOrderId(orderID);
+        Trans trans=new Trans();
+        trans.setTransId(id);
+        trans.setTime(new Date());
+        trans.setDetail("餐点");
+        trans.setType(1);
+        trans.setTurnover(Double.valueOf(orderID.getMoney()));
+        transDao.insert(trans);
         return "redirect:/client/success";
     }
 }

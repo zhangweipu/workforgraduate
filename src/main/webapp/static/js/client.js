@@ -1,4 +1,5 @@
 $(function () {
+    var ur=$("#path").data("path");
     //主页js操作
     $(".left a").on("click", function (evt) {
         evt.preventDefault();
@@ -25,13 +26,13 @@ $(function () {
             }
             $.ajax({
                 async:false,
-                url: "/order/submit",
+                url: ur+"/order/submit",
                 type: "post",
                 dataTypes: "json",
                 data: JSON.stringify(jsonData),
                 contentType: "Application/json;charset=utf-8",
                 success: function (data) {
-                    window.location.href="<%=path%>/client/success";
+                    window.location.href=ur+"/client/success";
                 },
                 error:function (data) {
                     alert("error");
@@ -40,6 +41,8 @@ $(function () {
         }
     })
     $(".addorder").on("click", function () {
+
+
         $father = $(this).parent();
         var name = $father.data("title");
         var id = $father.data("id");
@@ -54,7 +57,7 @@ $(function () {
             "foodPrice": price
         }
         $.ajax({
-            url: '<%=path%>/order/addorder',
+            url: ur+'/order/addorder',
             data: jsonObject,
             dataType: 'json',
             type: 'post',
@@ -83,7 +86,7 @@ $(function () {
             "foodName": name,
             "foodPrice": price
         }
-        $.post('<%=path%>/order/addorder', jsonObject, function (data) {
+        $.post(ur+'/order/addorder', jsonObject, function (data) {
             var str = toshow(data);
             $nums.html(str);
         })
@@ -94,14 +97,14 @@ $(function () {
         var id = $(this).data("id");
         var orderid = $('.order').data('id');
         var $nums = $('#nums');
-        $.post("<%=path%>/order/suborder", {"orderId":orderid,"foodID": id}, function (data) {
+        $.post(ur+"/order/suborder", {"orderId":orderid,"foodID": id}, function (data) {
             var str = toshow(data);
             $nums.html(str);
         })
     })
     $("body").on("click",".reset",function () {
         var str="";
-        $.get("<%=path%>/order/reset",{},function (data) {
+        $.get(ur+"/order/reset",{},function (data) {
             $(".tijiao").attr("id","tijiao");
         })
         $('#nums').html(str);
@@ -131,7 +134,7 @@ $(function () {
         $this=$(this);
         var id=$this.data("id");
 
-        $.get("<%=path%>/client/praise",{"id":id},function (data) {
+        $.get(ur+"/client/praise",{"id":id},function (data) {
             $(".praise"+id).html(data);
             $this.unbind();
         })
