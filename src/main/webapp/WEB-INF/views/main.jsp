@@ -7,10 +7,10 @@
 </head>
 <body>
   <div>
-      <form>
+      <form action="<%=path%>/main/login" method="post">
       <div class="modal-dialog bg-success"><h4>登录</h4></div>
-      <div><label>账号：</label><input type="text" name="id"></div>
-      <div><label>密码：</label><input type="password" name="password"></div>
+      <div><label>账号：</label><input type="text" name="str1"></div>
+      <div><label>密码：</label><input type="password" name="str2"></div>
       <div><input type="submit"></div>
       </form>
   </div>
