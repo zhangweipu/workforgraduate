@@ -37,8 +37,8 @@ public class AccountTest {
     @Test
     public void upda(){
         Account account=new Account();
-        account.setAccountId(123333);
-        account.setAmount(12.23);
+        account.setAccountId(1333);
+        account.setAmount(22.0);
         account.setType("suoy");
         accountDao.update(account);
     }

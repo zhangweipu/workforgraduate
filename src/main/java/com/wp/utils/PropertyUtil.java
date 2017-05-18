@@ -28,7 +28,7 @@ public class PropertyUtil {
        try{
            //通过类加载器加载properties文件
            in=PropertyUtil.class.getClassLoader().getResourceAsStream("app.properties");
-           BufferedReader reader=new BufferedReader(new InputStreamReader(in));
+           BufferedReader reader=new BufferedReader(new InputStreamReader(in,"UTF-8"));
            pro.load(reader);
        }catch(FileNotFoundException f){
            logger.error("没有找到文件",f);
@@ -51,11 +51,11 @@ public class PropertyUtil {
        return pro.getProperty(key);
     }
 
-    public static String getProperty(String key,String defaultValue){
+    public static String getProperty(String prefix,String subfix){
         if(null==pro){
             loadProp();
         }
-        return pro.getProperty(key,defaultValue);
+        return pro.getProperty(prefix+"."+subfix);
     }
 }
 

@@ -10,7 +10,13 @@ public class PropertyTest {
 
     @Test
     public void test(){
-      String a=  PropertyUtil.getProperty("ND");
+      String a=  PropertyUtil.getProperty("sex.1");
         System.out.println(a);
+    }
+
+    @Test
+    public void test2(){
+        String b=PropertyUtil.getProperty("power","1");
+        System.out.println(b);
     }
 }

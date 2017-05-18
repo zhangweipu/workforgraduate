@@ -1,5 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@taglib prefix="covert" uri="http://covert.com" %>
 <%@include file="../../common.jsp"%>
 <script src="<%=path%>/static/js/service.js"></script>
 <div>
@@ -78,8 +80,8 @@
                                     <td>${ls.id}</td>
                                     <td>${ls.name}</td>
                                     <td>${ls.age}</td>
-                                    <td>${ls.sex}</td>
-                                    <td>${ls.worktime}</td>
+                                    <td>${covert:covert2("sex",ls.sex)}</td>
+                                    <td><fmt:formatDate value="${ls.worktime}" pattern="yyyy-MM-dd"></fmt:formatDate></td>
                                     <td>${ls.salary}</td>
                                     <td>${ls.power}</td>
                                     <td><a class="btn" href="<%=path%>/admin/emp/update?id=${ls.id}">修改</a></td>

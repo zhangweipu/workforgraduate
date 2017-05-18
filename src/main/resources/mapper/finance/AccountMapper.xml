@@ -33,7 +33,7 @@
         UPDATE t_account
         <set>
             <if test="amount !=null">
-                amount=amount + #{amount}
+                amount=amount+#{amount}
             </if>
         </set>
         WHERE accountId=#{accountId}
