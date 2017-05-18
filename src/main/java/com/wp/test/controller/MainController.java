@@ -14,4 +14,9 @@ public class MainController {
     public String main(){
         return "main";
     }
+
+    @RequestMapping("/success")
+    public String success(){
+        return "service/success";
+    }
 }
