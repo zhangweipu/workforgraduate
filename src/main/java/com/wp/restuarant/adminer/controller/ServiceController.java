@@ -259,7 +259,6 @@ public class ServiceController {
                     serviceService.addFoodType(foodType);
                 }
         }
-        System.out.println("+++++++++++++++++++++++++++++++++++++++++");
         return "service/success";
     }
 
