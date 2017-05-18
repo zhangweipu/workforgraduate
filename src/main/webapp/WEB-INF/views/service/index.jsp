@@ -14,6 +14,11 @@
     <base href="<%=basePath%>">
 
     <!-- Bootstrap core CSS -->
+    <script src="<%=path%>/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
+    <script src="<%=path%>/static/bootstrap3/js/bootstrap.min.js"></script>
+    <script src="<%=path%>/static/bootstrap3/js/json2.js"></script>
+    <script  src="<%=path%>/static/js/service.js"></script>
+    <script src="<%=path%>/static/js/angular.min.js"></script>
     <link href="<%=path%>/static/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
     <link href="<%=path%>/static/css/common.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -62,10 +67,6 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="<%=path%>/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
-<script src="<%=path%>/static/bootstrap3/js/bootstrap.min.js"></script>
-<script src="<%=path%>/static/bootstrap3/js/json2.js"></script>
-<script  src="<%=path%>/static/js/service.js"></script>
-<script src="<%=path%>/static/js/angular.min.js"></script>
+
 </body>
 </html>

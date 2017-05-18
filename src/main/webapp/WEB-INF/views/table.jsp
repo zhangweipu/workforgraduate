@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<<div ng-controller="CertUpdateQueryList" ng-init="init()">
+<div >
 <div class="bg-light lter b-b wrapper-md">
     <h1 class="m-n font-thin h3">查询结果</h1>
 </div>

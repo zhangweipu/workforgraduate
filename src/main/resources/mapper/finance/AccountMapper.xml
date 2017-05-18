@@ -33,9 +33,19 @@
         UPDATE t_account
         <set>
             <if test="amount !=null">
-                amount=#{amount}
+                amount=amount + #{amount}
             </if>
         </set>
+        WHERE accountId=#{accountId}
+    </update>
+    <update id="updateD" parameterType="com.wp.restuarant.data.finance.entity.Account">
+        UPDATE t_account
+        <set>
+            <if test="amount !=null">
+                amount=amount-#{amount}
+            </if>
+        </set>
+        WHERE accountId=#{accountId}
     </update>
     <delete id="delete" parameterType="java.lang.Integer">
         DELETE FROM t_account

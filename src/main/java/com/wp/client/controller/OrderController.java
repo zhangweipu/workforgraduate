@@ -85,7 +85,7 @@ public class OrderController {
         trans.setDetail("餐点");
         trans.setType(1);
         trans.setTurnover(Double.valueOf(orderID.getMoney()));
-        transDao.insert(trans);
+        serviceService.inCome(trans);
         return "redirect:/client/success";
     }
 }

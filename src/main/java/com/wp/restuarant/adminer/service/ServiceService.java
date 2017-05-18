@@ -1,5 +1,6 @@
 package com.wp.restuarant.adminer.service;
 
+import com.wp.restuarant.data.finance.entity.Trans;
 import com.wp.restuarant.data.food.entity.FoodType;
 import com.wp.restuarant.data.food.entity.Foods;
 import com.wp.restuarant.data.order.entity.Order;
@@ -29,4 +30,6 @@ public interface ServiceService {
     List<FoodType> getFoodTypes();
     void updateFoodType(FoodType foodType);
     void deleteFoodType(String type);
+    void inCome(Trans trans);
+    void outCome(Trans trans);
 }

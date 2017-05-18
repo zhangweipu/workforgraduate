@@ -1,5 +1,9 @@
 package com.wp.restuarant.adminer.service.serviceImpl;
 
+import com.wp.restuarant.data.finance.dao.AccountDao;
+import com.wp.restuarant.data.finance.dao.TransDao;
+import com.wp.restuarant.data.finance.entity.Account;
+import com.wp.restuarant.data.finance.entity.Trans;
 import com.wp.restuarant.data.food.dao.FoodTypeMapper;
 import com.wp.restuarant.data.food.dao.FoodsMapper;
 import com.wp.restuarant.data.food.entity.FoodType;
@@ -32,6 +36,12 @@ public class ServiceServiceImpl implements ServiceService{
 
     @Autowired
     private OrderIdMapper orderIdMapper;
+
+    @Autowired
+    private TransDao transDao;
+
+    @Autowired
+    private AccountDao accountDao;
 
     public void add(Foods food) {
         foodsMapper.insert(food);
@@ -109,5 +119,23 @@ public class ServiceServiceImpl implements ServiceService{
     @Override
     public void deleteFoodType(String type) {
 
+    }
+
+    @Override
+    public void inCome(Trans trans) {
+        transDao.insert(trans);
+        Account account=new Account();
+        account.setAccountId(123333);
+        account.setAmount(trans.getTurnover());
+        accountDao.update(account);
+    }
+
+    @Override
+    public void outCome(Trans trans) {
+        transDao.insert(trans);
+        Account account=new Account();
+        account.setAccountId(123333);
+        account.setAmount(trans.getTurnover());
+        accountDao.updateD(account);
     }
 }

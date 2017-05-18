@@ -17,10 +17,10 @@
     </select>
 
     <select id="selectIncome" resultMap="BaseMap">
-        SELECT * FROM t_trans WHERE type='IN'
+        SELECT * FROM t_trans WHERE type=1
     </select>
     <select id="selectOutcome" resultMap="BaseMap">
-        SELECT * FROM t_trans WHERE type='IN'
+        SELECT * FROM t_trans WHERE type=2
     </select>
     <update id="update" parameterType="com.wp.restuarant.data.finance.entity.Trans">
         UPDATE  t_trans

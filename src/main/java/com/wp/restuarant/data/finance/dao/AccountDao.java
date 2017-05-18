@@ -15,5 +15,6 @@ public interface AccountDao {
     List<Account> select();
     Account selectById(Integer accountId);
     void update(Account account);
+    void updateD(Account account);
     void delete(Integer accountId);
 }
