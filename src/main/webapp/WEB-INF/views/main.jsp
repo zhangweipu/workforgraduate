@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="covert" uri="http://covert.com" %>
 <%@include file="common.jsp"%>
 <script src="<%=path%>/static/js/common.js"></script>
 <html>
@@ -16,7 +17,7 @@
       </form>
       <div><input type="button" id="submit" value="登录"></div>
   </div>
-  <label id="showErr">${msg}</label>
+  <label id="showErr">${covert:covert(msg)}</label>
 <div>
     <a href="<%=path%>/admin/index">后台服务</a>
     <a href="<%=path%>/client/list">菜单</a>

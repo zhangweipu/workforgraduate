@@ -26,7 +26,9 @@ public class MainController {
     EmpDao empDao;
 
     @RequestMapping("/main")
-    public String main(Model model,@ModelAttribute("msg") String msg){
+    public String main(HttpServletRequest request,Model model,@ModelAttribute("msg") String msg){
+        HttpSession session=request.getSession();
+        session.removeAttribute("USER");
         model.addAttribute("msg",msg);
         return "main";
     }
@@ -37,7 +39,7 @@ public class MainController {
         Emp emp=empDao.selectById(Integer.valueOf(optionUtil.getStr1()));
         if(null == emp){
             //RedirectAttributesModelMap还是会在地址栏上显示的啊
-            modelMap.put("msg","没有该账号，请重新输入");
+            modelMap.put("msg","null");
             return "redirect:/main";
         }
         if(null !=emp.getPassword() && emp.getPassword().equals(optionUtil.getStr2())){
