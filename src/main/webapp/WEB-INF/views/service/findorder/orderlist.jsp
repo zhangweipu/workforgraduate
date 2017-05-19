@@ -35,11 +35,6 @@
                                 <th class="sorting" tabindex="0"
                                     aria-controls="DataTables_Table_4" rowspan="1" colspan="1"
                                     aria-label="Domain: activate to sort column ascending"
-                                    style="width: 102px;">状态:
-                                </th>
-                                <th class="sorting" tabindex="0"
-                                    aria-controls="DataTables_Table_4" rowspan="1" colspan="1"
-                                    aria-label="Domain: activate to sort column ascending"
                                     style="width: 102px;">总额:
                                 </th>
                                 <th class="sorting" tabindex="0"
@@ -55,7 +50,6 @@
                             <c:forEach items="${list}" var="ls">
                                 <tr><td>${ls.id}</td>
                                     <td><fmt:formatDate value="${ls.time}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate></td>
-                                    <td>${ls.stat}</td>
                                     <td>${ls.money}</td>
                                     <td><a class="btn" href="<%=path%>/admin/orderdetail?id=${ls.id}">详情</a></td>
                                 </tr>

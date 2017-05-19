@@ -31,7 +31,6 @@ public class SecurityFilter extends OncePerRequestFilter{
                 break;
             }
         }
-
         if(doFilter){
             //执行过滤
             //从session中获取登录信息
