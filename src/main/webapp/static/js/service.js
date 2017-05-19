@@ -26,7 +26,11 @@ jQuery(function($) {
             str3:pass3
         }
         $.post(ur+"/admin/security/update",options,function (response) {
-            alert(response);
+            if(response=="success"){
+                $("#main").load(ur+"/success");
+            }else {
+                $("showErr").html("修改密码失败！！！")
+            }
         })
     })
 })

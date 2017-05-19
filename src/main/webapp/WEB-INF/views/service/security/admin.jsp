@@ -14,7 +14,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label ">账户：</label>
                         <div class="col-sm-10">
-
+                            ${Id}
                         </div>
                     </div>
 
@@ -36,6 +36,7 @@
                         <input type="password" id="password3" name="password">
                     </div>
                 </div>
+                <div id="showErr"></div>
                 <div  align="center">
                     <a id="update" type="button" href="javascript:void(0);" class="btn btn-primary">修改</a>
                 </div>

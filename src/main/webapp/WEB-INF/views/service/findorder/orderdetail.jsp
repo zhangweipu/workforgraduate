@@ -11,7 +11,7 @@
         <div class="panel-body">
             <form class="form-horizontal">
                 <div class="ng-scope">
-                    <div class="table-header">
+                    <div class="table-header">订单编号：${id}
                     </div>
                     <div id="DataTables_Table_4_wrapper"
                          class="dataTables_wrapper form-inline no-footer">

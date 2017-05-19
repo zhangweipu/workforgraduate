@@ -20,9 +20,7 @@
     where id = #{id,jdbcType=INTEGER}
   </select>
   <select id="selectAll" resultMap="BaseResultMap">
-    select o.id,o.time,o.stat,sum(t.food_price) as money,o.seat
-    from t_order t,t_orderid o
-    group by t.orderid having o.id=t.orderid
+    select * from t_orderid
   </select>
   <select id="selectND" parameterType="java.lang.Integer" resultMap="BaseResultMap">
   select * from t_orderid t

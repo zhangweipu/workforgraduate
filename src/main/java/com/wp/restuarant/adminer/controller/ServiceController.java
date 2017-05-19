@@ -233,6 +233,7 @@ public class ServiceController {
     public String orderDetial(int id,Model model){
        // Integer id=getId(request);
         List<Order> list=serviceService.findOrderDetail(id);
+        model.addAttribute("id",id);
         model.addAttribute("list",list);
         return "service/findorder/orderdetail";
     }
