@@ -37,10 +37,10 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/sys/index">首页</a></li>
-                <li><a onclick="history.go(-1)">返回上一页</a></li>
+                <%--<li><a href="/sys/index">首页</a></li>--%>
+                <%--<li><a onclick="history.go(-1)">返回上一页</a></li>--%>
                 <li><a href="#">Profile</a></li>
-                <li><a href="/sys/loadOut">登出</a></li>
+                <li><a href="<%=path%>/loadOut">登出</a></li>
             </ul>
             <form class="navbar-form navbar-right">
                 <input type="text" class="form-control" placeholder="Search...">

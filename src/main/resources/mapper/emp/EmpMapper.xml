@@ -51,6 +51,10 @@
     </set>
     where id=#{id}
   </update>
+
+  <update id="resetPsd" parameterType="java.lang.Integer">
+    update t_emp set password=111111 where id=#{0}
+  </update>
   <delete id="delete" parameterType="java.lang.Integer">
     delete from t_emp where id=#{0}
   </delete>

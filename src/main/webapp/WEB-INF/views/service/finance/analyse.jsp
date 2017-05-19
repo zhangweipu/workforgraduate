@@ -10,22 +10,19 @@
         <div class="panel-body">
             <form class="form-horizontal" method="post" name="user">
                 <div class="line line-dashed b-b line-lg pull-in"></div>
-                <c:forEach items="${account}" var="item" varStatus="index">
                     <div class="form-group">
-                        <label class="col-sm-2 control-label ">账户：</label>
+                        <label class="col-sm-2 control-label "></label>
                         <div class="col-sm-10">
-                                ${item.accountId}
+                               此功能未完成
                         </div>
                     </div>
 
                     <div class="form-group" >
-                        <label class="col-sm-2 control-label ">余额：</label>
+                        <label class="col-sm-2 control-label "></label>
                         <div class="col-sm-10" >
-                                ${item.amount}
-                        </div>
+
                     </div>
-                </c:forEach>
-                aaa
+
                 <div  align="center">
                     <button type="button" class="btn btn-primary">查询</button>
                 </div>

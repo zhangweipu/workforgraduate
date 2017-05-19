@@ -10,12 +10,12 @@
         order by id asc
     </select>
     <insert id="insert" parameterType="com.wp.restuarant.data.food.entity.FoodType">
-        insert into t_foodtype(type,id) values(#{type},#{id})
+        insert into t_foodtype(type) values(#{type})
     </insert>
     <insert id="insertBatch" parameterType="java.util.List">
-        insert into t_foodtype values
+        insert into t_foodtype(type) values
         <foreach collection="list" item="item" index="index" separator=",">
-            (#{item.type},#{item.id})
+            (#{item.type})
         </foreach>
     </insert>
     <update id="update" parameterType="com.wp.restuarant.data.food.entity.FoodType">

@@ -33,4 +33,42 @@ jQuery(function($) {
             }
         })
     })
+    
+    $("#find").on("click",function () {
+
+        var id=$("#id").val();
+        if(id=="" || id==null){
+            $("#showErr").html("输入查询的员工号");
+            $("#id").focus();
+            return;
+        }
+        if(isNaN(id)){
+            $("#showErr").html("员工号格式不正确");
+            $("#id").focus();
+            return;
+        }
+        $("#showErr").html("");
+        var href=ur+"/admin/security/updateEmp?id="+id;
+        $("#showRsp").load(href);
+        // $.post(ur+"/admin/security/updateEmp",{id:id},function (response) {
+        //     alert(response.password);
+        // })
+    })
+
+    $("#container").on("click",'#reset',function () {
+        var id=$(this).data("id");
+        $.post(ur+"/admin/security/reset",{id:id},function (data) {
+            if(data=="success"){
+                $("#showRsp").html("");
+                $("#showErr").html("成功");
+            }
+        })
+    })
+
+    $("#queding").on("click",function () {
+        var options={
+        };
+        $("#form3").ajaxForm(options).submit();
+        $("#main").load(ur+"/success2");
+    })
 })

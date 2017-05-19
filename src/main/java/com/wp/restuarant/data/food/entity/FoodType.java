@@ -10,9 +10,8 @@ public class FoodType {
     public FoodType() {
     }
 
-    public FoodType(String type, Integer id) {
+    public FoodType(String type) {
         this.type = type;
-        this.id = id;
     }
 
     public String getType() {

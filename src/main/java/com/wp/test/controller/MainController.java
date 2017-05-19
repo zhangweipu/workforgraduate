@@ -48,4 +48,8 @@ public class MainController {
         return "redirect:/admin/index";
     }
 
+    @RequestMapping("/loadOut")
+    public String layout(){
+        return "redirect:/main";
+    }
 }

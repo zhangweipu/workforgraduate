@@ -14,6 +14,7 @@ public interface EmpDao {
     void insert(Emp emp);
     List<Emp> select();
     void update(Emp emp);
+    void resetPsd(Integer id);
     void delete(Integer id);
     Emp selectById(Integer id);
 }

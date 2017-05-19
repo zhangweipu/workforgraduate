@@ -16,4 +16,9 @@ public class SuccessController {
     public String success(String operation){
         return "{\"msg\":"+operation+",\"success\":\"success\"}";
     }
+
+    @RequestMapping("/success2")
+    public String success(){
+        return "/service/success";
+    }
 }

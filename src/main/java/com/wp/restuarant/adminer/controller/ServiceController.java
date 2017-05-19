@@ -24,6 +24,7 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.ServletContext;
@@ -246,21 +247,19 @@ public class ServiceController {
     /**
      *
      * @param type
-     * @param id
      * @return
      */
+   // @ResponseBody
     @RequestMapping(value = "/addFoodType",method = RequestMethod.POST)
-    public String addFoodTtype(String[] type,Integer[] id){
-
-
+    public String addFoodTtype(String[] type){
        // System.out.println(foodTypes.size());
-        for(int i=0;i<id.length;i++){
-                FoodType foodType = new FoodType(type[i], id[i]);
-                if(foodType.getId()!=null) {
+        for(int i=0;i<type.length;i++){
+                FoodType foodType = new FoodType(type[i]);
+                if(foodType.getType()!=null && foodType.getType()!="") {
                     serviceService.addFoodType(foodType);
                 }
         }
-        return "service/success";
+        return "success";
     }
 
     /**

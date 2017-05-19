@@ -1,4 +1,4 @@
-##create database forgradute default charset utf8;
+=##create database forgradute default charset utf8;
 
   use forgradute;
 ##--菜单表
@@ -18,9 +18,8 @@ CREATE TABLE `t_food` (
 ##--菜单类型表
 drop table if exists t_foodtype;
 create table t_foodtype(
-  type varchar(20),
-  id int
-);
+     id int auto_increment primary key,
+     type varchar(20));
 
 
 

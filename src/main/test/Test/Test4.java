@@ -2,6 +2,8 @@ package Test;
 
 import com.wp.restuarant.data.emp.dao.EmpDao;
 import com.wp.restuarant.data.emp.entity.Emp;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,5 +26,13 @@ public class Test4 {
         emp.setId(1);
         emp.setName("tom");
         empDao.insert(emp);
+    }
+
+    @Test
+    public void testJson(){
+        Emp emp=empDao.selectById(5);
+        System.out.println(emp);
+        String Json= JSONObject.valueToString(emp);
+        System.out.println(Json);
     }
 }

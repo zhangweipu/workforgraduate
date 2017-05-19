@@ -3,6 +3,8 @@ package com.wp.restuarant.adminer.controller;
 import com.wp.restuarant.data.emp.dao.EmpDao;
 import com.wp.restuarant.data.emp.entity.Emp;
 import com.wp.utils.OptionUtil;
+import org.json.JSONObject;
+import org.pptx4j.pml.STTLTriggerRuntimeNode;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -56,9 +58,22 @@ public class SecurityController {
         return "success";
     }
 
-    @RequestMapping(value = "/emp")
+    @RequestMapping(value = "/emp",method = RequestMethod.GET)
     public String emp(){
-
         return "service/security/emp";
+    }
+
+    @RequestMapping(value = "/updateEmp",method = RequestMethod.GET)
+    public String emp(Integer id,Model model){
+      Emp emp=empDao.selectById(id);
+       model.addAttribute("ls",emp);
+        return "service/security/empDetail";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/reset",method = RequestMethod.POST)
+    public String reset(Integer id){
+        empDao.resetPsd(id);
+        return "success";
     }
 }

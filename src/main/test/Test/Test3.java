@@ -38,7 +38,7 @@ public class Test3 {
     public void testInsertBatch(){
         List<FoodType> foodTypes=new ArrayList<>();
         for(int i=0;i<10;i++){
-            FoodType foodType=new FoodType(""+i,i);
+            FoodType foodType=new FoodType(""+i);
             foodTypes.add(foodType);
         }
         foodTypeMapper.insertBatch(foodTypes);
