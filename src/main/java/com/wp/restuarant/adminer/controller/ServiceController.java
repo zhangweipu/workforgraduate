@@ -187,7 +187,7 @@ public class ServiceController {
      * @param food
      * @return
      */
-    @RequestMapping(value = "/update",method = RequestMethod.POST)
+    @RequestMapping(value = "/toupdate",method = RequestMethod.POST)
     public String update(Foods food){
         serviceService.update(food);
         return "redirect:/admin/index";

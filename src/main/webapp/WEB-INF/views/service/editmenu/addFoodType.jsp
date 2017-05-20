@@ -43,5 +43,5 @@
         </form>
     </div>
 </div>
-<div class="display"><span>设置优先级，越小越优先展示</span></div>
+<div class="display"><span>该添加为批量添加，最多可添加5个</span></div>
 </div>

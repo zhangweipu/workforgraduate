@@ -9,7 +9,7 @@
 
 <div>
     <div class="bg-light lter b-b wrapper-md">
-        <h1 class="m-n font-thin h3">批量添加菜单类型</h1>
+        <h1 class="m-n font-thin h3">编辑菜单</h1>
     </div>
     <div class="panel panel-default">
 

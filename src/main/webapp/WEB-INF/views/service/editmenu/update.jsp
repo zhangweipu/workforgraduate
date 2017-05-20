@@ -8,7 +8,8 @@
     </div>
     <div class="panel panel-default">
         <div class="panel-body">
-            <form:form  action="<%=path%>/admin/update" class="form-horizontal" method="post" modelAttribute="food">
+            <!---form 怎么还不能用jsp呢>》-->
+            <form:form  action="admin/toupdate" class="form-horizontal" method="post" modelAttribute="food">
                 <div class="line line-dashed b-b line-lg pull-in"></div>
 
                 <div class="form-group">
