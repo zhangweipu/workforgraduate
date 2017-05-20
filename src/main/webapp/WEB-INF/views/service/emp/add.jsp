@@ -31,9 +31,15 @@
                     </div>
                 </div>
                 <div class="form-group" >
-                    <label class="col-sm-2 control-label">职位：</label>
+                    <label class="col-sm-2 control-label">职业：</label>
                     <div class="col-sm-10" >
-                        <input class="input" type="text" name="duty">
+                        <select class="input" name="duty">
+                            <option value="">请选择</option>
+                            <option value="1">管理员</option>
+                            <option value="2">厨师</option>
+                            <option value="3">服务员</option>
+                            <option value="4">财务</option>
+                        </select>
                     </div>
                 </div>
                 <div class="form-group" >
@@ -49,9 +55,15 @@
                     </div>
                 </div>
                 <div class="form-group" >
-                    <label class="col-sm-2 control-label">状态：</label>
+                    <label class="col-sm-2 control-label">权限：</label>
                     <div class="col-sm-10" >
-                        <input class="input" type="text" name="power">
+                        <select class="input" name="power">
+                            <option value="">请选择</option>
+                            <option value="1">管理权限</option>
+                            <option value="2">厨师权限</option>
+                            <option value="3">服务员权限</option>
+                            <option value="4">财务权限</option>
+                        </select>
                     </div>
                 </div>
 

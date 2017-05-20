@@ -66,9 +66,22 @@ jQuery(function($) {
     })
 
     $("#queding").on("click",function () {
+        var num=0;
+       $(".input").each(function () {
+            if($(this).val()==""){
+                console.log("kong",$(this));
+            }else{
+               num=num+1;
+            }
+        });
+       if(num==7){
         var options={
         };
         $("#form3").ajaxForm(options).submit();
         $("#main").load(ur+"/success2");
+    }else {
+           alert("请输入完整！");
+           return false;
+       }
     })
 })

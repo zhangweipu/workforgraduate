@@ -39,13 +39,23 @@ public class MainController {
         Emp emp=empDao.selectById(Integer.valueOf(optionUtil.getStr1()));
         if(null == emp){
             //RedirectAttributesModelMap还是会在地址栏上显示的啊
-            modelMap.put("msg","null");
+            modelMap.put("msg","没有该账号");
             return "redirect:/main";
         }
         if(null !=emp.getPassword() && emp.getPassword().equals(optionUtil.getStr2())){
             session.setAttribute("USER",emp);
         }
-        return "redirect:/admin/index";
+        if(emp.getPower()==1) {
+            return "redirect:/admin/index";
+        }
+        if(emp.getPower()==2){
+            return "redirect:/admin/cooker";
+        }
+        if(emp.getPower()==3){
+            return "redirect:/admin/waiter";
+        }
+        modelMap.put("msg","没有该账号");
+        return "redirect:main";
     }
 
     @RequestMapping("/loadOut")
