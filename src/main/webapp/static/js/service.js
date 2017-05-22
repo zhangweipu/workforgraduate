@@ -76,7 +76,19 @@ jQuery(function($) {
         });
        if(num==7){
         var options={
+            //url:url, //提交的地址
+            //type:type,//form提交的方式
+            //target:target,//显示服务器返回数据的元素id号
+            //before:function(),//提交前执行的回调函数
+            success:function(data){
+                //alert(data);
+            },//执行成功后的回调函数
+            //dataType:null,//服务器返回的数据类型
+            clearForm:true,//提交后清除表单中的字段
+            //resetForm:true,//提交后重置表单中的字段
+            timeout:6000 //设置请求时间
         };
+        console.log("提交！！！！");
         $("#form3").ajaxForm(options).submit();
         $("#main").load(ur+"/success2");
     }else {

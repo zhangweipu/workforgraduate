@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributesModelMap;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -34,8 +35,9 @@ public class MainController {
     }
 
     @RequestMapping(value = "/main/login",method = RequestMethod.POST)
-    public String login(HttpServletRequest request, OptionUtil optionUtil, RedirectAttributesModelMap modelMap){
+    public String login(HttpServletRequest request, HttpServletResponse response, OptionUtil optionUtil, RedirectAttributesModelMap modelMap){
         HttpSession session=request.getSession();
+        response.setCharacterEncoding("UTF-8");
         Emp emp=empDao.selectById(Integer.valueOf(optionUtil.getStr1()));
         if(null == emp){
             //RedirectAttributesModelMap还是会在地址栏上显示的啊
