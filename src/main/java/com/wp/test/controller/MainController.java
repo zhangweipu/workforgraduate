@@ -49,10 +49,10 @@ public class MainController {
             return "redirect:/admin/index";
         }
         if(emp.getPower()==2){
-            return "redirect:/admin/cooker";
+            return "redirect:/admin/cooker/list";
         }
         if(emp.getPower()==3){
-            return "redirect:/admin/waiter";
+            return "redirect:/admin/waiter/index";
         }
         modelMap.put("msg","没有该账号");
         return "redirect:main";

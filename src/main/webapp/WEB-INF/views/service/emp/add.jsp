@@ -66,12 +66,11 @@
                         </select>
                     </div>
                 </div>
-
-                <div  align="center">
-                    <input type="button" id="queding" value="保存">
-                    <a href="">批量添加</a>
-                </div>
             </form>
+            <div  align="center">
+                <input type="button" id="queding" value="保存">
+                <a href="">批量添加</a>
+            </div>
         </div>
     </div>
 </div>
