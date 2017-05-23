@@ -36,7 +36,7 @@
                         </c:forEach>
                         </tbody>
                     </table>
-                    <input class="btn btn-default" type="button" id="queding" value="确定">
+                    <input class="btn btn-default" type="button" id="sure" value="确定">
                     <input class="btn btn-default" type="reset" value="重置">
                 </div>
             </div>

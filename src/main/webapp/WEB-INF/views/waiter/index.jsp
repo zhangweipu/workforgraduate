@@ -10,14 +10,22 @@
     <script src="<%=path%>/static/js/waiter.js"></script>
 </head>
 <body>
-<div class="top">服务员菜单</div>
+<div class="top">服务员菜单
+  <div class="ls">订单列表
+    <div class="order">
+        <form id="form1">
+
+        </form>
+    </div>
+  </div>
+</div>
 <div class="main">main</div>
 <div class="left">
     <div class="type">
         <h3>种类选择</h3>
     <ul>
     <c:forEach items="${type:myFunc()}" var="type" varStatus="status">
-        <li><a href="admin/waiter/list?type=${type.type}" >${type.id}--${type.type}</a></li>
+        <li><a class="get" href="<%=path%>/admin/waiter/list?type=${type.id}">${type.id}--${type.type}</a></li>
     </c:forEach>
     </ul>
     </div>

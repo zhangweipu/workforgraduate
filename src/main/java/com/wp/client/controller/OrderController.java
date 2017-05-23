@@ -42,8 +42,14 @@ public class OrderController {
 //        if(null==id){
 //            id=clientService.addOrderID(seat);
 //        }
+        Integer id=null;
         HttpSession session=req.getSession();
-        int id= (int) session.getAttribute("orderid");
+        if (session.getAttribute("orderid")!=null) {
+             id = (int) session.getAttribute("orderid");
+        }else{
+            id=order.getOrderId();
+            session.setAttribute("orderid",id);
+        }
         order.setOrderId(id);
         order.setTime(new Date());
         order.setLa(Constants.FOOD_ND);
@@ -86,6 +92,6 @@ public class OrderController {
         trans.setType(1);
         trans.setTurnover(Double.valueOf(orderID.getMoney()));
         serviceService.inCome(trans);
-        return "redirect:/client/success";
+        return "redirect:/client/succe";
     }
 }

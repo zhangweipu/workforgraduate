@@ -249,7 +249,7 @@ public class ServiceController {
      * @param type
      * @return
      */
-   // @ResponseBody
+    @ResponseBody
     @RequestMapping(value = "/addFoodType",method = RequestMethod.POST)
     public String addFoodTtype(String[] type){
        // System.out.println(foodTypes.size());
