@@ -3,7 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <link rel="shortcut icon" href="/static/image/bushuohua.ico" type="image/x-icon"/>
+
     <title>fuwu</title>
     <%
         String basePath = request.getScheme() + "://"
@@ -12,7 +12,7 @@
         String path=request.getContextPath();
     %>
     <base href="<%=basePath%>">
-
+    <link rel="shortcut icon" href="<%=path%>/static/image/bushuohua.ico" type="image/x-icon"/>
     <!-- Bootstrap core CSS -->
     <script src="<%=path%>/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
     <script src="<%=path%>/static/bootstrap3/js/bootstrap.min.js"></script>

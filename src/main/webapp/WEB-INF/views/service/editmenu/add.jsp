@@ -3,7 +3,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <title>添加菜</title>
 <%@include file="../../common.jsp"%>
-    <script src="<%=path%>/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
 <script src="<%=path%>/static/js/service.js"></script>
     <div class="add">
         <div class="bg-light lter b-b wrapper-md">
