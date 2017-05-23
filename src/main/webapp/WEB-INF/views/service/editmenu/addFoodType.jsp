@@ -2,7 +2,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="../../common.jsp"%>
 <script src="<%=path%>/static/js/jquery.form.js"></script>
-<script src="<%=path%>/static/js/service.js"></script>
+<script src="<%=path%>/static/js/addtype.js"></script>
 <div>
 <div class="bg-light lter b-b wrapper-md">
     <h1 class="m-n font-thin h3">批量添加菜单类型</h1>
@@ -11,7 +11,7 @@
 
     <div class="panel-body">
         <form id="form3" class="form-horizontal" action="<%=path%>/admin/addFoodType" method="post">
-            <div class="ng-scope">
+            <div class="">
                 <div class="table-header">
                     添加食物种类
                 </div>
@@ -36,8 +36,8 @@
                         </c:forEach>
                         </tbody>
                     </table>
-                    <input class="btn btn-default" type="button" id="sure" value="确定">
-                    <input class="btn btn-default" type="reset" value="重置">
+                    <input type="button" id="sure" value="确定">
+                    <input type="reset" value="重置">
                 </div>
             </div>
         </form>

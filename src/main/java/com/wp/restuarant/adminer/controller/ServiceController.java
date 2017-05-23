@@ -239,7 +239,7 @@ public class ServiceController {
         return "service/findorder/orderdetail";
     }
 
-    @RequestMapping(value = "/addFoodType",method = RequestMethod.GET)
+    @RequestMapping(value = "/toaddFoodType",method = RequestMethod.GET)
     public String addFoodTtype(){
         return "service/editmenu/addFoodType";
     }
@@ -252,10 +252,12 @@ public class ServiceController {
     @ResponseBody
     @RequestMapping(value = "/addFoodType",method = RequestMethod.POST)
     public String addFoodTtype(String[] type){
+        System.out.println("进入保存环节");
        // System.out.println(foodTypes.size());
         for(int i=0;i<type.length;i++){
                 FoodType foodType = new FoodType(type[i]);
                 if(foodType.getType()!=null && foodType.getType()!="") {
+                    System.out.println("保存开始");
                     serviceService.addFoodType(foodType);
                 }
         }

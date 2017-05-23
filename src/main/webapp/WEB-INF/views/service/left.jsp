@@ -12,7 +12,7 @@
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
                     <ul  class="nav nav-sidebar">
-                        <li ><a href="<%=path%>/admin/addFoodType" class="btn " role="button">添加食物类型</a></li>
+                        <li ><a href="<%=path%>/admin/toaddFoodType" class="btn " role="button">添加食物类型</a></li>
                         <li ><a href="<%=path%>/admin/add" class="btn " role="button">添加食物菜单</a></li>
                         <li ><a href="<%=path%>/admin/list" class="btn " role="button">编辑菜单列表</a></li>
                     </ul>

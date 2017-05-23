@@ -95,14 +95,7 @@ jQuery(function($) {
            alert("请输入完整！");
            return false;
        }
-    })
-    $("#sure").on("click",function () {
-        var option={
-            success:function (data) {
-                $("#main").load(ur+"/success2");
-            },
-            clearForm:true
-        }
-        $("#form3").ajaxForm(option).submit();
-    })
+    });
+
+
 })
