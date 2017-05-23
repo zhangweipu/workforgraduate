@@ -7,19 +7,17 @@
     <title>waiter</title>
     <link href="<%=path%>/static/css/waiter.css" rel="stylesheet"/>
     <script src="<%=path%>/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
-    <script src="<%=path%>/static/js/waiter.js"></script>
+    <%--<script src="<%=path%>/static/js/waiter.js"></script>--%>
 </head>
 <body>
 <div class="top">服务员菜单
   <div class="ls">订单列表
     <div class="order">
-        <form id="form1">
 
-        </form>
     </div>
   </div>
 </div>
-<div class="main">main</div>
+<iframe class="main">main</iframe>
 <div class="left">
     <div class="type">
         <h3>种类选择</h3>
@@ -33,5 +31,15 @@
 
     </div>
 </div>
+<script type="text/javascript">
+    $(".get").on("click",function (evt) {
+        evt.preventDefault();
+        var href=$(this).attr("href");
+        $(".main").attr("src",href);
+    })
+    $.ajaxSetup ({
+        cache: false //关闭AJAX相应的缓存
+    });
+</script>
 </body>
 </html>

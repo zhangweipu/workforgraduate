@@ -19,8 +19,8 @@ CREATE TABLE `t_food` (
 drop table if exists t_foodtype;
 create table t_foodtype(
      id int auto_increment primary key,
-     type varchar(20));
-
+     type varchar(20)),
+);
 
 
 ##--每单订单列表  订单详细表
@@ -79,7 +79,8 @@ create table t_emp(
   password varchar(20)
 );
 ##餐厅信息表
-| t_resturant | CREATE TABLE `t_resturant` (
+drop table  if exists t_resturant;
+CREATE TABLE `t_resturant` (
   `id` int(11) DEFAULT NULL,
   `name` varchar(20) DEFAULT NULL,
   `begindate` date DEFAULT NULL,
