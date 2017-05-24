@@ -19,7 +19,7 @@ CREATE TABLE `t_food` (
 drop table if exists t_foodtype;
 create table t_foodtype(
      id int auto_increment primary key,
-     type varchar(20)),
+     type varchar(20)
 );
 
 
