@@ -43,7 +43,6 @@
             orderId:orderid
         }
         $.post(ur+"/order/addorder",order,function (data) {
-            alert("aaa");
             var str= toshow(data);
             $(".order",window.parent.document).html(str);
         })

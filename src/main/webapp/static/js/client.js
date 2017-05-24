@@ -1,4 +1,7 @@
 $(function () {
+    $.ajaxSetup ({
+        cache: false //关闭AJAX相应的缓存
+    });
     var ur=$("#path").data("path");
     //主页js操作
     $(".left a").on("click", function (evt) {

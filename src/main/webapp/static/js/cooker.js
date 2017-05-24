@@ -1,4 +1,7 @@
 $(function () {
+    $.ajaxSetup ({
+        cache: false //关闭AJAX相应的缓存
+    });
     $('.btu').on('click',function () {
         $parent=$(this).parent();
         if($('.child').length>0){

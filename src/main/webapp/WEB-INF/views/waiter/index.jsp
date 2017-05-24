@@ -17,7 +17,7 @@
     </div>
   </div>
 </div>
-<iframe class="main">main</iframe>
+<div class="main">main</div>
 <div class="left">
     <div class="type">
         <h3>种类选择</h3>
@@ -32,14 +32,15 @@
     </div>
 </div>
 <script type="text/javascript">
-    $(".get").on("click",function (evt) {
-        evt.preventDefault();
-        var href=$(this).attr("href");
-        $(".main").attr("src",href);
-    })
     $.ajaxSetup ({
         cache: false //关闭AJAX相应的缓存
     });
+    $(".get").on("click",function (evt) {
+        evt.preventDefault();
+        var href=$(this).attr("href");
+        $(".main").load(href);
+    })
+
 </script>
 </body>
 </html>

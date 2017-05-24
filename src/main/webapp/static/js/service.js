@@ -1,4 +1,7 @@
 jQuery(function($) {
+    $.ajaxSetup ({
+        cache: false //关闭AJAX相应的缓存
+    });
     var ur=$("#path").data("path");
     $(".btn").on("click",function (evt) {
         evt.preventDefault();

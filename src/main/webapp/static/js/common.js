@@ -2,6 +2,9 @@
  * Created by zhang on 2017/2/8.
  */
 jQuery(function ($) {
+    $.ajaxSetup ({
+        cache: false //关闭AJAX相应的缓存
+    });
     //写登陆界面的验证
     $("#submit").on("click",function () {
         var $id=$("input[name='str1']");
