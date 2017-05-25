@@ -89,7 +89,7 @@ public class ServiceController {
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     public String add(Foods food, MultipartFile icon, HttpServletRequest request, ModelMap modelMap){
 
-        byte[] bytes=food.getName().getBytes();
+
         String ne= ChineseToPinyinUtil.getPinYin(food.getName());
         String imageName=ne+".jpg";
         //String path = request.getSession().getServletContext().getRealPath("images");//获取服务器文件夹地址 不能长期存储 服务重启就消失
@@ -152,7 +152,7 @@ public class ServiceController {
      * @return
      */
     @RequestMapping(value="/list",method = RequestMethod.GET)
-    public String list(ModelMap modelMap, Conditions conditions){
+    public String list(ModelMap modelMap, Conditions conditions,HttpServletRequest request){
         if(conditions.getPage()==null||conditions.getPage()==0){
             conditions.setPage(1);
         }
@@ -161,11 +161,12 @@ public class ServiceController {
         //求总页数的公式
         int pageCount=(serviceService.foodCount()+20-1)/20;
         List<Foods> list=serviceService.findPage(conditions);
+        String ur=request.getContextPath();
         //conditions.setPageCount(pageCount);
         modelMap.addAttribute("list",list);
         modelMap.addAttribute("currentPage",currentPage);
         modelMap.addAttribute("pageCount",pageCount);
-        modelMap.addAttribute("url","/admin/list");
+        modelMap.addAttribute("url",ur+"/admin/list");
         return "service/editmenu/list";
     }
 

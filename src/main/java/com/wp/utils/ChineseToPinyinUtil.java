@@ -6,6 +6,9 @@ import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
 import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
 import org.apache.log4j.Logger;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * 汉字转化成汉语拼音
  * 使用一个hanyupinyin的包
@@ -43,4 +46,23 @@ public class ChineseToPinyinUtil {
         return change(hanyin);
     }
 
+    /**
+     * 判断是否是汉字，使用正则表达式进行判断
+     * @param str
+     * @return
+     */
+    private static boolean isChinese(String str){
+        Pattern p_str=Pattern.compile("[\\u4e00-\\u9fa5]+");
+        Matcher m=p_str.matcher(str);
+        if(m.find()&&m.group(0).equals(str)) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        String str="我qq";
+        System.out.println(isChinese(str));
+    }
 }
