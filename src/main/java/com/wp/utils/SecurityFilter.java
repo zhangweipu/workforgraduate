@@ -17,7 +17,7 @@ public class SecurityFilter extends OncePerRequestFilter{
     @Override
     protected void doFilterInternal(HttpServletRequest Req, HttpServletResponse Resp, FilterChain Chain) throws ServletException, IOException {
         //不过滤的uri
-        String[] notFilter=new String[]{"/static","/views","/js","/main"};
+        String[] notFilter=new String[]{"/static","/views","/js","/main","/test"};
 
         //请求的uri
         String uri=Req.getRequestURI();

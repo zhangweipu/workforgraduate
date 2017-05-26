@@ -37,6 +37,8 @@ public class ChineseToPinyinUtil {
                 }catch(Exception e){
                     logger.error("出错了......");
                 }
+            }else{
+                result+=temp[i];
             }
         }
         return result;

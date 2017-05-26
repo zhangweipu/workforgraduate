@@ -83,13 +83,14 @@ public class ClientController {
     @RequestMapping(value = "/list",method = RequestMethod.GET)
     public String list(Integer tab, ModelMap modelMap,HttpServletRequest req){
         HttpSession session=req.getSession();
+        String ur=req.getContextPath();
         //todo:添加订单号
        int id= (int) (Math.random()*1000);
         session.setAttribute("orderid",id);
         List<FoodType> typeList=foodTypeMapper.seach();
         modelMap.put("typeList",typeList);
         //TODO:路径
-        modelMap.put("url","/static/images/");
+        modelMap.put("url",ur+"/static/images/");
         modelMap.put("id",id);
         return "client/main";
     }
