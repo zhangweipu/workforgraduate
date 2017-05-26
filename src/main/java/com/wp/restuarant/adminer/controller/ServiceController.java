@@ -61,11 +61,12 @@ public class ServiceController {
      */
     @RequestMapping(value = "/index",method = RequestMethod.GET)
     public String index(HttpServletRequest request,ModelMap modelMap){
+        String ur=request.getContextPath();
         List<Foods> list=serviceService.findAll();
         List<String> urlList=new ArrayList<String>();
         for(Foods f:list) {
             //   String url=request.getContextPath()+"/images/"+f.getImageName();
-            String url = "/static/images/" + f.getImageName();
+            String url = ur+"/static/images/" + f.getImageName();
             url.trim();
             urlList.add(url);
         }
