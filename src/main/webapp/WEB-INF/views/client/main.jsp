@@ -28,8 +28,5 @@
     </div>
  <%@include file="footer.jsp"%>
 
-<c:forEach items="${food:foodFunc('11')}" var="item">
-    ${item.type}
-</c:forEach>
 </body>
 </html>

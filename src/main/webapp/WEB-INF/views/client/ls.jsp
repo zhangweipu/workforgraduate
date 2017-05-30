@@ -1,11 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="order" uri="http://myOrderEL.com" %>
 <div class="food-list">
+    ${typeList}
     <c:forEach items="${typeList}" var="type">
-        <c:if test="${food:foodFunc(type.type).size()!=0}">
+        <c:if test="${food:foodFunc(type.id).size()!=0}">
             <div class="list-row">
                 <span class="food-type">${type.type}</span>
-                <c:forEach items="${food:foodFunc(type.type)}" var="li">
+                <c:forEach items="${food:foodFunc(type.id)}" var="li">
                     <div class="row">
                         <div class="image">
                             <img src="${url}${li.imageName}">

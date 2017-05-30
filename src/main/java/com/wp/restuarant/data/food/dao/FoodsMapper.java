@@ -19,7 +19,7 @@ public interface FoodsMapper {
 
     Foods selectByPrimaryKey(Integer id);
 
-    List<Foods> selectByType(String type);
+    List<Foods> selectByType(Integer type);
 
     int updateByPrimaryKeySelective(Foods record);
 

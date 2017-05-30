@@ -21,7 +21,7 @@ public class FoodFuntion {
         this.foodsMapper = foodsMapper;
     }
 
-    public static List<Foods> getByType(String type){
+    public static List<Foods> getByType(Integer type){
         return foodsMapper.selectByType(type);
     }
 
