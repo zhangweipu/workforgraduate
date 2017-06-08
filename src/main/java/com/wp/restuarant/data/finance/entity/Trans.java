@@ -5,7 +5,6 @@ import java.util.Date;
 /**
  * create table t_trans(
  transId int auto_increment primary key,
- type int,
  time date,
  turnover double,
  detail varchar(200)
@@ -16,7 +15,7 @@ import java.util.Date;
  */
 public class Trans {
    private Integer transId;
-   private Integer type;
+   private String type;
    private  Date time;
    private Double turnover;
    private String detail;
@@ -29,11 +28,11 @@ public class Trans {
         this.transId = transId;
     }
 
-    public Integer getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(Integer type) {
+    public void setType(String type) {
         this.type = type;
     }
 

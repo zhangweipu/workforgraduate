@@ -5,7 +5,7 @@
 <script  src="<%=path%>/static/js/service.js"></script>
 <div>
     <div class="bg-light lter b-b wrapper-md">
-        <h1 class="m-n font-thin h3">收入详细</h1>
+        <h1 class="m-n font-thin h3">支出详细</h1>
     </div>
     <div class="panel panel-default">
 
@@ -54,8 +54,8 @@
                             <tbody>
 
                             <c:forEach items="${list}" var="ls">
-                                <tr><td>${ls.transId}</td>
-                                    <td><fmt:formatDate value="${ls.time}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate></td>
+                                <tr><td>2</td>
+                                    <td>2017-05-06</td>
                                     <td>${ls.type}</td>
                                     <td>${ls.turnover}</td>
                                     <td>${ls.detail}</td>

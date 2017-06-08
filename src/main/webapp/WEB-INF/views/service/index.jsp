@@ -25,10 +25,9 @@
     <link href="<%=path%>/static/css/dashboard.css" rel="stylesheet">
     <script src="<%=path%>/static/my97date/calendar.js"></script>
     <script src="<%=path%>/static/my97date/WdatePicker.js"></script>
-
 </head>
 
-<body>
+<body style="background: url('/static/images/beijing2.jpg') repeat;">
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
@@ -39,12 +38,8 @@
             <ul class="nav navbar-nav navbar-right">
                 <%--<li><a href="/sys/index">首页</a></li>--%>
                 <%--<li><a onclick="history.go(-1)">返回上一页</a></li>--%>
-                <li><a href="#">Profile</a></li>
                 <li><a href="<%=path%>/loadOut">登出</a></li>
             </ul>
-            <form class="navbar-form navbar-right">
-                <input type="text" class="form-control" placeholder="Search...">
-            </form>
         </div>
     </div>
 </nav>
@@ -55,7 +50,7 @@
             <jsp:include page="left.jsp"/>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="showOper">
-            <div id="main">
+            <div id="main" >
                 <%--<c:forEach items="${urlList}" var="list">--%>
                 <%--<img src="${list}" width="100" height="100">--%>
                 <%--</c:forEach>--%>

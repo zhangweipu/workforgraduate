@@ -3,13 +3,13 @@
 <mapper namespace="com.wp.restuarant.data.finance.dao.TransDao">
     <resultMap id="BaseMap" type="com.wp.restuarant.data.finance.entity.Trans">
         <result property="transId" column="transId" javaType="java.lang.Integer" jdbcType="INTEGER"/>
-        <result property="type" column="type" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+        <result property="type" column="type" javaType="java.lang.String" jdbcType="VARCHAR"/>
         <result property="time" column="time" javaType="java.util.Date" jdbcType="DATE"/>
         <result property="turnover" column="turnover" javaType="java.lang.Double" jdbcType="DOUBLE"/>
         <result property="detail" column="detail" jdbcType="VARCHAR" javaType="java.lang.String"/>
     </resultMap>
     <insert id="insert" parameterType="com.wp.restuarant.data.finance.entity.Trans">
-        INSERT  INTO t_trans(transId,type,time,turnover,detail)
+        INSERT  INTO t_trans(id,type,time,turnover,detail)
         VALUES (#{transId},#{type},#{time},#{turnover},#{detail})
     </insert>
     <select id="select" resultMap="BaseMap">
@@ -17,10 +17,10 @@
     </select>
 
     <select id="selectIncome" resultMap="BaseMap">
-        SELECT * FROM t_trans WHERE type=1
+        SELECT * FROM t_trans WHERE type='IN'
     </select>
     <select id="selectOutcome" resultMap="BaseMap">
-        SELECT * FROM t_trans WHERE type=2
+        SELECT * FROM t_trans WHERE type='OUT'
     </select>
     <update id="update" parameterType="com.wp.restuarant.data.finance.entity.Trans">
         UPDATE  t_trans
@@ -38,9 +38,9 @@
                 detail=#{detail}
             </if>
         </set>
-        where transId=#{transId}
+        where id=#{transId}
     </update>
     <delete id="delete" parameterType="java.lang.Integer">
-            DELETE  FROM t_trans WHERE transId=#{0}
+            DELETE  FROM t_trans WHERE id=#{0}
     </delete>
 </mapper>

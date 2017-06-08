@@ -7,10 +7,9 @@
 
     </style>
 </head>
-<body>
+<body style="background-image: url('/static/images/success.jpg')">
 <div class="timer" data-time="${time}">
-  成功页面
-    请耐心等待，预计<span class="showtime">${time}</span>分钟后出餐
+    <h1>点餐成功，请耐心等待</h1>
 </div>
 <div>
     <c:forEach items="${orders}" var="order">

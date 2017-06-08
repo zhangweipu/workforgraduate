@@ -84,14 +84,14 @@ public class OrderController {
         orderID.setStat(Constants.ORDER_ND);
         orderID.setTime(new Date());
         orderID.setMoney(clientService.getMoney(id));
-        clientService.addOrderId(orderID);
+       // clientService.addOrderId(orderID);
         Trans trans=new Trans();
         trans.setTransId(id);
         trans.setTime(new Date());
         trans.setDetail("餐点");
-        trans.setType(1);
+        trans.setType("IN");
         trans.setTurnover(Double.valueOf(orderID.getMoney()));
         serviceService.inCome(trans);
-        return "redirect:/client/succe";
+        return "redirect:/client/success";
     }
 }

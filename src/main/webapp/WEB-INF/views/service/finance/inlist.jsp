@@ -58,8 +58,8 @@
                             <tbody>
 
                             <c:forEach items="${list}" var="ls">
-                                <tr><td>${ls.transId}</td>
-                                    <td><fmt:formatDate value="${ls.time}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate></td>
+                                <tr><td>1</td>
+                                    <td>2017-05-6</td>
                                     <td>${ls.type}</td>
                                     <td>${ls.turnover}</td>
                                     <td>${ls.detail}</td>
