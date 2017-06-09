@@ -51,7 +51,7 @@ public class ServiceController {
     private ServiceService serviceService;
     //文件上传路径
     //TODO：更改文件路径
-    //public final static String path= PropertyUtil.getProperty("imageUrl");
+    public final static String path= PropertyUtil.getProperty("imageUrl");
 
     /**
      * 菜单查询
@@ -93,7 +93,7 @@ public class ServiceController {
 
         String ne= ChineseToPinyinUtil.getPinYin(food.getName());
         String imageName=ne+".jpg";
-        String path = request.getSession().getServletContext().getRealPath("images");//获取服务器文件夹地址 不能长期存储 服务重启就消失
+       // String path = request.getSession().getServletContext().getRealPath("images");//获取服务器文件夹地址 不能长期存储 服务重启就消失
 
         File image=new File(path,imageName);
         if(!image.exists()){//如果不存在创建目录
@@ -203,7 +203,7 @@ public class ServiceController {
     @RequestMapping(value = "/delete",method = RequestMethod.GET)
     public String delete(Integer id,HttpServletRequest request){
         Foods food=serviceService.findById(id);
-        String path=request.getSession().getServletContext().getRealPath("images");
+       // String path=request.getSession().getServletContext().getRealPath("images");
         String imageName=food.getImageName();
         if(imageName!=null){//删除图片文件
             File file=new File(path+imageName);

@@ -1,46 +1,67 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="type" uri="http://myel.com" %>
 <html>
 <head>
-    <% String path=request.getContextPath();%>
-    <title>waiter</title>
-    <link href="<%=path%>/static/css/waiter.css" rel="stylesheet"/>
+
+    <title>fuwu</title>
+    <%
+        String basePath = request.getScheme() + "://"
+                + request.getServerName() + ":" + request.getServerPort();
+        basePath += request.getContextPath() + "/";
+        String path=request.getContextPath();
+    %>
+    <base href="<%=basePath%>">
+    <link rel="shortcut icon" href="<%=path%>/static/image/bushuohua.ico" type="image/x-icon"/>
+    <!-- Bootstrap core CSS -->
     <script src="<%=path%>/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
-    <%--<script src="<%=path%>/static/js/waiter.js"></script>--%>
+    <script src="<%=path%>/static/bootstrap3/js/bootstrap.min.js"></script>
+    <script src="<%=path%>/static/bootstrap3/js/json2.js"></script>
+    <script  src="<%=path%>/static/js/service.js"></script>
+    <script src="<%=path%>/static/js/angular.min.js"></script>
+    <link href="<%=path%>/static/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<%=path%>/static/css/common.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="<%=path%>/static/css/dashboard.css" rel="stylesheet">
+    <script src="<%=path%>/static/my97date/calendar.js"></script>
+    <script src="<%=path%>/static/my97date/WdatePicker.js"></script>
 </head>
-<body>
-<div class="top">服务员菜单
-  <div class="ls">订单列表
-    <div class="order">
 
+<body style="background: url('/static/images/beijing2.jpg') repeat;">
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">餐厅后台</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <%--<li><a href="/sys/index">首页</a></li>--%>
+                <%--<li><a onclick="history.go(-1)">返回上一页</a></li>--%>
+                <li><a href="<%=path%>/loadOut">登出</a></li>
+            </ul>
+        </div>
     </div>
-  </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <jsp:include page="left.jsp"/>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="showOper">
+            <div id="main" >
+                <%--<c:forEach items="${urlList}" var="list">--%>
+                <%--<img src="${list}" width="100" height="100">--%>
+                <%--</c:forEach>--%>
+                <h1>欢迎员工</h1>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="main">main</div>
-<div class="left">
-    <div class="type">
-        <h3>种类选择</h3>
-    <ul>
-    <c:forEach items="${type:myFunc()}" var="type" varStatus="status">
-        <li><a class="get" href="<%=path%>/admin/waiter/list?type=${type.id}">${type.id}--${type.type}</a></li>
-    </c:forEach>
-    </ul>
-    </div>
-    <div class="other">
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
 
-    </div>
-</div>
-<script type="text/javascript">
-    $.ajaxSetup ({
-        cache: false //关闭AJAX相应的缓存
-    });
-    $(".get").on("click",function (evt) {
-        evt.preventDefault();
-        var href=$(this).attr("href");
-        $(".main").load(href);
-    })
-
-</script>
 </body>
 </html>

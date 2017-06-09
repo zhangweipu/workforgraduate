@@ -84,6 +84,7 @@ jQuery(function($) {
             //target:target,//显示服务器返回数据的元素id号
             //before:function(),//提交前执行的回调函数
             success:function(data){
+                $("#main").load(ur+"/success2");
                 //alert(data);
             },//执行成功后的回调函数
             //dataType:null,//服务器返回的数据类型
@@ -93,7 +94,7 @@ jQuery(function($) {
         };
         console.log("提交！！！！");
         $("#form3").ajaxForm(options).submit();
-        $("#main").load(ur+"/success2");
+
     }else {
            alert("请输入完整！");
            return false;
