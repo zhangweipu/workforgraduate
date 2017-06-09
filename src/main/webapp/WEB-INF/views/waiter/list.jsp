@@ -34,7 +34,6 @@
     var ur=$("#path").data("path");
 
     $(".tianjia").on("click",function () {
-        alert("aaaa");
         var $this=$(this);
         var id=$this.data("id");
         var name=$this.data("name");
