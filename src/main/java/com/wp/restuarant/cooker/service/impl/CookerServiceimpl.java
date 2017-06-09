@@ -34,8 +34,13 @@ public class CookerServiceimpl implements CookerService{
     }
 
     @Override
-    public void updateOrder(Integer oid, Integer fid) {
-        orderMapper.updateOrder(oid,fid);
+    public List<Order> getOrder() {
+        return orderMapper.selectND();
+    }
+
+    @Override
+    public void updateOrder(Integer id) {
+        orderMapper.updateOrder(id);
     }
 
     @Override

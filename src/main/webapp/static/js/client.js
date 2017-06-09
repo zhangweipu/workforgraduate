@@ -44,8 +44,6 @@ $(function () {
         }
     })
     $(".addorder").on("click", function () {
-
-
         $father = $(this).parent();
         var name = $father.data("title");
         var id = $father.data("id");

@@ -35,9 +35,11 @@ public interface OrderMapper {
 
     List<Order> search(int a,boolean b);
 
+    List<Order> selectND();
+
     int getBefore(Integer id);
 
-    void updateOrder(Integer oid,Integer fid);
+    void updateOrder(Integer id);
 
     void UpdateLa(Integer orderid);
     Integer findNum(Integer foodid);

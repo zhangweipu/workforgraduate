@@ -24,25 +24,15 @@ public class CookerController {
 
     @RequestMapping(value = "/list",method = RequestMethod.GET)
     public String getOrderIdList(Model model){
-        List<OrderID> orderIDS=cookerService.getAllOrderID(0);
+        List<Order> orderIDS=cookerService.getOrder();
         model.addAttribute("IDlist",orderIDS);
         return "cooker/list";
     }
-    @RequestMapping("/orderdetail")
-    @ResponseBody
-    public List<Order> orderDetial(Integer id,Model model){
-        List<Order> list=cookerService.getOrder(id);
-        model.addAttribute("list",list);
-        return list;
-    }
 
-    @RequestMapping(value = "/orderStatus",method = RequestMethod.POST)
-    @ResponseBody
-    public String orderStatus(Integer oid,Integer fid){
-        cookerService.updateOrder(oid,fid);
-        if(cookerService.getAllOrderID(oid).size()==0){
-            cookerService.updateOrderId(oid);
-        }
-        return "success";
+    @RequestMapping(value = "/orderStatus",method = RequestMethod.GET)
+    public String orderStatus(Integer id){
+        cookerService.updateOrder(id);
+
+        return "redirect:/admin/cooker/list";
     }
 }

@@ -11,6 +11,7 @@ import java.util.List;
 public interface CookerService {
     List<OrderID> getAllOrderID(Integer id);
     List<Order> getOrder(int id);
-    void updateOrder(Integer oid,Integer fid);
+    List<Order> getOrder();
+    void updateOrder(Integer id);
     void updateOrderId(Integer id);
 }

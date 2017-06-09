@@ -23,14 +23,14 @@
     select * from t_orderid
   </select>
   <select id="selectND" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-  select * from t_orderid t
-  <where> 'ND' in
-  (select la from t_order where orderid=t.id)
-  and stat &lt;&gt; 'DONE'
-  <if test='_parameter!="0"'>
-    and id=#{0}
-  </if>
-  </where>
+  select * from t_order where la='ND'
+  <!--<where> 'ND' in-->
+  <!--(select la from t_order where orderid=t.id)-->
+  <!--and stat &lt;&gt; 'DONE'-->
+  <!--<if test='_parameter!="0"'>-->
+    <!--and id=#{0}-->
+  <!--</if>-->
+  <!--</where>-->
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from t_orderid

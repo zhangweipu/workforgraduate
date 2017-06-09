@@ -20,6 +20,9 @@
     <select id="selectSum" parameterType="java.lang.Integer" resultType="java.lang.Integer">
         select sum(food_price) from t_order where orderid=#{0}
     </select>
+    <select id="selectND" resultMap="BaseResultMap">
+        select * from t_order where la='ND'
+    </select>
     <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
@@ -144,10 +147,10 @@
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <update id="updateOrder">
+    <update id="updateOrder" parameterType="java.lang.Integer">
         update t_order
         set la='DONE'
-        where orderid=#{0} and food_id=#{1}
+        where  id=#{0}
     </update>
     <update id="updateByPrimaryKey" parameterType="com.wp.restuarant.data.order.entity.Order">
     update t_order

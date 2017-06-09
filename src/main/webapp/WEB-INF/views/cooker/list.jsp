@@ -10,15 +10,10 @@
     <script src="<%=path%>/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
     <script src="<%=path%>/static/bootstrap3/js/bootstrap.min.js"></script>
     <script src="<%=path%>/static/bootstrap3/js/json2.js"></script>
-    <script  src="<%=path%>/static/js/service.js"></script>
-    <script src="<%=path%>/static/js/angular.min.js"></script>
     <link href="<%=path%>/static/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
     <link href="<%=path%>/static/css/cooker.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="<%=path%>/static/css/dashboard.css" rel="stylesheet">
-    <script src="<%=path%>/static/my97date/calendar.js"></script>
-    <script src="<%=path%>/static/my97date/WdatePicker.js"></script>
-
 </head>
 
 <body>
@@ -44,17 +39,23 @@
 <%@include file="left.jsp"%>
 <div class="main">
             <div class="thead">
-                <span class="head">序列号</span>
-                <span class="head">订单号</span>
-                <span class="head">详情</span>
+                <span>待做</span>
             </div>
+       <c:choose>
+           <c:when test="${IDlist != null}">
+               <c:forEach items="${IDlist}" var="ID" varStatus="status">
+               <div class="tbody">
+                   <a class="btn btn-primary btn-lg" href="/admin/cooker/orderStatus?id=${ID.id}">${ID.foodName}</a>
+               </div>
+               </c:forEach>
+           </c:when>
+           <c:otherwise>
+               <div class="tbody">没有记录</div>
+           </c:otherwise>
+       </c:choose>
 
-        <c:forEach items="${IDlist}" var="ID" varStatus="status">
-        <div class="tbody">
-            <a class="btu" href="javascript:void(0);" data-status="${status.index}"
-          data-id="${ID.id}" data-seat="${ID.seat}">${ID.id}</a>
-        </div>
-        </c:forEach>
+
+
 
 </div>
 <script type="text/javascript" src="<%=path%>/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
