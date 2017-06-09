@@ -7,7 +7,7 @@
             <c:forEach items="${type:myFunc()}" var="type" varStatus="status">
             <div class="panel-heading" role="tab" id="headingOne">
                 <h4 class="panel-title">
-                    <a role="button"  href="<%=path%>/admin/waiter/list?type=${type.id}" >
+                    <a role="button" class="btn" href="<%=path%>/admin/waiter/list?type=${type.id}" >
                             ${type.id}--${type.type}
                     </a>
                 </h4>

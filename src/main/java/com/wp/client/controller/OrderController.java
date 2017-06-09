@@ -47,7 +47,7 @@ public class OrderController {
         if (session.getAttribute("orderid")!=null) {
              id = (int) session.getAttribute("orderid");
         }else{
-            id=order.getOrderId();
+            id= (int) (Math.random()*1000);
             session.setAttribute("orderid",id);
         }
         order.setOrderId(id);

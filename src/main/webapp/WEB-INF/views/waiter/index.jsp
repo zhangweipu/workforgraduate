@@ -25,6 +25,7 @@
     <link href="<%=path%>/static/css/dashboard.css" rel="stylesheet">
     <script src="<%=path%>/static/my97date/calendar.js"></script>
     <script src="<%=path%>/static/my97date/WdatePicker.js"></script>
+    <link rel="stylesheet" href="<%=path%>/static/css/client.css">
 </head>
 
 <body style="background: url('/static/images/beijing2.jpg') repeat;">
@@ -49,12 +50,10 @@
         <div class="col-sm-3 col-md-2 sidebar">
             <jsp:include page="left.jsp"/>
         </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="showOper">
+        <div class="showord"></div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <div id="main" >
-                <%--<c:forEach items="${urlList}" var="list">--%>
-                <%--<img src="${list}" width="100" height="100">--%>
-                <%--</c:forEach>--%>
-                <h1>欢迎员工</h1>
+
             </div>
         </div>
     </div>

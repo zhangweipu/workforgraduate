@@ -7,9 +7,9 @@
 
     </style>
 </head>
-<body style="background-image: url('/static/images/success.jpg')">
+<body style="background: url('/static/images/success.jpg') no-repeat; ">
 <div class="timer" data-time="${time}">
-    <h1>点餐成功，请耐心等待</h1>
+    <h1>点餐成功</h1>
 </div>
 <div>
     <c:forEach items="${orders}" var="order">

@@ -33,10 +33,13 @@ public class WaiterController {
     }
 
     @RequestMapping(value = "/list",method = RequestMethod.GET)
-    public String getMenu(String type,Model model){
+    public String getMenu(HttpServletRequest req,String type,Model model){
         List<Foods> list=foodsMapper.findByType(type);
         model.addAttribute("list",list);
         Integer orderid=(int)(Math.random()*1000);
+        String url=req.getContextPath();
+        model.addAttribute("list",list);
+        model.addAttribute("url",url+"/static/images/");
         model.addAttribute("orderid",orderid);
         return "waiter/list";
     }
