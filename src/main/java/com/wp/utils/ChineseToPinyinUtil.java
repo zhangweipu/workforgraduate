@@ -24,7 +24,7 @@ public class ChineseToPinyinUtil {
 
         logger.info("开始转换.....");
         char[] temp=str.toCharArray();
-
+        logger.info("转换的字符串为："+str);
         HanyuPinyinOutputFormat defaultFormat=new HanyuPinyinOutputFormat();
         defaultFormat.setCaseType(HanyuPinyinCaseType.LOWERCASE);
         defaultFormat.setToneType(HanyuPinyinToneType.WITHOUT_TONE);
