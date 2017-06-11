@@ -41,13 +41,13 @@ CREATE TABLE `t_order` (
 ##--所有订单列表
 drop table if exists t_orderid;
 CREATE TABLE `t_orderid` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11),
   `time` date DEFAULT NULL,
   `stat` varchar(20) DEFAULT NULL,
   `money` int(11) DEFAULT NULL,
   `seat` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=935 DEFAULT CHARSET=utf8;
+)
 ##--账目流水表
 drop table if exists t_trans;
 create table t_trans(

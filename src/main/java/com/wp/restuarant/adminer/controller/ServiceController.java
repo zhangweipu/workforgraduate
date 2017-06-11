@@ -137,7 +137,6 @@ public class ServiceController {
      */
     @RequestMapping(value = "/down",method = RequestMethod.GET)
     public ResponseEntity<byte[]> downMould() throws IOException{
-        String path="d://food.xlsx";
         File file=new File(path);
         HttpHeaders httpHeaders = new HttpHeaders();
         String fileName=new String("菜单模板.xlsx".getBytes("UTF-8"),"iso-8859-1");

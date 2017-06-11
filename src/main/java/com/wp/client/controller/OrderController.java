@@ -84,7 +84,7 @@ public class OrderController {
         orderID.setStat(Constants.ORDER_ND);
         orderID.setTime(new Date());
         orderID.setMoney(clientService.getMoney(id));
-       // clientService.addOrderId(orderID);
+        clientService.addOrderId(orderID);
         Trans trans=new Trans();
         trans.setTransId(id);
         trans.setTime(new Date());
