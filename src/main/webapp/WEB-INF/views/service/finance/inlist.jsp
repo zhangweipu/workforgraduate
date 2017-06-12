@@ -63,7 +63,7 @@
                                     <td>${ls.type}</td>
                                     <td>${ls.turnover}</td>
                                     <td>${ls.detail}</td>
-                                    <td><a class="btn" href="<%=path%>/admin/orderdetail?id=${ls.id}">详情</a></td>
+                                    <td><a class="btn" href="<%=path%>/admin/orderdetail?id=${ls.transId}">详情</a></td>
                                 </tr>
                             </c:forEach>
                             </tbody>
