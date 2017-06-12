@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@include file="../../common.jsp"%>
 <link href="<%=path%>/static/css/finance.css" rel="stylesheet">
 <script  src="<%=path%>/static/js/service.js"></script>
@@ -59,11 +60,11 @@
 
                             <c:forEach items="${list}" var="ls">
                                 <tr><td>1</td>
-                                    <td>2017-05-6</td>
+                                    <td><fmt:formatDate value="${ls.time}" pattern="yyyy-MM-dd"></fmt:formatDate> </td>
                                     <td>${ls.type}</td>
                                     <td>${ls.turnover}</td>
                                     <td>${ls.detail}</td>
-                                    <td><a class="btn" href="<%=path%>/admin/orderdetail?id=${ls.transId}">详情</a></td>
+                                    <td>${ls.transId}<a class="btn" href="<%=path%>/admin/orderdetail?id=${ls.transId}">详情</a></td>
                                 </tr>
                             </c:forEach>
                             </tbody>

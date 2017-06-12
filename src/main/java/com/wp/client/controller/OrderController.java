@@ -7,6 +7,7 @@ import com.wp.restuarant.data.order.entity.Order;
 import com.wp.restuarant.data.order.entity.OrderID;
 import com.wp.restuarant.adminer.service.ServiceService;
 import com.wp.utils.Constants;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +25,8 @@ import java.util.List;
 @RequestMapping("/order")
 @Controller
 public class OrderController {
+
+    private static final Logger logger=Logger.getLogger(OrderController.class);
 
     @Autowired
     private ClientService clientService;
@@ -85,6 +88,7 @@ public class OrderController {
         orderID.setTime(new Date());
         orderID.setMoney(clientService.getMoney(id));
         clientService.addOrderId(orderID);
+        logger.info("提交订单");
         Trans trans=new Trans();
         trans.setTransId(id);
         trans.setTime(new Date());
@@ -92,6 +96,7 @@ public class OrderController {
         trans.setType("IN");
         trans.setTurnover(Double.valueOf(orderID.getMoney()));
         serviceService.inCome(trans);
+        logger.info("tianjia");
         return "redirect:/client/success";
     }
 }
